@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cefc28bfea164b00aaa70a958f28adc2" Name="Diagram1">
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.Address" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.AppSetting" Width="1.5" PointX="10" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.DeliveryOption" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.OrderedItem" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.Order" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.OrderStage" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.Product" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.ProductsCategory" Width="1.5" PointX="9.875" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.ShoppingCartItem" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.ShoppingCart" Width="1.5" PointX="2.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.User" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.ZipCode" Width="1.5" PointX="2.875" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.database_firewall_rules" Width="1.5" PointX="10" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__UserI__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__ZipCo__40058253" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__AddressI__531856C7" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__Delivery__540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Order__57DD0BE4" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Produ__58D1301D" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__OrderSta__55009F39" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__UserID__5224328E" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Products__Catego__44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Produ__4B7734FF" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Shopp__4A8310C6" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__UserI__47A6A41B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
