@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Mail;
 using System.Web.Mvc;
+using SugarMonkey.Models;
 using SugarMonkey.Models.View;
 
 namespace SugarMonkey.Controllers
@@ -31,21 +32,21 @@ namespace SugarMonkey.Controllers
             if (ModelState.IsValid)
             {
                 //create database context using Entity framework 
-                using (var databaseContext = new Entities())
+                using (var databaseContext = new MSSQLinAzure())
                 {
                     //If the model state is valid i.e. the form values passed the validation then we are storing the User's details in DB.
-                    RegisterUser reglog = new RegisterUser();
+                    User reglog = new User();
 
                     //Save all details in RegitserUser object
 
                     reglog.FirstName = registerDetails.FirstName;
-                    reglog.LastName = registerDetails.LastName;
+                    reglog.FirstLastName = registerDetails.LastName;
                     reglog.Email = registerDetails.Email;
                     reglog.Password = registerDetails.Password;
 
 
                     //Calling the SaveDetails method which saves the details.
-                    databaseContext.RegisterUsers.Add(reglog);
+                    databaseContext.Users.Add(reglog);
                     databaseContext.SaveChanges();
                 }
 
