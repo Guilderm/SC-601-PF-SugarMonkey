@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web.Mvc;
+using System.Web.Security;
 using SugarMonkey.Models;
 using SugarMonkey.Models.Logic;
 using SugarMonkey.Models.View;
@@ -11,7 +13,8 @@ namespace SugarMonkey.Controllers
 {
     public class UserAccountController : Controller
     {
-        [HttpGet]
+
+       [HttpGet]
         public ActionResult Index()
         {
             return RedirectToAction("index", "Home");
@@ -34,7 +37,7 @@ namespace SugarMonkey.Controllers
             if (ModelState.IsValid)
             {
                 //create database context using Entity framework 
-                using (var databaseContext = new MSSQLinAzure())
+                using (var databaseContext = new GeneralPurposeDBEntities())
                 {
                     //If the model state is valid i.e. the form values passed the validation then we are storing the User's details in DB.
                     User reglog = new User();
@@ -47,9 +50,9 @@ namespace SugarMonkey.Controllers
                     reglog.Password = registerDetails.Password;
 
 
-                    //Calling the SaveDetails method which saves the details.
                     databaseContext.Users.Add(reglog);
-                    databaseContext.SaveChanges();
+                       databaseContext.SaveChanges();
+                        
                 }
 
                 ViewBag.Message = "User Details Saved";
@@ -89,6 +92,15 @@ namespace SugarMonkey.Controllers
             return View(model);
         }
 
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("index", "Home");
+        }
+
+
         public ActionResult Welcome()
         {
             return View();
@@ -97,7 +109,7 @@ namespace SugarMonkey.Controllers
         //function to check if User is valid or not
         public User IsValidUser(Login model)
         {
-            using (var dataContext = new MSSQLinAzure())
+            using (var dataContext = new GeneralPurposeDBEntities())
             {
                 //Retireving the user details from DB based on username and password enetered by user.
                 User user = dataContext.Users
@@ -117,19 +129,19 @@ namespace SugarMonkey.Controllers
         }
 
         [HttpPost]
-        public ActionResult ForgotPassword(string EmailID)
+        public ActionResult ForgotPassword(string emailId)
         {
             string resetCode = Guid.NewGuid().ToString();
             string verifyUrl = "/Account/ResetPassword/" + resetCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
-            using (var context = new MSSQLinAzure())
+            using (var context = new GeneralPurposeDBEntities())
             {
-                var getUser = (from s in context.Users where s.Email == EmailID select s).FirstOrDefault();
+                var getUser = (from s in context.Users where s.Email == emailId select s).FirstOrDefault();
                 if (getUser != null)
                 {
                     getUser.ResetPasswordCode = resetCode;
                     //This line I have added here to avoid confirm password not match issue , as we had added a confirm password property 
-                    context.Configuration.ValidateOnSaveEnabled = false;
+                   context.Configuration.ValidateOnSaveEnabled = false;
                     context.SaveChanges();
 
                     string subject = "Password Reset Request";
@@ -160,12 +172,12 @@ namespace SugarMonkey.Controllers
             //redirect to reset password page
             if (string.IsNullOrWhiteSpace(id)) return HttpNotFound();
 
-            using (var context = new MSSQLinAzure())
+            using (var context = new GeneralPurposeDBEntities())
             {
                 var user = context.Users.Where(a => a.ResetPasswordCode == id).FirstOrDefault();
                 if (user != null)
                 {
-                    ResetPasswordModel model = new ResetPasswordModel();
+                    ResetPassword model = new ResetPassword();
                     model.ResetCode = id;
                     return View(model);
                 }
@@ -176,11 +188,11 @@ namespace SugarMonkey.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ResetPassword(ResetPasswordModel model)
+        public ActionResult ResetPassword(ResetPassword model)
         {
             string message = "";
             if (ModelState.IsValid)
-                using (var context = new MSSQLinAzure())
+                using (var context = new GeneralPurposeDBEntities())
                 {
                     var user = context.Users.Where(a => a.ResetPasswordCode == model.ResetCode)
                         .FirstOrDefault();

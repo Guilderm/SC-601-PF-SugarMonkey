@@ -15,10 +15,10 @@ namespace SugarMonkey.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class MSSQLinAzure : DbContext
+    public partial class GeneralPurposeDBEntities : DbContext
     {
-        public MSSQLinAzure()
-            : base("name=MSSQLinAzure")
+        public GeneralPurposeDBEntities()
+            : base("name=GeneralPurposeDBEntities")
         {
         }
     
@@ -48,6 +48,11 @@ namespace SugarMonkey.Models
                 new ObjectParameter("Name", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("STP_GetAppSetting", nameParameter);
+        }
+    
+        public virtual ObjectResult<STP_GetUsersInfo_Result> STP_GetUsersInfo()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUsersInfo_Result>("STP_GetUsersInfo");
         }
     
         public virtual int STP_NewAppSetting(string name, string value, string @default, string description)

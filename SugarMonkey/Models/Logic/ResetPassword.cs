@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SugarMonkey.Models.Logic
 {
-    public class ResetPasswordModel
+    public class ResetPassword
     {
         [Required(ErrorMessage = "New password required", AllowEmptyStrings = false)]
         [DataType(DataType.Password)]

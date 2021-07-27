@@ -30,10 +30,10 @@ namespace SugarMonkey.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string ProfilePhotoPath { get; set; }
-        public bool isShopper { get; set; }
-        public bool isAdmin { get; set; }
-        public bool iSActive { get; set; }
-        public System.DateTime lastLogin { get; set; }
+        public Nullable<bool> isCustomer { get; set; }
+        public Nullable<bool> isAdmin { get; set; }
+        public Nullable<bool> iSActive { get; set; }
+        public Nullable<System.DateTime> lastLogin { get; set; }
         public string ResetPasswordCode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

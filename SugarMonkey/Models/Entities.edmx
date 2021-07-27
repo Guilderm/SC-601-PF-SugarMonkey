@@ -114,17 +114,17 @@
             <PropertyRef Name="UserID" />
           </Key>
           <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="FirstLastName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="SecondLastName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Cellphone" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ProfilePhotoPath" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="isShopper" Type="bit" Nullable="false" />
-          <Property Name="isAdmin" Type="bit" Nullable="false" />
-          <Property Name="iSActive" Type="bit" Nullable="false" />
-          <Property Name="lastLogin" Type="datetime" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="FirstLastName" Type="varchar" MaxLength="50" />
+          <Property Name="SecondLastName" Type="varchar" MaxLength="50" />
+          <Property Name="Cellphone" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="ProfilePhotoPath" Type="varchar" MaxLength="100" />
+          <Property Name="isCustomer" Type="bit" />
+          <Property Name="isAdmin" Type="bit" />
+          <Property Name="iSActive" Type="bit" />
+          <Property Name="lastLogin" Type="datetime" />
           <Property Name="ResetPasswordCode" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="ZipCodes">
@@ -155,7 +155,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="create_date" Type="datetime" Nullable="false" />
           <Property Name="modify_date" Type="datetime" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Addresses__UserI__681373AD">
+        <Association Name="FK__Addresses__UserI__0EF836A4">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
           <ReferentialConstraint>
@@ -167,7 +167,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Addresses__ZipCo__690797E6">
+        <Association Name="FK__Addresses__ZipCo__0FEC5ADD">
           <End Role="ZipCodes" Type="Self.ZipCodes" Multiplicity="1" />
           <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
           <ReferentialConstraint>
@@ -179,7 +179,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderedIt__Order__00DF2177">
+        <Association Name="FK__OrderedIt__Order__27C3E46E">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
           <End Role="OrderedItems" Type="Self.OrderedItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -191,7 +191,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderedIt__Produ__01D345B0">
+        <Association Name="FK__OrderedIt__Produ__28B808A7">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
           <End Role="OrderedItems" Type="Self.OrderedItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -203,7 +203,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__AddressI__7C1A6C5A">
+        <Association Name="FK__Orders__AddressI__22FF2F51">
           <End Role="Addresses" Type="Self.Addresses" Multiplicity="1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -215,7 +215,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__Delivery__7D0E9093">
+        <Association Name="FK__Orders__Delivery__23F3538A">
           <End Role="DeliveryOptions" Type="Self.DeliveryOptions" Multiplicity="1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -227,7 +227,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__OrderSta__7E02B4CC">
+        <Association Name="FK__Orders__OrderSta__24E777C3">
           <End Role="OrderStages" Type="Self.OrderStages" Multiplicity="1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -239,7 +239,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__UserID__7B264821">
+        <Association Name="FK__Orders__UserID__220B0B18">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -251,7 +251,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__Catego__6DCC4D03">
+        <Association Name="FK__Products__Catego__14B10FFA">
           <End Role="ProductsCategories" Type="Self.ProductsCategories" Multiplicity="1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -263,7 +263,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ShoppingC__Produ__74794A92">
+        <Association Name="FK__ShoppingC__Produ__1B5E0D89">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
           <End Role="ShoppingCartItems" Type="Self.ShoppingCartItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -275,7 +275,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ShoppingC__Shopp__73852659">
+        <Association Name="FK__ShoppingC__Shopp__1A69E950">
           <End Role="ShoppingCarts" Type="Self.ShoppingCarts" Multiplicity="1" />
           <End Role="ShoppingCartItems" Type="Self.ShoppingCartItems" Multiplicity="*" />
           <ReferentialConstraint>
@@ -287,7 +287,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ShoppingC__UserI__70A8B9AE">
+        <Association Name="FK__ShoppingC__UserI__178D7CA5">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="ShoppingCarts" Type="Self.ShoppingCarts" Multiplicity="*" />
           <ReferentialConstraint>
@@ -302,6 +302,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
         <Function Name="STP_GetAppSetting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Name" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="STP_GetUsersInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="STP_NewAppSetting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Name" Type="varchar" Mode="In" />
           <Parameter Name="Value" Type="varchar" Mode="In" />
@@ -336,51 +337,51 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
     [database_firewall_rules].[modify_date] AS [modify_date]
     FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__Addresses__UserI__681373AD" Association="Self.FK__Addresses__UserI__681373AD">
+          <AssociationSet Name="FK__Addresses__UserI__0EF836A4" Association="Self.FK__Addresses__UserI__0EF836A4">
             <End Role="Users" EntitySet="Users" />
             <End Role="Addresses" EntitySet="Addresses" />
           </AssociationSet>
-          <AssociationSet Name="FK__Addresses__ZipCo__690797E6" Association="Self.FK__Addresses__ZipCo__690797E6">
+          <AssociationSet Name="FK__Addresses__ZipCo__0FEC5ADD" Association="Self.FK__Addresses__ZipCo__0FEC5ADD">
             <End Role="ZipCodes" EntitySet="ZipCodes" />
             <End Role="Addresses" EntitySet="Addresses" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderedIt__Order__00DF2177" Association="Self.FK__OrderedIt__Order__00DF2177">
+          <AssociationSet Name="FK__OrderedIt__Order__27C3E46E" Association="Self.FK__OrderedIt__Order__27C3E46E">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="OrderedItems" EntitySet="OrderedItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderedIt__Produ__01D345B0" Association="Self.FK__OrderedIt__Produ__01D345B0">
+          <AssociationSet Name="FK__OrderedIt__Produ__28B808A7" Association="Self.FK__OrderedIt__Produ__28B808A7">
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderedItems" EntitySet="OrderedItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__AddressI__7C1A6C5A" Association="Self.FK__Orders__AddressI__7C1A6C5A">
+          <AssociationSet Name="FK__Orders__AddressI__22FF2F51" Association="Self.FK__Orders__AddressI__22FF2F51">
             <End Role="Addresses" EntitySet="Addresses" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__Delivery__7D0E9093" Association="Self.FK__Orders__Delivery__7D0E9093">
+          <AssociationSet Name="FK__Orders__Delivery__23F3538A" Association="Self.FK__Orders__Delivery__23F3538A">
             <End Role="DeliveryOptions" EntitySet="DeliveryOptions" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__OrderSta__7E02B4CC" Association="Self.FK__Orders__OrderSta__7E02B4CC">
+          <AssociationSet Name="FK__Orders__OrderSta__24E777C3" Association="Self.FK__Orders__OrderSta__24E777C3">
             <End Role="OrderStages" EntitySet="OrderStages" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__UserID__7B264821" Association="Self.FK__Orders__UserID__7B264821">
+          <AssociationSet Name="FK__Orders__UserID__220B0B18" Association="Self.FK__Orders__UserID__220B0B18">
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__Catego__6DCC4D03" Association="Self.FK__Products__Catego__6DCC4D03">
+          <AssociationSet Name="FK__Products__Catego__14B10FFA" Association="Self.FK__Products__Catego__14B10FFA">
             <End Role="ProductsCategories" EntitySet="ProductsCategories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__ShoppingC__Produ__74794A92" Association="Self.FK__ShoppingC__Produ__74794A92">
+          <AssociationSet Name="FK__ShoppingC__Produ__1B5E0D89" Association="Self.FK__ShoppingC__Produ__1B5E0D89">
             <End Role="Products" EntitySet="Products" />
             <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__ShoppingC__Shopp__73852659" Association="Self.FK__ShoppingC__Shopp__73852659">
+          <AssociationSet Name="FK__ShoppingC__Shopp__1A69E950" Association="Self.FK__ShoppingC__Shopp__1A69E950">
             <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
             <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__ShoppingC__UserI__70A8B9AE" Association="Self.FK__ShoppingC__UserI__70A8B9AE">
+          <AssociationSet Name="FK__ShoppingC__UserI__178D7CA5" Association="Self.FK__ShoppingC__UserI__178D7CA5">
             <End Role="Users" EntitySet="Users" />
             <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
           </AssociationSet>
@@ -398,9 +399,9 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ZipCodeID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Addresses__UserI__3F115E1A" FromRole="Addresses" ToRole="Users" />
-          <NavigationProperty Name="ZipCode" Relationship="Self.FK__Addresses__ZipCo__40058253" FromRole="Addresses" ToRole="ZipCodes" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__AddressI__531856C7" FromRole="Addresses" ToRole="Orders" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Addresses__UserI__6501FCD8" FromRole="Addresses" ToRole="Users" />
+          <NavigationProperty Name="ZipCode" Relationship="Self.FK__Addresses__ZipCo__65F62111" FromRole="Addresses" ToRole="ZipCodes" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__AddressI__7908F585" FromRole="Addresses" ToRole="Orders" />
         </EntityType>
         <EntityType Name="AppSetting">
           <Key>
@@ -419,7 +420,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="DeliveryOptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Delivery__540C7B00" FromRole="DeliveryOptions" ToRole="Orders" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Delivery__79FD19BE" FromRole="DeliveryOptions" ToRole="Orders" />
         </EntityType>
         <EntityType Name="OrderedItem">
           <Key>
@@ -431,8 +432,8 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="AmountDiscounted" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__OrderedIt__Order__57DD0BE4" FromRole="OrderedItems" ToRole="Orders" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__OrderedIt__Produ__58D1301D" FromRole="OrderedItems" ToRole="Products" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__OrderedIt__Order__7DCDAAA2" FromRole="OrderedItems" ToRole="Orders" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__OrderedIt__Produ__7EC1CEDB" FromRole="OrderedItems" ToRole="Products" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -451,11 +452,11 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="SpecialInstructions" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="OrderedDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="OrderStageID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Address" Relationship="Self.FK__Orders__AddressI__531856C7" FromRole="Orders" ToRole="Addresses" />
-          <NavigationProperty Name="DeliveryOption" Relationship="Self.FK__Orders__Delivery__540C7B00" FromRole="Orders" ToRole="DeliveryOptions" />
-          <NavigationProperty Name="OrderedItems" Relationship="Self.FK__OrderedIt__Order__57DD0BE4" FromRole="Orders" ToRole="OrderedItems" />
-          <NavigationProperty Name="OrderStage" Relationship="Self.FK__Orders__OrderSta__55009F39" FromRole="Orders" ToRole="OrderStages" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Orders__UserID__5224328E" FromRole="Orders" ToRole="Users" />
+          <NavigationProperty Name="Address" Relationship="Self.FK__Orders__AddressI__7908F585" FromRole="Orders" ToRole="Addresses" />
+          <NavigationProperty Name="DeliveryOption" Relationship="Self.FK__Orders__Delivery__79FD19BE" FromRole="Orders" ToRole="DeliveryOptions" />
+          <NavigationProperty Name="OrderedItems" Relationship="Self.FK__OrderedIt__Order__7DCDAAA2" FromRole="Orders" ToRole="OrderedItems" />
+          <NavigationProperty Name="OrderStage" Relationship="Self.FK__Orders__OrderSta__7AF13DF7" FromRole="Orders" ToRole="OrderStages" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Orders__UserID__7814D14C" FromRole="Orders" ToRole="Users" />
         </EntityType>
         <EntityType Name="OrderStage">
           <Key>
@@ -464,7 +465,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="OrderStageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Stage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__OrderSta__55009F39" FromRole="OrderStages" ToRole="Orders" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__OrderSta__7AF13DF7" FromRole="OrderStages" ToRole="Orders" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -480,9 +481,9 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="percentageOff" Type="Int32" Nullable="false" />
           <Property Name="SaleStarts" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="SaleEnds" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="OrderedItems" Relationship="Self.FK__OrderedIt__Produ__58D1301D" FromRole="Products" ToRole="OrderedItems" />
-          <NavigationProperty Name="ProductsCategory" Relationship="Self.FK__Products__Catego__44CA3770" FromRole="Products" ToRole="ProductsCategories" />
-          <NavigationProperty Name="ShoppingCartItems" Relationship="Self.FK__ShoppingC__Produ__4B7734FF" FromRole="Products" ToRole="ShoppingCartItems" />
+          <NavigationProperty Name="OrderedItems" Relationship="Self.FK__OrderedIt__Produ__7EC1CEDB" FromRole="Products" ToRole="OrderedItems" />
+          <NavigationProperty Name="ProductsCategory" Relationship="Self.FK__Products__Catego__6ABAD62E" FromRole="Products" ToRole="ProductsCategories" />
+          <NavigationProperty Name="ShoppingCartItems" Relationship="Self.FK__ShoppingC__Produ__7167D3BD" FromRole="Products" ToRole="ShoppingCartItems" />
         </EntityType>
         <EntityType Name="ProductsCategory">
           <Key>
@@ -490,7 +491,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           </Key>
           <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__44CA3770" FromRole="ProductsCategories" ToRole="Products" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__6ABAD62E" FromRole="ProductsCategories" ToRole="Products" />
         </EntityType>
         <EntityType Name="ShoppingCartItem">
           <Key>
@@ -500,8 +501,8 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="ShoppingCartID" Type="Int32" Nullable="false" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__ShoppingC__Produ__4B7734FF" FromRole="ShoppingCartItems" ToRole="Products" />
-          <NavigationProperty Name="ShoppingCart" Relationship="Self.FK__ShoppingC__Shopp__4A8310C6" FromRole="ShoppingCartItems" ToRole="ShoppingCarts" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__ShoppingC__Produ__7167D3BD" FromRole="ShoppingCartItems" ToRole="Products" />
+          <NavigationProperty Name="ShoppingCart" Relationship="Self.FK__ShoppingC__Shopp__7073AF84" FromRole="ShoppingCartItems" ToRole="ShoppingCarts" />
         </EntityType>
         <EntityType Name="ShoppingCart">
           <Key>
@@ -510,29 +511,29 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="ShoppingCartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <Property Name="LastModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ShoppingCartItems" Relationship="Self.FK__ShoppingC__Shopp__4A8310C6" FromRole="ShoppingCarts" ToRole="ShoppingCartItems" />
-          <NavigationProperty Name="User" Relationship="Self.FK__ShoppingC__UserI__47A6A41B" FromRole="ShoppingCarts" ToRole="Users" />
+          <NavigationProperty Name="ShoppingCartItems" Relationship="Self.FK__ShoppingC__Shopp__7073AF84" FromRole="ShoppingCarts" ToRole="ShoppingCartItems" />
+          <NavigationProperty Name="User" Relationship="Self.FK__ShoppingC__UserI__6D9742D9" FromRole="ShoppingCarts" ToRole="Users" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
           <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FirstLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SecondLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Cellphone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ProfilePhotoPath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="isShopper" Type="Boolean" Nullable="false" />
-          <Property Name="isAdmin" Type="Boolean" Nullable="false" />
-          <Property Name="iSActive" Type="Boolean" Nullable="false" />
-          <Property Name="lastLogin" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Addresses" Relationship="Self.FK__Addresses__UserI__3F115E1A" FromRole="Users" ToRole="Addresses" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__UserID__5224328E" FromRole="Users" ToRole="Orders" />
-          <NavigationProperty Name="ShoppingCarts" Relationship="Self.FK__ShoppingC__UserI__47A6A41B" FromRole="Users" ToRole="ShoppingCarts" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirstLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SecondLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cellphone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProfilePhotoPath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="isCustomer" Type="Boolean" />
+          <Property Name="isAdmin" Type="Boolean" />
+          <Property Name="iSActive" Type="Boolean" />
+          <Property Name="lastLogin" Type="DateTime" Precision="3" />
           <Property Name="ResetPasswordCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Addresses" Relationship="Self.FK__Addresses__UserI__6501FCD8" FromRole="Users" ToRole="Addresses" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__UserID__7814D14C" FromRole="Users" ToRole="Orders" />
+          <NavigationProperty Name="ShoppingCarts" Relationship="Self.FK__ShoppingC__UserI__6D9742D9" FromRole="Users" ToRole="ShoppingCarts" />
         </EntityType>
         <EntityType Name="ZipCode">
           <Key>
@@ -543,7 +544,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="Canton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ZipCode1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Addresses" Relationship="Self.FK__Addresses__ZipCo__40058253" FromRole="ZipCodes" ToRole="Addresses" />
+          <NavigationProperty Name="Addresses" Relationship="Self.FK__Addresses__ZipCo__65F62111" FromRole="ZipCodes" ToRole="Addresses" />
         </EntityType>
         <EntityType Name="database_firewall_rules">
           <Key>
@@ -561,7 +562,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <Association Name="FK__Addresses__UserI__3F115E1A">
+        <Association Name="FK__Addresses__UserI__6501FCD8">
           <End Role="Users" Type="Self.User" Multiplicity="1" />
           <End Role="Addresses" Type="Self.Address" Multiplicity="*" />
           <ReferentialConstraint>
@@ -573,7 +574,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Addresses__ZipCo__40058253">
+        <Association Name="FK__Addresses__ZipCo__65F62111">
           <End Role="ZipCodes" Type="Self.ZipCode" Multiplicity="1" />
           <End Role="Addresses" Type="Self.Address" Multiplicity="*" />
           <ReferentialConstraint>
@@ -585,7 +586,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__AddressI__531856C7">
+        <Association Name="FK__Orders__AddressI__7908F585">
           <End Role="Addresses" Type="Self.Address" Multiplicity="1" />
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -597,7 +598,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__Delivery__540C7B00">
+        <Association Name="FK__Orders__Delivery__79FD19BE">
           <End Role="DeliveryOptions" Type="Self.DeliveryOption" Multiplicity="1" />
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -609,7 +610,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderedIt__Order__57DD0BE4">
+        <Association Name="FK__OrderedIt__Order__7DCDAAA2">
           <End Role="Orders" Type="Self.Order" Multiplicity="1" />
           <End Role="OrderedItems" Type="Self.OrderedItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -621,7 +622,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderedIt__Produ__58D1301D">
+        <Association Name="FK__OrderedIt__Produ__7EC1CEDB">
           <End Role="Products" Type="Self.Product" Multiplicity="1" />
           <End Role="OrderedItems" Type="Self.OrderedItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -633,7 +634,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__OrderSta__55009F39">
+        <Association Name="FK__Orders__OrderSta__7AF13DF7">
           <End Role="OrderStages" Type="Self.OrderStage" Multiplicity="1" />
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -645,7 +646,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__UserID__5224328E">
+        <Association Name="FK__Orders__UserID__7814D14C">
           <End Role="Users" Type="Self.User" Multiplicity="1" />
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -657,7 +658,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__Catego__44CA3770">
+        <Association Name="FK__Products__Catego__6ABAD62E">
           <End Role="ProductsCategories" Type="Self.ProductsCategory" Multiplicity="1" />
           <End Role="Products" Type="Self.Product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -669,7 +670,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ShoppingC__Produ__4B7734FF">
+        <Association Name="FK__ShoppingC__Produ__7167D3BD">
           <End Role="Products" Type="Self.Product" Multiplicity="1" />
           <End Role="ShoppingCartItems" Type="Self.ShoppingCartItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -681,7 +682,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ShoppingC__Shopp__4A8310C6">
+        <Association Name="FK__ShoppingC__Shopp__7073AF84">
           <End Role="ShoppingCarts" Type="Self.ShoppingCart" Multiplicity="1" />
           <End Role="ShoppingCartItems" Type="Self.ShoppingCartItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -693,7 +694,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ShoppingC__UserI__47A6A41B">
+        <Association Name="FK__ShoppingC__UserI__6D9742D9">
           <End Role="Users" Type="Self.User" Multiplicity="1" />
           <End Role="ShoppingCarts" Type="Self.ShoppingCart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -705,7 +706,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MSSQLinAzure" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="GeneralPurposeDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Addresses" EntityType="Self.Address" />
           <EntitySet Name="AppSettings" EntityType="Self.AppSetting" />
           <EntitySet Name="DeliveryOptions" EntityType="Self.DeliveryOption" />
@@ -719,57 +720,58 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="ZipCodes" EntityType="Self.ZipCode" />
           <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
-          <AssociationSet Name="FK__Addresses__UserI__3F115E1A" Association="Self.FK__Addresses__UserI__3F115E1A">
+          <AssociationSet Name="FK__Addresses__UserI__6501FCD8" Association="Self.FK__Addresses__UserI__6501FCD8">
             <End Role="Users" EntitySet="Users" />
             <End Role="Addresses" EntitySet="Addresses" />
           </AssociationSet>
-          <AssociationSet Name="FK__Addresses__ZipCo__40058253" Association="Self.FK__Addresses__ZipCo__40058253">
+          <AssociationSet Name="FK__Addresses__ZipCo__65F62111" Association="Self.FK__Addresses__ZipCo__65F62111">
             <End Role="ZipCodes" EntitySet="ZipCodes" />
             <End Role="Addresses" EntitySet="Addresses" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__AddressI__531856C7" Association="Self.FK__Orders__AddressI__531856C7">
+          <AssociationSet Name="FK__Orders__AddressI__7908F585" Association="Self.FK__Orders__AddressI__7908F585">
             <End Role="Addresses" EntitySet="Addresses" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__Delivery__540C7B00" Association="Self.FK__Orders__Delivery__540C7B00">
+          <AssociationSet Name="FK__Orders__Delivery__79FD19BE" Association="Self.FK__Orders__Delivery__79FD19BE">
             <End Role="DeliveryOptions" EntitySet="DeliveryOptions" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderedIt__Order__57DD0BE4" Association="Self.FK__OrderedIt__Order__57DD0BE4">
+          <AssociationSet Name="FK__OrderedIt__Order__7DCDAAA2" Association="Self.FK__OrderedIt__Order__7DCDAAA2">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="OrderedItems" EntitySet="OrderedItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderedIt__Produ__58D1301D" Association="Self.FK__OrderedIt__Produ__58D1301D">
+          <AssociationSet Name="FK__OrderedIt__Produ__7EC1CEDB" Association="Self.FK__OrderedIt__Produ__7EC1CEDB">
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderedItems" EntitySet="OrderedItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__OrderSta__55009F39" Association="Self.FK__Orders__OrderSta__55009F39">
+          <AssociationSet Name="FK__Orders__OrderSta__7AF13DF7" Association="Self.FK__Orders__OrderSta__7AF13DF7">
             <End Role="OrderStages" EntitySet="OrderStages" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__UserID__5224328E" Association="Self.FK__Orders__UserID__5224328E">
+          <AssociationSet Name="FK__Orders__UserID__7814D14C" Association="Self.FK__Orders__UserID__7814D14C">
             <End Role="Users" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__Catego__44CA3770" Association="Self.FK__Products__Catego__44CA3770">
+          <AssociationSet Name="FK__Products__Catego__6ABAD62E" Association="Self.FK__Products__Catego__6ABAD62E">
             <End Role="ProductsCategories" EntitySet="ProductsCategories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__ShoppingC__Produ__4B7734FF" Association="Self.FK__ShoppingC__Produ__4B7734FF">
+          <AssociationSet Name="FK__ShoppingC__Produ__7167D3BD" Association="Self.FK__ShoppingC__Produ__7167D3BD">
             <End Role="Products" EntitySet="Products" />
             <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__ShoppingC__Shopp__4A8310C6" Association="Self.FK__ShoppingC__Shopp__4A8310C6">
+          <AssociationSet Name="FK__ShoppingC__Shopp__7073AF84" Association="Self.FK__ShoppingC__Shopp__7073AF84">
             <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
             <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
           </AssociationSet>
-          <AssociationSet Name="FK__ShoppingC__UserI__47A6A41B" Association="Self.FK__ShoppingC__UserI__47A6A41B">
+          <AssociationSet Name="FK__ShoppingC__UserI__6D9742D9" Association="Self.FK__ShoppingC__UserI__6D9742D9">
             <End Role="Users" EntitySet="Users" />
             <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
           </AssociationSet>
           <FunctionImport Name="STP_GetAppSetting" ReturnType="Collection(String)">
           <Parameter Name="Name" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="STP_GetUsersInfo" ReturnType="Collection(GeneralPurposeDBModel.STP_GetUsersInfo_Result)" />
           <FunctionImport Name="STP_NewAppSetting">
             <Parameter Name="Name" Mode="In" Type="String" />
             <Parameter Name="Value" Mode="In" Type="String" />
@@ -782,12 +784,27 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             <Parameter Name="Value" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="STP_GetUsersInfo_Result">
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="FirstName1" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SecondLastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Cellphone" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ProfilePhotoPath" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="isCustomer" Nullable="false" />
+          <Property Type="Boolean" Name="isAdmin" Nullable="false" />
+          <Property Type="Boolean" Name="iSActive" Nullable="false" />
+          <Property Type="DateTime" Name="lastLogin" Nullable="false" Precision="23" />
+          <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="10" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GeneralPurposeDBModelStoreContainer" CdmEntityContainer="MSSQLinAzure">
+        <EntityContainerMapping StorageEntityContainer="GeneralPurposeDBModelStoreContainer" CdmEntityContainer="GeneralPurposeDBEntities">
           <EntitySetMapping Name="Addresses">
             <EntityTypeMapping TypeName="GeneralPurposeDBModel.Address">
               <MappingFragment StoreEntitySet="Addresses">
@@ -905,7 +922,6 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="GeneralPurposeDBModel.User">
               <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="ResetPasswordCode" ColumnName="ResetPasswordCode" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="FirstLastName" ColumnName="FirstLastName" />
@@ -914,10 +930,11 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="ProfilePhotoPath" ColumnName="ProfilePhotoPath" />
-                <ScalarProperty Name="isShopper" ColumnName="isShopper" />
+                <ScalarProperty Name="isCustomer" ColumnName="isCustomer" />
                 <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
                 <ScalarProperty Name="iSActive" ColumnName="iSActive" />
                 <ScalarProperty Name="lastLogin" ColumnName="lastLogin" />
+                <ScalarProperty Name="ResetPasswordCode" ColumnName="ResetPasswordCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -945,6 +962,25 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="STP_GetAppSetting" FunctionName="GeneralPurposeDBModel.Store.STP_GetAppSetting" />
+          <FunctionImportMapping FunctionImportName="STP_GetUsersInfo" FunctionName="GeneralPurposeDBModel.Store.STP_GetUsersInfo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="GeneralPurposeDBModel.STP_GetUsersInfo_Result">
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="FirstName1" ColumnName="FirstName1" />
+                <ScalarProperty Name="FirstLastName" ColumnName="FirstLastName" />
+                <ScalarProperty Name="SecondLastName" ColumnName="SecondLastName" />
+                <ScalarProperty Name="Cellphone" ColumnName="Cellphone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ProfilePhotoPath" ColumnName="ProfilePhotoPath" />
+                <ScalarProperty Name="isCustomer" ColumnName="isCustomer" />
+                <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+                <ScalarProperty Name="iSActive" ColumnName="iSActive" />
+                <ScalarProperty Name="lastLogin" ColumnName="lastLogin" />
+                <ScalarProperty Name="ResetPasswordCode" ColumnName="ResetPasswordCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="STP_NewAppSetting" FunctionName="GeneralPurposeDBModel.Store.STP_NewAppSetting" />
           <FunctionImportMapping FunctionImportName="STP_ResetAppSetting" FunctionName="GeneralPurposeDBModel.Store.STP_ResetAppSetting" />
           <FunctionImportMapping FunctionImportName="STP_SetAppSetting" FunctionName="GeneralPurposeDBModel.Store.STP_SetAppSetting" />

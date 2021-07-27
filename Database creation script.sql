@@ -67,19 +67,19 @@ GO
 -- For
 CREATE TABLE [Users]
 (
-    [UserID]           int IDENTITY (100,1) PRIMARY KEY,
-    [FirstName]        varchar(50)        NOT NULL,
-    [FirstLastName]    varchar(50)        NOT NULL,
-    [SecondLastName]   varchar(50)        NOT NULL,
-    [Cellphone]        varchar(50) UNIQUE NOT NULL,
-    [Email]            varchar(50) UNIQUE NOT NULL,
-    [Password]         varchar(50)        NOT NULL,
-    [ProfilePhotoPath] varchar(100)       NOT NULL,
-    [isShopper]        BIT                NOT NULL,
-    [isAdmin]          BIT                NOT NULL,
-    [iSActive]         BIT                NOT NULL,
-    [lastLogin]        DATETIME           NOT NULL,
-    [ResetPasswordCode] [varchar](10) NULL,
+    [UserID]            int IDENTITY (100,1) PRIMARY KEY,
+    [FirstName]         varchar(50)        NOT NULL,
+    [FirstLastName]     varchar(50)        NOT NULL,
+    [SecondLastName]    varchar(50)        NOT NULL,
+    [Cellphone]         varchar(50)        NOT NULL,
+    [Email]             varchar(50) UNIQUE NOT NULL,
+    [Password]          varchar(50)        NOT NULL,
+    [ProfilePhotoPath]  varchar(100)       NOT NULL,
+    [isCustomer]        BIT                NOT NULL,
+    [isAdmin]           BIT                NOT NULL,
+    [iSActive]          BIT                NOT NULL,
+    [lastLogin]         DATETIME           NOT NULL,
+    [ResetPasswordCode] [varchar](10)      NULL,
 )
 GO
 
@@ -187,3 +187,27 @@ CREATE TABLE [OrderedItems]
     [AmountDiscounted] Decimal NOT NULL,
 )
 GO
+
+CREATE PROCEDURE STP_GetUsersInfo
+AS
+BEGIN
+    SELECT [FirstName]
+         , [FirstName]
+         , [FirstLastName]
+         , [SecondLastName]
+         , [Cellphone]
+         , [Email]
+         , [Password]
+         , [ProfilePhotoPath]
+         , [isCustomer]
+         , [isAdmin]
+         , [iSActive]
+         , [lastLogin]
+         , [ResetPasswordCode]
+    FROM [GeneralPurposeDB].[dbo].[Users]
+    --            left join [GeneralPurposeDB].[dbo].[Grades] on [Students].[StudentID] = [Grades].[StudentID]
+--   where [Users].StudentID = @StudentID;
+END
+GO
+
+Execute STP_GetUsersInfo

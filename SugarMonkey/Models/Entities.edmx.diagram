@@ -4,32 +4,32 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="cefc28bfea164b00aaa70a958f28adc2" Name="Diagram1">
+      <Diagram DiagramId="6c7da25f13cd4fe8809a337317b32985" Name="Diagram1">
         <EntityTypeShape EntityType="GeneralPurposeDBModel.Address" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.AppSetting" Width="1.5" PointX="10" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.DeliveryOption" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.AppSetting" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.DeliveryOption" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.OrderedItem" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.Order" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.OrderStage" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.Product" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.ProductsCategory" Width="1.5" PointX="9.875" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.ShoppingCartItem" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.ShoppingCart" Width="1.5" PointX="2.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.User" Width="1.5" PointX="0.875" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.ZipCode" Width="1.5" PointX="2.875" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.database_firewall_rules" Width="1.5" PointX="10" PointY="1.75" IsExpanded="true" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__UserI__3F115E1A" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__ZipCo__40058253" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__AddressI__531856C7" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__Delivery__540C7B00" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Order__57DD0BE4" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Produ__58D1301D" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__OrderSta__55009F39" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__UserID__5224328E" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Products__Catego__44CA3770" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Produ__4B7734FF" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Shopp__4A8310C6" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__UserI__47A6A41B" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.OrderStage" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.Product" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.ProductsCategory" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.ShoppingCartItem" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.ShoppingCart" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.User" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.ZipCode" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.database_firewall_rules" Width="1.5" PointX="9.75" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__UserI__6501FCD8" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__ZipCo__65F62111" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__AddressI__7908F585" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__Delivery__79FD19BE" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Order__7DCDAAA2" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Produ__7EC1CEDB" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__OrderSta__7AF13DF7" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__UserID__7814D14C" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Products__Catego__6ABAD62E" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Produ__7167D3BD" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Shopp__7073AF84" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__UserI__6D9742D9" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
