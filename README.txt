@@ -2,9 +2,15 @@ SugarMonkey
 
 
 TODO List
+ - Need to update Nave bars
 
-Need to update Nave bars
 
+
+Data base information:
+User Name:	Defaultadmin
+Password:	4tn8vN%^5Wj7
+Server:		generalpurposemssql.database.windows.net
+database: 	GeneralPurposeDB
 
 
 Tutorial used:
@@ -24,18 +30,7 @@ Tutorial used:
 	https://qawithexperts.com/article/asp.net/data-annotation-in-aspnet-mvc-example-with-creating-custom-v/116
 
 
-DB Access
-
-Other Info
-SC601PA-SugarMonkey
-
-
-SQL credential
-Defaultadmin
-4tn8vN%^5Wj7
-
-generalpurposemssql
-GeneralPurposeDB
-
-GeneralPurpose
-
+EMails
+kelopez.48@gmail.com
+ari_lw@hotmail.com
+jjguzmanmeza15@gmail.com

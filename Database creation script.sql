@@ -63,23 +63,21 @@ BEGIN
 END
 GO
 
-
--- For
 CREATE TABLE [Users]
 (
     [UserID]            int IDENTITY (100,1) PRIMARY KEY,
-    [FirstName]         varchar(50)        NOT NULL,
-    [FirstLastName]     varchar(50)        NOT NULL,
-    [SecondLastName]    varchar(50)        NOT NULL,
-    [Cellphone]         varchar(50)        NOT NULL,
-    [Email]             varchar(50) UNIQUE NOT NULL,
-    [Password]          varchar(50)        NOT NULL,
-    [ProfilePhotoPath]  varchar(100)       NOT NULL,
-    [isCustomer]        BIT                NOT NULL,
-    [isAdmin]           BIT                NOT NULL,
-    [iSActive]          BIT                NOT NULL,
-    [lastLogin]         DATETIME           NOT NULL,
-    [ResetPasswordCode] [varchar](10)      NULL,
+    [FirstName]         varchar(50)   NOT NULL,
+    [FirstLastName]     varchar(50)   NOT NULL,
+    [SecondLastName]    varchar(50)   NULL,
+    [Cellphone]         int           NULL,
+    [Email]             varchar(50)   NOT NULL UNIQUE,
+    [Password]          varchar(50)   NOT NULL,
+    [ProfilePhotoPath]  varchar(100)  NULL,
+    [isCustomer]        BIT           NULL DEFAULT 1,
+    [isAdmin]           BIT           NULL DEFAULT 0,
+    [iSActive]          BIT           NULL DEFAULT 0,
+    [lastLogin]         DATETIME      NULL,
+    [ResetPasswordCode] [varchar](10) NULL,
 )
 GO
 
@@ -205,9 +203,58 @@ BEGIN
          , [lastLogin]
          , [ResetPasswordCode]
     FROM [GeneralPurposeDB].[dbo].[Users]
-    --            left join [GeneralPurposeDB].[dbo].[Grades] on [Students].[StudentID] = [Grades].[StudentID]
---   where [Users].StudentID = @StudentID;
 END
+GO
+
+CREATE PROCEDURE STP_GetUsersInfoByID @UserID INT
+AS
+BEGIN
+    SELECT [FirstName]
+         , [FirstName]
+         , [FirstLastName]
+         , [SecondLastName]
+         , [Cellphone]
+         , [Email]
+         , [Password]
+         , [ProfilePhotoPath]
+         , [isCustomer]
+         , [isAdmin]
+         , [iSActive]
+         , [lastLogin]
+         , [ResetPasswordCode]
+    FROM [GeneralPurposeDB].[dbo].[Users]
+    WHERE UserID = @UserID;
+END
+GO
+
+CREATE PROCEDURE STP_CreateUser @FirstName varchar(50),
+                                @FirstLastName varchar(50),
+                                @SecondLastName varchar(50),
+                                @Cellphone int,
+                                @Email varchar(50),
+                                @Password varchar(50)
+AS
+BEGIN
+    INSERT INTO [GeneralPurposeDB].[dbo].[Users] ([FirstName], [FirstLastName], [SecondLastName], [Cellphone], [Email],
+                                                  [Password])
+    VALUES (@FirstName, @FirstLastName, @SecondLastName, @Cellphone, @Email, @Password);
+
+    DECLARE @UserID int = SCOPE_IDENTITY();
+
+    Execute STP_GetUsersInfoByID @UserID;
+END
+GO
+
+EXECUTE STP_CreateUser "Beyonce","Collins","Harvey",12345678,"Beyonce.Collins.Har.@milliner.pro","Monkey@123";
+EXECUTE STP_CreateUser "Cassietta","Cooper","Andrews",12345678,"Cassietta.Cooper.And.@milliner.pro","Monkey@124";
+EXECUTE STP_CreateUser "Cleotha","Watson","Cunningham",12345678,"Cleotha.Watson.Cun.@milliner.pro","Monkey@125";
+EXECUTE STP_CreateUser "Deion","Williams","Hicks",12345678,"Deion.Williams.Hic.@milliner.pro","Monkey@126";
+EXECUTE STP_CreateUser "Deiondre","Johnson","Bennett",12345678,"Deiondre.Johnson.Ben.@milliner.pro","Monkey@127";
+EXECUTE STP_CreateUser "Deiondre","Butler","Stephens",12345678,"Deiondre.Butler.Ste.@milliner.pro","Monkey@128";
+EXECUTE STP_CreateUser "Dele","Smith","Joseph",12345678,"Dele.Smith.Jos.@milliner.pro","Monkey@129";
+EXECUTE STP_CreateUser "Denzel","Jones","Gibson",12345678,"Denzel.Jones.Gib.@milliner.pro","Monkey@130";
+EXECUTE STP_CreateUser "Dericia","Alexander","Armstrong",12345678,"Dericia.Alexander.Arm.@milliner.pro","Monkey@131";
+EXECUTE STP_CreateUser "Dewayne","Brown","Crawford",12345678,"Dewayne.Brown.Cra.@milliner.pro","Monkey@132";
 GO
 
 Execute STP_GetUsersInfo
