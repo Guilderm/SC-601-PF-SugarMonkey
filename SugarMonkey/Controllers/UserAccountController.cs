@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web.Mvc;
 using SugarMonkey.Models;
+using SugarMonkey.Models.Logic;
 using SugarMonkey.Models.View;
 
 namespace SugarMonkey.Controllers
@@ -75,7 +77,8 @@ namespace SugarMonkey.Controllers
                 var isValidUser = IsValidUser(model);
 
                 //If user is valid & present in database, we are redirecting it to Welcome page.
-                if (isValidUser != null) return View("Welcome", isValidUser);
+                if (isValidUser != null)
+                { return View("Welcome", isValidUser);}
 
                 //If the username and password combination is not present in DB then error message is shown.
                 ModelState.AddModelError("Failure", "Wrong Username and password combination !");
@@ -92,12 +95,12 @@ namespace SugarMonkey.Controllers
         }
 
         //function to check if User is valid or not
-        public RegisterUser IsValidUser(Login model)
+        public User IsValidUser(Login model)
         {
-            using (var dataContext = new LoginRegistrationInMVCEntities())
+            using (var dataContext = new MSSQLinAzure())
             {
                 //Retireving the user details from DB based on username and password enetered by user.
-                RegisterUser user = dataContext.RegisterUsers
+                User user = dataContext.Users
                     .Where(query => query.Email.Equals(model.Email) && query.Password.Equals(model.Password))
                     .SingleOrDefault();
                 //If user is present, then true is returned.
@@ -117,11 +120,11 @@ namespace SugarMonkey.Controllers
         public ActionResult ForgotPassword(string EmailID)
         {
             string resetCode = Guid.NewGuid().ToString();
-            var verifyUrl = "/Account/ResetPassword/" + resetCode;
-            var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
-            using (var context = new LoginRegistrationInMVCEntities())
+            string verifyUrl = "/Account/ResetPassword/" + resetCode;
+            string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
+            using (var context = new MSSQLinAzure())
             {
-                var getUser = (from s in context.RegisterUsers where s.Email == EmailID select s).FirstOrDefault();
+                var getUser = (from s in context.Users where s.Email == EmailID select s).FirstOrDefault();
                 if (getUser != null)
                 {
                     getUser.ResetPasswordCode = resetCode;
@@ -129,11 +132,11 @@ namespace SugarMonkey.Controllers
                     context.Configuration.ValidateOnSaveEnabled = false;
                     context.SaveChanges();
 
-                    var subject = "Password Reset Request";
-                    var body = "Hi " + getUser.FirstName +
-                               ", <br/> You recently requested to reset your password for your account. Click the link below to reset it. " +
-                               " <br/><br/><a href='" + link + "'>" + link + "</a> <br/><br/>" +
-                               "If you did not request a password reset, please ignore this email or reply to let us know.<br/><br/> Thank you";
+                    string subject = "Password Reset Request";
+                    string body = "Hi " + getUser.FirstName +
+                                  ", <br/> You recently requested to reset your password for your account. Click the link below to reset it. " +
+                                  " <br/><br/><a href='" + link + "'>" + link + "</a> <br/><br/>" +
+                                  "If you did not request a password reset, please ignore this email or reply to let us know.<br/><br/> Thank you";
 
                     SendEmail(getUser.Email, body, subject);
 
@@ -157,9 +160,9 @@ namespace SugarMonkey.Controllers
             //redirect to reset password page
             if (string.IsNullOrWhiteSpace(id)) return HttpNotFound();
 
-            using (var context = new LoginRegistrationInMVCEntities())
+            using (var context = new MSSQLinAzure())
             {
-                var user = context.RegisterUsers.Where(a => a.ResetPasswordCode == id).FirstOrDefault();
+                var user = context.Users.Where(a => a.ResetPasswordCode == id).FirstOrDefault();
                 if (user != null)
                 {
                     ResetPasswordModel model = new ResetPasswordModel();
@@ -175,11 +178,11 @@ namespace SugarMonkey.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ResetPassword(ResetPasswordModel model)
         {
-            var message = "";
+            string message = "";
             if (ModelState.IsValid)
-                using (var context = new LoginRegistrationInMVCEntities())
+                using (var context = new MSSQLinAzure())
                 {
-                    var user = context.RegisterUsers.Where(a => a.ResetPasswordCode == model.ResetCode)
+                    var user = context.Users.Where(a => a.ResetPasswordCode == model.ResetCode)
                         .FirstOrDefault();
                     if (user != null)
                     {

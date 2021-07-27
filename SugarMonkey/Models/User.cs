@@ -34,6 +34,7 @@ namespace SugarMonkey.Models
         public bool isAdmin { get; set; }
         public bool iSActive { get; set; }
         public System.DateTime lastLogin { get; set; }
+        public string ResetPasswordCode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Address> Addresses { get; set; }

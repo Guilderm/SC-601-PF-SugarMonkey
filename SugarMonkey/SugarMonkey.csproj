@@ -157,6 +157,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Logic\ResetPasswordModel.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -199,7 +200,6 @@
     <None Include="Artifacts\Vendors\JQuery\jquery.validate-vsdoc.js" />
     <Content Include="Artifacts\Vendors\JQuery\jquery.validate.js" />
     <Content Include="Artifacts\Vendors\JQuery\jquery.validate.unobtrusive.js" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Models\Entities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -228,12 +228,13 @@
     <Content Include="Views\UserAccount\Login.cshtml" />
     <Content Include="Views\UserAccount\Register.cshtml" />
     <Content Include="Views\UserAccount\Welcome.cshtml" />
+    <Content Include="Views\UserAccount\ForgotPassword.cshtml" />
+    <Content Include="Views\UserAccount\ResetPassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Artifacts\Images\" />
     <Folder Include="Artifacts\Media\" />
     <Folder Include="Models\Entities\" />
-    <Folder Include="Models\Logic\" />
     <Folder Include="Models\Utilities\" />
   </ItemGroup>
   <ItemGroup>

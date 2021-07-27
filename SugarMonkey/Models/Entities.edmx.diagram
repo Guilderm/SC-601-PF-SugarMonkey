@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="GeneralPurposeDBModel.ProductsCategory" Width="1.5" PointX="9.875" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.ShoppingCartItem" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.ShoppingCart" Width="1.5" PointX="2.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeneralPurposeDBModel.User" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeneralPurposeDBModel.User" Width="1.5" PointX="0.875" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.ZipCode" Width="1.5" PointX="2.875" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.database_firewall_rules" Width="1.5" PointX="10" PointY="1.75" IsExpanded="true" />
         <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__UserI__3F115E1A" ManuallyRouted="false" />
