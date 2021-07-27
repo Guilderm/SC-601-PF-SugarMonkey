@@ -225,6 +225,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\UserAccount\Login.cshtml" />
+    <Content Include="Views\UserAccount\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Artifacts\Images\" />
@@ -232,8 +234,6 @@
     <Folder Include="Models\Entities\" />
     <Folder Include="Models\Logic\" />
     <Folder Include="Models\Utilities\" />
-    <Folder Include="Views\UserAccount\" />
-    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Artifacts\Vendors\Bootstrap 5.0.2\css\bootstrap.css.map" />

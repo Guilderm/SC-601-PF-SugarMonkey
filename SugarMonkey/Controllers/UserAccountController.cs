@@ -12,10 +12,10 @@ namespace SugarMonkey.Controllers
         public ActionResult Index()
         {
             return RedirectToAction("index", "Home");
-            }
+        }
 
 
-public ActionResult Register()
+        public ActionResult Register()
         {
             return View();
         }
@@ -31,7 +31,7 @@ public ActionResult Register()
             if (ModelState.IsValid)
             {
                 //create database context using Entity framework 
-                using (var databaseContext = new LoginRegistrationInMVCEntities())
+                using (var databaseContext = new Entities())
                 {
                     //If the model state is valid i.e. the form values passed the validation then we are storing the User's details in DB.
                     RegisterUser reglog = new RegisterUser();

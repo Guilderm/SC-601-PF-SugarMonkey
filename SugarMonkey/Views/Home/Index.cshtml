@@ -9,22 +9,17 @@
         <a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a>
     </p>
 </div>
-
 <br/>
-<br/>
-
 @if (Request.IsAuthenticated)
 {
     <span>Welcome @Html.Encode(User.Identity.Name) </span>
 }
 else
 {
-    <li class="nav-item">@Html.ActionLink("Login", "Login", "UserAccount", null, new {@class = "nav-link"})</li>
-    <br/>
-    <li class="nav-item">@Html.ActionLink("Register", "Register", "UserAccount", null, new {@class = "nav-link"})</li>
+    @Html.ActionLink("Login", "Login", "UserAccount", null, new {@class = "nav-link"})
+    @Html.ActionLink("Register", "Register", "UserAccount", null, new {@class = "nav-link"})
 }
-
-
+<br/>
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
