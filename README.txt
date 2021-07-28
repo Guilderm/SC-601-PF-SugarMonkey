@@ -29,8 +29,22 @@ Tutorial used:
 	Encrypt password & decrypt it (C# Console application example)
 	https://qawithexperts.com/article/asp.net/data-annotation-in-aspnet-mvc-example-with-creating-custom-v/116
 
+Current host:
 
-EMails
+
+Menbers
+Kevin Andres López
 kelopez.48@gmail.com
+FrontEnd
+
+Ariana Rivas Valverde
 ari_lw@hotmail.com
-jjguzmanmeza15@gmail.com Juan Jose Guzman Meza
+Gestión de usuarios
+
+Juan Jose Guzman Meza
+jjguzmanmeza15@gmail.com 
+Gestión de Productos
+
+Guilder W. Milliner
+guilderw@gmail.com
+Gestión de ordenes
