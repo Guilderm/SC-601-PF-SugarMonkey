@@ -1,9 +1,9 @@
-SugarMonkey
+Github:
+gh repo clone Guilderm/SC601PA-SugarMonkey
 
 
 TODO List
  - Need to update Nave bars
-
 
 
 Data base information:

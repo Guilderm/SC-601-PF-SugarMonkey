@@ -17,14 +17,14 @@ namespace SugarMonkey.Models
         public string FirstName1 { get; set; }
         public string FirstLastName { get; set; }
         public string SecondLastName { get; set; }
-        public string Cellphone { get; set; }
+        public Nullable<int> Cellphone { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string ProfilePhotoPath { get; set; }
-        public bool isCustomer { get; set; }
-        public bool isAdmin { get; set; }
-        public bool iSActive { get; set; }
-        public System.DateTime lastLogin { get; set; }
+        public Nullable<bool> isCustomer { get; set; }
+        public Nullable<bool> isAdmin { get; set; }
+        public Nullable<bool> iSActive { get; set; }
+        public Nullable<System.DateTime> lastLogin { get; set; }
         public string ResetPasswordCode { get; set; }
     }
 }

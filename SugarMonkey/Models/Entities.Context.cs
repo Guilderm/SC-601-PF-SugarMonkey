@@ -41,6 +41,35 @@ namespace SugarMonkey.Models
         public virtual DbSet<ZipCode> ZipCodes { get; set; }
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     
+        public virtual ObjectResult<STP_CreateUser_Result> STP_CreateUser(string firstName, string firstLastName, string secondLastName, Nullable<int> cellphone, string email, string password)
+        {
+            var firstNameParameter = firstName != null ?
+                new ObjectParameter("FirstName", firstName) :
+                new ObjectParameter("FirstName", typeof(string));
+    
+            var firstLastNameParameter = firstLastName != null ?
+                new ObjectParameter("FirstLastName", firstLastName) :
+                new ObjectParameter("FirstLastName", typeof(string));
+    
+            var secondLastNameParameter = secondLastName != null ?
+                new ObjectParameter("SecondLastName", secondLastName) :
+                new ObjectParameter("SecondLastName", typeof(string));
+    
+            var cellphoneParameter = cellphone.HasValue ?
+                new ObjectParameter("Cellphone", cellphone) :
+                new ObjectParameter("Cellphone", typeof(int));
+    
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_CreateUser_Result>("STP_CreateUser", firstNameParameter, firstLastNameParameter, secondLastNameParameter, cellphoneParameter, emailParameter, passwordParameter);
+        }
+    
         public virtual ObjectResult<string> STP_GetAppSetting(string name)
         {
             var nameParameter = name != null ?
@@ -53,6 +82,15 @@ namespace SugarMonkey.Models
         public virtual ObjectResult<STP_GetUsersInfo_Result> STP_GetUsersInfo()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUsersInfo_Result>("STP_GetUsersInfo");
+        }
+    
+        public virtual ObjectResult<STP_GetUsersInfoByID_Result> STP_GetUsersInfoByID(Nullable<int> userID)
+        {
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUsersInfoByID_Result>("STP_GetUsersInfoByID", userIDParameter);
         }
     
         public virtual int STP_NewAppSetting(string name, string value, string @default, string description)

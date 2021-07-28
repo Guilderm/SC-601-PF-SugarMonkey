@@ -179,6 +179,12 @@
     <Compile Include="Models\ShoppingCartItem.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\STP_CreateUser_Result.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\STP_GetUsersInfoByID_Result.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\STP_GetUsersInfo_Result.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>

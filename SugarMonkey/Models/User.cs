@@ -26,7 +26,7 @@ namespace SugarMonkey.Models
         public string FirstName { get; set; }
         public string FirstLastName { get; set; }
         public string SecondLastName { get; set; }
-        public string Cellphone { get; set; }
+        public Nullable<int> Cellphone { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string ProfilePhotoPath { get; set; }
