@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5ea6eed48f644b88a5de513a924eac47" Name="Diagram1">
+      <Diagram DiagramId="3438a2f7a48648b79077baab203b5952" Name="Diagram1">
         <EntityTypeShape EntityType="GeneralPurposeDBModel.Address" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.AppSetting" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.DeliveryOption" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
@@ -18,18 +18,18 @@
         <EntityTypeShape EntityType="GeneralPurposeDBModel.User" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.ZipCode" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.database_firewall_rules" Width="1.5" PointX="9.75" PointY="1.75" IsExpanded="true" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__UserI__3C89F72A" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__ZipCo__3D7E1B63" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__AddressI__5090EFD7" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__Delivery__51851410" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Order__5555A4F4" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Produ__5649C92D" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__OrderSta__52793849" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__UserID__4F9CCB9E" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Products__Catego__4242D080" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Produ__48EFCE0F" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Shopp__47FBA9D6" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__UserI__451F3D2B" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__UserI__2665ABE1" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__ZipCo__2759D01A" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__AddressI__3A6CA48E" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__Delivery__3B60C8C7" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Order__3F3159AB" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Produ__40257DE4" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__OrderSta__3C54ED00" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__UserID__39788055" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Products__Catego__2C1E8537" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Produ__32CB82C6" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Shopp__31D75E8D" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__UserI__2EFAF1E2" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

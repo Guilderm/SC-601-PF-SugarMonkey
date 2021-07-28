@@ -239,9 +239,8 @@ BEGIN
                                                   [Password])
     VALUES (@FirstName, @FirstLastName, @SecondLastName, @Cellphone, @Email, @Password);
 
-    DECLARE @UserID int = SCOPE_IDENTITY();
-
-    Execute STP_GetUsersInfoByID @UserID;
+   --DECLARE @UserID int = SCOPE_IDENTITY();
+   --Execute STP_GetUsersInfoByID @UserID;
 END
 GO
 

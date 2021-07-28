@@ -20,66 +20,40 @@ namespace SugarMonkey.Controllers
             return RedirectToAction("index", "Home");
         }
 
-
-        public ActionResult Register()
+        [HttpGet]
+        public ActionResult UserRegistration()
         {
             return View();
         }
 
-        //The form's data in Register view is posted to this method. 
-        //We have binded the Register View with Register ViewModel, so we can accept object of Register class as parameter.
-        //This object contains all the values entered in the form by the user.
         [HttpPost]
-        public ActionResult SaveRegisterDetails(Register registerDetails)
+        public ActionResult UserRegistration(UserRegistration userRegistration)
         {
-            //We check if the model state is valid or not. We have used DataAnnotation attributes.
-            //If any form value fails the DataAnnotation validation the model state becomes invalid.
             if (ModelState.IsValid)
             {
-                //create database context using Entity framework 
-                using (var databaseContext = new GeneralPurposeDBEntities())
+              using (GeneralPurposeDBEntities databaseContext = new GeneralPurposeDBEntities())
                 {
-                    //If the model state is valid i.e. the form values passed the validation then we are storing the User's details in DB.
-                    User reglog = new User();
-
-                    //Save all details in RegitserUser object
-
-                    reglog.FirstName = registerDetails.FirstName;
-                    reglog.FirstLastName = registerDetails.LastName;
-                    reglog.Email = registerDetails.Email;
-                    reglog.Password = registerDetails.Password;
-
-
-                    databaseContext.Users.Add(reglog);
-                       databaseContext.SaveChanges();
-                        
-                }
-
-                ViewBag.Message = "User Details Saved";
-                return View("Register");
+                    databaseContext.STP_CreateUser(userRegistration.FirstName, userRegistration.FirstLastName, userRegistration.SecondLastName, userRegistration.Cellphone, userRegistration.Email, userRegistration.Password);
+ }
+              ViewBag.Message = "El usuario fue creado exitosamente";
+              return RedirectToAction("index", "Home");
             }
-
-            //If the validation fails, we are returning the model object with errors to the view, which will display the error messages.
-            return View("Register", registerDetails);
+            return View("UserRegistration", userRegistration);
         }
-
+        
 
         public ActionResult Login()
         {
             return View();
         }
-
-        //The login form is posted to this method.
+        
         [HttpPost]
         public ActionResult Login(Login model)
         {
-            //Checking the state of model passed as parameter.
-            if (ModelState.IsValid)
+           if (ModelState.IsValid)
             {
-                //Validating the user, whether the user is valid or not.
-                var isValidUser = IsValidUser(model);
+             User isValidUser = IsValidUser(model);
 
-                //If user is valid & present in database, we are redirecting it to Welcome page.
                 if (isValidUser != null)
                 { return View("Welcome", isValidUser);}
 
@@ -109,7 +83,7 @@ namespace SugarMonkey.Controllers
         //function to check if User is valid or not
         public User IsValidUser(Login model)
         {
-            using (var dataContext = new GeneralPurposeDBEntities())
+            using (GeneralPurposeDBEntities dataContext = new GeneralPurposeDBEntities())
             {
                 //Retireving the user details from DB based on username and password enetered by user.
                 User user = dataContext.Users
@@ -134,9 +108,9 @@ namespace SugarMonkey.Controllers
             string resetCode = Guid.NewGuid().ToString();
             string verifyUrl = "/Account/ResetPassword/" + resetCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
-            using (var context = new GeneralPurposeDBEntities())
+            using (GeneralPurposeDBEntities context = new GeneralPurposeDBEntities())
             {
-                var getUser = (from s in context.Users where s.Email == emailId select s).FirstOrDefault();
+                User getUser = (from s in context.Users where s.Email == emailId select s).FirstOrDefault();
                 if (getUser != null)
                 {
                     getUser.ResetPasswordCode = resetCode;
@@ -172,9 +146,9 @@ namespace SugarMonkey.Controllers
             //redirect to reset password page
             if (string.IsNullOrWhiteSpace(id)) return HttpNotFound();
 
-            using (var context = new GeneralPurposeDBEntities())
+            using (GeneralPurposeDBEntities context = new GeneralPurposeDBEntities())
             {
-                var user = context.Users.Where(a => a.ResetPasswordCode == id).FirstOrDefault();
+                User user = context.Users.Where(a => a.ResetPasswordCode == id).FirstOrDefault();
                 if (user != null)
                 {
                     ResetPassword model = new ResetPassword();
@@ -192,9 +166,9 @@ namespace SugarMonkey.Controllers
         {
             string message = "";
             if (ModelState.IsValid)
-                using (var context = new GeneralPurposeDBEntities())
+                using (GeneralPurposeDBEntities context = new GeneralPurposeDBEntities())
                 {
-                    var user = context.Users.Where(a => a.ResetPasswordCode == model.ResetCode)
+                    User user = context.Users.Where(a => a.ResetPasswordCode == model.ResetCode)
                         .FirstOrDefault();
                     if (user != null)
                     {

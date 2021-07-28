@@ -157,6 +157,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Logic\Login.cs" />
     <Compile Include="Models\Logic\ResetPassword.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>Entities.tt</DependentUpon>
@@ -179,9 +180,6 @@
     <Compile Include="Models\ShoppingCartItem.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\STP_CreateUser_Result.cs">
-      <DependentUpon>Entities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\STP_GetUsersInfoByID_Result.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -192,7 +190,7 @@
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View\Login.cs" />
-    <Compile Include="Models\View\Register.cs" />
+    <Compile Include="Models\View\UserRegistration.cs" />
     <Compile Include="Models\ZipCode.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -235,7 +233,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\UserAccount\Login.cshtml" />
-    <Content Include="Views\UserAccount\Register.cshtml" />
+    <Content Include="Views\UserAccount\UserRegistration.cshtml" />
     <Content Include="Views\UserAccount\Welcome.cshtml" />
     <Content Include="Views\UserAccount\ForgotPassword.cshtml" />
     <Content Include="Views\UserAccount\ResetPassword.cshtml" />
