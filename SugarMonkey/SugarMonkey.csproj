@@ -239,6 +239,8 @@
     <Content Include="Views\UserAccount\Welcome.cshtml" />
     <Content Include="Views\UserAccount\ForgotPassword.cshtml" />
     <Content Include="Views\UserAccount\ResetPassword.cshtml" />
+    <None Include="Properties\PublishProfiles\SugarMonkey - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\SugarMonkey20210727201522 - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Artifacts\Images\" />
