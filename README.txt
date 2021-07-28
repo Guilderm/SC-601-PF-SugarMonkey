@@ -33,4 +33,4 @@ Tutorial used:
 EMails
 kelopez.48@gmail.com
 ari_lw@hotmail.com
-jjguzmanmeza15@gmail.com
+jjguzmanmeza15@gmail.com Juan Jose Guzman Meza
