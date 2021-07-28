@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="GeneralPurposeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="GeneralPurposeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Addresses">
           <Key>
             <PropertyRef Name="AddressID" />
@@ -397,8 +397,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="GeneralPurposeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -789,11 +788,11 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="STP_GetAppSetting" ReturnType="Collection(String)">
-            <Parameter Name="Name" Mode="In" Type="String" />
+          <Parameter Name="Name" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="STP_GetUsersInfo" ReturnType="Collection(GeneralPurposeDBModel.STP_GetUsersInfo_Result)" />
           <FunctionImport Name="STP_GetUsersInfoByID" ReturnType="Collection(GeneralPurposeDBModel.STP_GetUsersInfoByID_Result)">
-            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          <Parameter Name="UserID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="STP_NewAppSetting">
             <Parameter Name="Name" Mode="In" Type="String" />
