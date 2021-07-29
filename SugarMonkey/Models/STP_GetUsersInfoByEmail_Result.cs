@@ -11,7 +11,7 @@ namespace SugarMonkey.Models
 {
     using System;
     
-    public partial class STP_GetUsersInfoByID_Result
+    public partial class STP_GetUsersInfoByEmail_Result
     {
         public int UserID { get; set; }
         public string FirstName { get; set; }

@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +43,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -136,6 +138,9 @@
     <Compile Include="Models\AppSetting.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Credential.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\database_firewall_rules.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -157,7 +162,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Logic\Login.cs" />
+    <Compile Include="Models\Entities\OrderEntity.cs" />
+    <Compile Include="Models\Entities\ProductEntity.cs" />
+    <Compile Include="Models\Entities\UserEntity.cs" />
+    <Compile Include="Models\Logic\OrderManagement.cs" />
+    <Compile Include="Models\Logic\ProductManagement.cs" />
+    <Compile Include="Models\Logic\UserManagement.cs" />
     <Compile Include="Models\Logic\ResetPassword.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>Entities.tt</DependentUpon>
@@ -178,6 +188,9 @@
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShoppingCartItem.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\STP_GetUsersInfoByEmail_Result.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\STP_GetUsersInfoByID_Result.cs">
@@ -232,7 +245,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\UserAccount\Login.cshtml" />
+    <Content Include="Views\UserAccount\LoginUser.cshtml" />
     <Content Include="Views\UserAccount\UserRegistration.cshtml" />
     <Content Include="Views\UserAccount\Welcome.cshtml" />
     <Content Include="Views\UserAccount\ForgotPassword.cshtml" />
@@ -241,7 +254,6 @@
   <ItemGroup>
     <Folder Include="Artifacts\Images\" />
     <Folder Include="Artifacts\Media\" />
-    <Folder Include="Models\Entities\" />
     <Folder Include="Models\Utilities\" />
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>

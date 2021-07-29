@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -13,8 +12,7 @@ namespace SugarMonkey.Controllers
 {
     public class UserAccountController : Controller
     {
-
-       [HttpGet]
+        [HttpGet]
         public ActionResult Index()
         {
             return RedirectToAction("index", "Home");
@@ -31,39 +29,48 @@ namespace SugarMonkey.Controllers
         {
             if (ModelState.IsValid)
             {
-              using (GeneralPurposeDBEntities databaseContext = new GeneralPurposeDBEntities())
+                using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
                 {
-                    databaseContext.STP_CreateUser(userRegistration.FirstName, userRegistration.FirstLastName, userRegistration.SecondLastName, userRegistration.Cellphone, userRegistration.Email, userRegistration.Password);
- }
-              ViewBag.Message = "El usuario fue creado exitosamente";
-              return RedirectToAction("index", "Home");
+                    dbContext.STP_CreateUser(userRegistration.FirstName,
+                        userRegistration.FirstLastName,
+                        userRegistration.SecondLastName,
+                        userRegistration.Cellphone,
+                        userRegistration.Email,
+                        userRegistration.Password,
+                        "notSalted");
+                }
+
+                ViewBag.Message = "El usuario fue creado exitosamente";
+                return RedirectToAction("index", "Home");
             }
+
             return View("UserRegistration", userRegistration);
         }
-        
 
-        public ActionResult Login()
+        [HttpGet]
+        public ActionResult LoginUser()
         {
             return View();
         }
-        
+
         [HttpPost]
-        public ActionResult Login(Login model)
+        public ActionResult LoginUser(Login login)
         {
-           if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-             User isValidUser = IsValidUser(model);
-
-                if (isValidUser != null)
-                { return View("Welcome", isValidUser);}
-
-                //If the username and password combination is not present in DB then error message is shown.
-                ModelState.AddModelError("Failure", "Wrong Username and password combination !");
-                return View();
+                return View(login);
             }
 
-            //If model state is not valid, the model with error message is returned to the View.
-            return View(model);
+            int userId = (int) UserManagement.GetUserId(login);
+
+            if (userId > 0)
+            {
+                Session["UserID"] = userId;
+                return RedirectToAction("index", "Home");
+            }
+
+            ModelState.AddModelError("Failure", "Wrong Username and password combination !");
+            return View(login);
         }
 
 
@@ -80,22 +87,6 @@ namespace SugarMonkey.Controllers
             return View();
         }
 
-        //function to check if User is valid or not
-        public User IsValidUser(Login model)
-        {
-            using (GeneralPurposeDBEntities dataContext = new GeneralPurposeDBEntities())
-            {
-                //Retireving the user details from DB based on username and password enetered by user.
-                User user = dataContext.Users
-                    .Where(query => query.Email.Equals(model.Email) && query.Password.Equals(model.Password))
-                    .SingleOrDefault();
-                //If user is present, then true is returned.
-                if (user == null)
-                    return null;
-                //If user is not present false is returned.
-                return user;
-            }
-        }
 
         public ActionResult ForgotPassword()
         {
@@ -108,15 +99,15 @@ namespace SugarMonkey.Controllers
             string resetCode = Guid.NewGuid().ToString();
             string verifyUrl = "/Account/ResetPassword/" + resetCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
-            using (GeneralPurposeDBEntities context = new GeneralPurposeDBEntities())
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
-                User getUser = (from s in context.Users where s.Email == emailId select s).FirstOrDefault();
+                User getUser = (from s in dbContext.Users where s.Email == emailId select s).FirstOrDefault();
                 if (getUser != null)
                 {
-                    getUser.ResetPasswordCode = resetCode;
+                    //getUser.ResetPasswordCode = resetCode;
                     //This line I have added here to avoid confirm password not match issue , as we had added a confirm password property 
-                   context.Configuration.ValidateOnSaveEnabled = false;
-                    context.SaveChanges();
+                    dbContext.Configuration.ValidateOnSaveEnabled = false;
+                    dbContext.SaveChanges();
 
                     string subject = "Password Reset Request";
                     string body = "Hi " + getUser.FirstName +
@@ -146,17 +137,13 @@ namespace SugarMonkey.Controllers
             //redirect to reset password page
             if (string.IsNullOrWhiteSpace(id)) return HttpNotFound();
 
-            using (GeneralPurposeDBEntities context = new GeneralPurposeDBEntities())
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
-                User user = context.Users.Where(a => a.ResetPasswordCode == id).FirstOrDefault();
-                if (user != null)
-                {
-                    ResetPassword model = new ResetPassword();
-                    model.ResetCode = id;
-                    return View(model);
-                }
-
-                return HttpNotFound();
+                Credential credential = dbContext.Credentials.FirstOrDefault(a => a.ResetPasswordCode == id);
+                if (credential == null) return HttpNotFound();
+                ResetPassword model = new ResetPassword();
+                model.ResetCode = id;
+                return View(model);
             }
         }
 
@@ -166,10 +153,10 @@ namespace SugarMonkey.Controllers
         {
             string message = "";
             if (ModelState.IsValid)
-                using (GeneralPurposeDBEntities context = new GeneralPurposeDBEntities())
+                using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
                 {
-                    User user = context.Users.Where(a => a.ResetPasswordCode == model.ResetCode)
-                        .FirstOrDefault();
+                    Credential user = dbContext.Credentials
+                        .FirstOrDefault(a => a.ResetPasswordCode == model.ResetCode);
                     if (user != null)
                     {
                         //you can encrypt password here, we are not doing it
@@ -177,8 +164,8 @@ namespace SugarMonkey.Controllers
                         //make resetpasswordcode empty string now
                         user.ResetPasswordCode = "";
                         //to avoid validation issues, disable it
-                        context.Configuration.ValidateOnSaveEnabled = false;
-                        context.SaveChanges();
+                        dbContext.Configuration.ValidateOnSaveEnabled = false;
+                        dbContext.SaveChanges();
                         message = "New password updated successfully";
                     }
                 }
@@ -200,9 +187,9 @@ namespace SugarMonkey.Controllers
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
-                NetworkCredential NetworkCred = new NetworkCredential("youremail@gmail.com", "YourPassword");
+                NetworkCredential networkCred = new NetworkCredential("youremail@gmail.com", "YourPassword");
                 smtp.UseDefaultCredentials = true;
-                smtp.Credentials = NetworkCred;
+                smtp.Credentials = networkCred;
                 smtp.Port = 587;
                 smtp.Send(mm);
             }

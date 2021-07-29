@@ -29,6 +29,7 @@ namespace SugarMonkey.Models
     
         public virtual DbSet<Address> Addresses { get; set; }
         public virtual DbSet<AppSetting> AppSettings { get; set; }
+        public virtual DbSet<Credential> Credentials { get; set; }
         public virtual DbSet<DeliveryOption> DeliveryOptions { get; set; }
         public virtual DbSet<OrderedItem> OrderedItems { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -41,7 +42,7 @@ namespace SugarMonkey.Models
         public virtual DbSet<ZipCode> ZipCodes { get; set; }
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     
-        public virtual int STP_CreateUser(string firstName, string firstLastName, string secondLastName, Nullable<int> cellphone, string email, string password)
+        public virtual int STP_CreateUser(string firstName, string firstLastName, string secondLastName, Nullable<int> cellphone, string email, string password, string salt)
         {
             var firstNameParameter = firstName != null ?
                 new ObjectParameter("FirstName", firstName) :
@@ -67,7 +68,11 @@ namespace SugarMonkey.Models
                 new ObjectParameter("Password", password) :
                 new ObjectParameter("Password", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("STP_CreateUser", firstNameParameter, firstLastNameParameter, secondLastNameParameter, cellphoneParameter, emailParameter, passwordParameter);
+            var saltParameter = salt != null ?
+                new ObjectParameter("Salt", salt) :
+                new ObjectParameter("Salt", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("STP_CreateUser", firstNameParameter, firstLastNameParameter, secondLastNameParameter, cellphoneParameter, emailParameter, passwordParameter, saltParameter);
         }
     
         public virtual ObjectResult<string> STP_GetAppSetting(string name)
@@ -79,9 +84,31 @@ namespace SugarMonkey.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("STP_GetAppSetting", nameParameter);
         }
     
+        public virtual ObjectResult<Nullable<int>> STP_GetCredential(string email, string password)
+        {
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("STP_GetCredential", emailParameter, passwordParameter);
+        }
+    
         public virtual ObjectResult<STP_GetUsersInfo_Result> STP_GetUsersInfo()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUsersInfo_Result>("STP_GetUsersInfo");
+        }
+    
+        public virtual ObjectResult<STP_GetUsersInfoByEmail_Result> STP_GetUsersInfoByEmail(string email)
+        {
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUsersInfoByEmail_Result>("STP_GetUsersInfoByEmail", emailParameter);
         }
     
         public virtual ObjectResult<STP_GetUsersInfoByID_Result> STP_GetUsersInfoByID(Nullable<int> userID)

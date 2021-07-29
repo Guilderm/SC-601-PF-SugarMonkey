@@ -1,14 +1,14 @@
 ﻿@model SugarMonkey.Models.View.Login
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "LoginUser";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Login</h2>
+<h2>LoginUser</h2>
 
 
 <div>
-    @using (Html.BeginForm("Login", "UserAccount"))
+    @using (Html.BeginForm("LoginUser", "UserAccount"))
     {
         <div style="color: red;">@Html.ValidationSummary()</div>
         <div class="row">
@@ -27,7 +27,7 @@
             <div class="col-lg-10">@Html.TextBoxFor(a => a.Password, new {@class = "form-control", type = "Password"})</div>
         </div>
         <br/>
-        <input type="submit" value="Login" class="btn btn-primary"/>
+        <input type="submit" value="LoginUser" class="btn btn-primary"/>
     }
 
 </div>

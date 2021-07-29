@@ -10,22 +10,22 @@
 namespace SugarMonkey.Models
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class STP_GetUsersInfoByID_Result
+    public partial class Credential
     {
-        public int UserID { get; set; }
-        public string FirstName { get; set; }
-        public string FirstLastName { get; set; }
-        public string SecondLastName { get; set; }
-        public Nullable<int> Cellphone { get; set; }
-        public string Email { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Credential()
+        {
+            this.Users = new HashSet<User>();
+        }
+    
         public int CredentialID { get; set; }
-        public string ProfilePhotoPath { get; set; }
-        public Nullable<bool> isCustomer { get; set; }
-        public Nullable<bool> isAdmin { get; set; }
-        public Nullable<bool> iSActive { get; set; }
-        public Nullable<System.DateTime> lastLogin { get; set; }
         public string Password { get; set; }
         public string ResetPasswordCode { get; set; }
+        public string Salt { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

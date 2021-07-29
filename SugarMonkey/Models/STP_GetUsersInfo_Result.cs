@@ -13,6 +13,7 @@ namespace SugarMonkey.Models
     
     public partial class STP_GetUsersInfo_Result
     {
+        public int UserID { get; set; }
         public string FirstName { get; set; }
         public string FirstName1 { get; set; }
         public string FirstLastName { get; set; }
@@ -20,11 +21,13 @@ namespace SugarMonkey.Models
         public Nullable<int> Cellphone { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public int CredentialID { get; set; }
         public string ProfilePhotoPath { get; set; }
         public Nullable<bool> isCustomer { get; set; }
         public Nullable<bool> isAdmin { get; set; }
         public Nullable<bool> iSActive { get; set; }
         public Nullable<System.DateTime> lastLogin { get; set; }
         public string ResetPasswordCode { get; set; }
+        public string Salt { get; set; }
     }
 }
