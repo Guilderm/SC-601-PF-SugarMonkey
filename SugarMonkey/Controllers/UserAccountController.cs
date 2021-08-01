@@ -72,58 +72,50 @@ namespace SugarMonkey.Controllers
             ModelState.AddModelError("Failure", "Wrong Username and password combination !");
             return View(login);
         }
-
-
+        
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             Session.Abandon(); // it will clear the session at the end of request
             return RedirectToAction("index", "Home");
         }
-
-
-        public ActionResult Welcome()
-        {
-            return View();
-        }
-
-
+        
         public ActionResult ForgotPassword()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult ForgotPassword(string emailId)
+        public ActionResult ForgotPassword(string eMail)
         {
-            string resetCode = Guid.NewGuid().ToString();
-            string verifyUrl = "/Account/ResetPassword/" + resetCode;
+            string ResetPasswordCode = Guid.NewGuid().ToString();
+            string verifyUrl = "/Account/ResetPassword/" + ResetPasswordCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
-            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+
+            int userId = UserManagement.SetResetPasswordCode(eMail, ResetPasswordCode);
+
+            if (getUser != null)
             {
-                User getUser = (from s in dbContext.Users where s.Email == emailId select s).FirstOrDefault();
-                if (getUser != null)
-                {
-                    //getUser.ResetPasswordCode = resetCode;
-                    //This line I have added here to avoid confirm password not match issue , as we had added a confirm password property 
-                    dbContext.Configuration.ValidateOnSaveEnabled = false;
-                    dbContext.SaveChanges();
+                getUser.ResetPasswordCode = ResetPasswordCode;
+                //This line I have added here to avoid confirm password not match issue , as we had added a confirm password property 
+                dbContext.Configuration.ValidateOnSaveEnabled = false;
+                dbContext.SaveChanges();
 
-                    string subject = "Password Reset Request";
-                    string body = "Hi " + getUser.FirstName +
-                                  ", <br/> You recently requested to reset your password for your account. Click the link below to reset it. " +
-                                  " <br/><br/><a href='" + link + "'>" + link + "</a> <br/><br/>" +
-                                  "If you did not request a password reset, please ignore this email or reply to let us know.<br/><br/> Thank you";
 
-                    SendEmail(getUser.Email, body, subject);
+                string subject = "Password Reset Request";
+                string body = "Hi " + getUser.FirstName +
+                              ", <br/> You recently requested to reset your password for your account. Click the link below to reset it. " +
+                              " <br/><br/><a href='" + link + "'>" + link + "</a> <br/><br/>" +
+                              "If you did not request a password reset, please ignore this email or reply to let us know.<br/><br/> Thank you";
 
-                    ViewBag.Message = "Reset password link has been sent to your email id.";
-                }
-                else
-                {
-                    ViewBag.Message = "User doesn't exists.";
-                    return View();
-                }
+                SendEmail(getUser.Email, body, subject);
+
+                ViewBag.Message = "Reset password link has been sent to your email id.";
+            }
+            else
+            {
+                ViewBag.Message = "User doesn't exists.";
+                return View();
             }
 
             return View();

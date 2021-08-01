@@ -297,6 +297,23 @@ WHERE [Email] = @Email AND [Password] = @Password
 END
 Go
 
+
+CREATE PROCEDURE STP_SetResetPasswordCode @Email varchar(50),
+@SetResetPasswordCode varchar(50)
+
+AS
+BEGIN
+    DECLARE  @CredentialID varchar(50) = (Select CredentialID from [GeneralPurposeDB].[dbo].Users where Email = @Email);
+
+    Update [GeneralPurposeDB].[dbo].[Credentials]
+        SET [ResetPasswordCode] = @SetResetPasswordCode
+    WHERE CredentialID = @CredentialID;
+
+    Select UserID from [GeneralPurposeDB].[dbo].Users where Email = @Email
+
+END
+GO
+
 EXECUTE STP_CreateUser 'Beyonce','Collins','Harvey',12345678,'Beyonce.Collins.Har.@gmail.com','Monkey@123','notSalted';
 EXECUTE STP_CreateUser 'Cassietta','Cooper','Andrews',12345678,'Cassietta.Cooper.And.@gmail.com','Monkey@124','notSalted';
 EXECUTE STP_CreateUser 'Cleotha','Watson','Cunningham',12345678,'Cleotha.Watson.Cun.@gmail.com','Monkey@125','notSalted';
@@ -311,6 +328,9 @@ GO
 
 Execute STP_GetCredential 'Dewayne.Brown.Cra.@gmail.com', 'Monkey@132';
 Go
+
+STP_SetResetPasswordCode 'Dewayne.Brown.Cra.@gmail.com', '555555'
+GO
 
 Execute STP_GetUsersInfo
 Go

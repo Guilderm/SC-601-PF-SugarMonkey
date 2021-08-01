@@ -158,5 +158,18 @@ namespace SugarMonkey.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("STP_SetAppSetting", nameParameter, valueParameter);
         }
+    
+        public virtual ObjectResult<Nullable<int>> STP_SetResetPasswordCode(string email, string setResetPasswordCode)
+        {
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+    
+            var setResetPasswordCodeParameter = setResetPasswordCode != null ?
+                new ObjectParameter("SetResetPasswordCode", setResetPasswordCode) :
+                new ObjectParameter("SetResetPasswordCode", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("STP_SetResetPasswordCode", emailParameter, setResetPasswordCodeParameter);
+        }
     }
 }

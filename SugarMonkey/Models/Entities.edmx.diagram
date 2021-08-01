@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="61fd8c3d21e7492da7b30ad351591456" Name="Diagram1">
+      <Diagram DiagramId="be758beb98f444f6a2544c076cd99e4b" Name="Diagram1">
         <EntityTypeShape EntityType="GeneralPurposeDBModel.Address" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.AppSetting" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.Credential" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
@@ -19,19 +19,19 @@
         <EntityTypeShape EntityType="GeneralPurposeDBModel.User" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.ZipCode" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="GeneralPurposeDBModel.database_firewall_rules" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__UserI__5911273F" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__ZipCo__5A054B78" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__AddressI__6D181FEC" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Users__Credentia__51700577" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__Delivery__6E0C4425" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Order__71DCD509" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Produ__72D0F942" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__OrderSta__6F00685E" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__UserID__6C23FBB3" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__Products__Catego__5ECA0095" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Produ__6576FE24" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Shopp__6482D9EB" ManuallyRouted="false" />
-        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__UserI__61A66D40" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__UserI__0B9CA70C" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Addresses__ZipCo__0C90CB45" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__AddressI__1FA39FB9" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Users__Credentia__03FB8544" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__Delivery__2097C3F2" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Order__246854D6" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__OrderedIt__Produ__255C790F" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__OrderSta__218BE82B" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Orders__UserID__1EAF7B80" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__Products__Catego__11558062" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Produ__18027DF1" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__Shopp__170E59B8" ManuallyRouted="false" />
+        <AssociationConnector Association="GeneralPurposeDBModel.FK__ShoppingC__UserI__1431ED0D" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

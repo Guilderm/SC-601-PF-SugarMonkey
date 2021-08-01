@@ -10,6 +10,11 @@
     </p>
 </div>
 <br/>
+
+<div class="text-danger">
+    @ViewBag.Message
+</div>
+
 @if (Request.IsAuthenticated)
 {
     <span>Welcome @Html.Encode(User.Identity.Name) </span>

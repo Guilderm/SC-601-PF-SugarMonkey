@@ -1,5 +1,4 @@
-﻿using System.Data.Entity.Core.Objects;
-using System.Linq;
+﻿using System.Linq;
 using SugarMonkey.Models.View;
 
 namespace SugarMonkey.Models.Logic
@@ -11,12 +10,21 @@ namespace SugarMonkey.Models.Logic
             return ValidateCredentials(login);
         }
 
-        static int ValidateCredentials(Login login)
+        private static int ValidateCredentials(Login login)
         {
             using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
                 int userId = dbContext.STP_GetCredential(login.Email, login.Password).FirstOrDefault() ?? 0;
-               return userId;
+                return userId;
+            }
+        }
+
+        public static int SetResetPasswordCode(string eMail, string ResetPasswordCode)
+        {
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            {
+                int userId = dbContext.STP_SetResetPasswordCode(eMail, ResetPasswordCode).FirstOrDefault() ?? 0;
+                return userId;
             }
         }
     }
