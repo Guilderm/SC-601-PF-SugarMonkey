@@ -94,9 +94,21 @@ namespace SugarMonkey.Controllers
 
             int userId = UserManagement.SetResetPasswordCode(eMail, ResetPasswordCode);
 
-            if (userId >0)
+            if (userId != null)
             {
-                
+                getUser.ResetPasswordCode = ResetPasswordCode;
+                //This line I have added here to avoid confirm password not match issue , as we had added a confirm password property 
+                dbContext.Configuration.ValidateOnSaveEnabled = false;
+                dbContext.SaveChanges();
+
+
+                string subject = "Password Reset Request";
+                string body = "Hi " + getUser.FirstName +
+                              ", <br/> You recently requested to reset your password for your account. Click the link below to reset it. " +
+                              " <br/><br/><a href='" + link + "'>" + link + "</a> <br/><br/>" +
+                              "If you did not request a password reset, please ignore this email or reply to let us know.<br/><br/> Thank you";
+
+                SendEmail(getUser.Email, body, subject);
 
                 ViewBag.Message = "Reset password link has been sent to your email id.";
             }
