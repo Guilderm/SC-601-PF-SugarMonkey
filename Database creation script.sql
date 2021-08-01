@@ -66,7 +66,7 @@ GO
 CREATE TABLE [Credentials]
 (
     [CredentialID]      int IDENTITY (100,1) PRIMARY KEY,
-       [Password]          varchar(50)   NOT NULL,
+    [Password]          varchar(50)   NOT NULL,
     [ResetPasswordCode] [varchar](50) NULL,
     [Salt]              [varchar](50) NULL,
 )
@@ -198,7 +198,7 @@ CREATE PROCEDURE STP_GetUsersInfo
 AS
 BEGIN
     SELECT [UserID]
-        ,[FirstName]
+         , [FirstName]
          , [FirstName]
          , [FirstLastName]
          , [SecondLastName]
@@ -227,7 +227,7 @@ BEGIN
          , [SecondLastName]
          , [Cellphone]
          , [Email]
-              , Users.[CredentialID]
+         , Users.[CredentialID]
          , [ProfilePhotoPath]
          , [isCustomer]
          , [isAdmin]
@@ -245,23 +245,15 @@ GO
 CREATE PROCEDURE STP_GetUsersInfoByEmail @Email varchar(50)
 AS
 BEGIN
-    SELECT Users.[UserID]
-         , [FirstName]
-         , [FirstLastName]
-         , [SecondLastName]
-         , [Cellphone]
-         , [Email]
-              , Users.[CredentialID]
-         , [ProfilePhotoPath]
-         , [isCustomer]
-         , [isAdmin]
-         , [iSActive]
-         , [lastLogin]
-         , [Password]
-         , [ResetPasswordCode]
-    FROM [GeneralPurposeDB].[dbo].[Users]
-             INNER JOIN [GeneralPurposeDB].[dbo].[Credentials] On [Users].[CredentialID] = [Credentials].[CredentialID]
-    WHERE Email = @Email;
+
+    DECLARE @UserID int;
+
+    Select @UserID = UserID,
+           @Email = Email
+    from [GeneralPurposeDB].[dbo].Users
+    where Email = @Email;
+
+    execute STP_GetUsersInfoByID @UserID;
 END
 GO
 
@@ -281,49 +273,63 @@ BEGIN
     DECLARE @CredentialID int = SCOPE_IDENTITY();
 
     INSERT INTO [GeneralPurposeDB].[dbo].[Users]
-        ([FirstName], [FirstLastName], [SecondLastName], [Cellphone], [Email], [CredentialID])
+    ([FirstName], [FirstLastName], [SecondLastName], [Cellphone], [Email], [CredentialID])
     VALUES (@FirstName, @FirstLastName, @SecondLastName, @Cellphone, @Email, @CredentialID);
 END
 GO
 
 CREATE PROCEDURE STP_GetCredential @Email varchar(50),
-    @Password varchar(50)
+                                   @Password varchar(50)
 AS
 BEGIN
-SELECT UserID FROM Users
-    INNER JOIN [GeneralPurposeDB].[dbo].[Credentials]
-        On [Users].[CredentialID] = [Credentials].[CredentialID]
-WHERE [Email] = @Email AND [Password] = @Password
+    SELECT UserID
+    FROM Users
+             INNER JOIN [GeneralPurposeDB].[dbo].[Credentials] On [Users].[CredentialID] = [Credentials].[CredentialID]
+    WHERE [Email] = @Email
+      AND [Password] = @Password
 END
 Go
 
 
 CREATE PROCEDURE STP_SetResetPasswordCode @Email varchar(50),
-@SetResetPasswordCode varchar(50)
-
+                                          @SetResetPasswordCode varchar(50)
 AS
 BEGIN
-    DECLARE  @CredentialID varchar(50) = (Select CredentialID from [GeneralPurposeDB].[dbo].Users where Email = @Email);
+    DECLARE @CredentialID varchar(50),
+        @UserID int;
+
+    Select @UserID = UserID,
+           @CredentialID = CredentialID
+
+    from [GeneralPurposeDB].[dbo].Users
+    where Email = @Email;
 
     Update [GeneralPurposeDB].[dbo].[Credentials]
-        SET [ResetPasswordCode] = @SetResetPasswordCode
+    SET [ResetPasswordCode] = @SetResetPasswordCode
     WHERE CredentialID = @CredentialID;
 
-    Select UserID from [GeneralPurposeDB].[dbo].Users where Email = @Email
-
+    execute STP_GetUsersInfoByID @UserID;
 END
 GO
 
-EXECUTE STP_CreateUser 'Beyonce','Collins','Harvey',12345678,'Beyonce.Collins.Har.@gmail.com','Monkey@123','notSalted';
-EXECUTE STP_CreateUser 'Cassietta','Cooper','Andrews',12345678,'Cassietta.Cooper.And.@gmail.com','Monkey@124','notSalted';
-EXECUTE STP_CreateUser 'Cleotha','Watson','Cunningham',12345678,'Cleotha.Watson.Cun.@gmail.com','Monkey@125','notSalted';
-EXECUTE STP_CreateUser 'Deion','Williams','Hicks',12345678,'Deion.Williams.Hic.@gmail.com','Monkey@126','notSalted';
-EXECUTE STP_CreateUser 'Deiondre','Johnson','Bennett',12345678,'Deiondre.Johnson.Ben.@gmail.com','Monkey@127','notSalted';
-EXECUTE STP_CreateUser 'Deiondre','Butler','Stephens',12345678,'Deiondre.Butler.Ste.@gmail.com','Monkey@128','notSalted';
-EXECUTE STP_CreateUser 'Dele','Smith','Joseph',12345678,'Dele.Smith.Jos.@gmail.com','Monkey@129','notSalted';
-EXECUTE STP_CreateUser 'Denzel','Jones','Gibson',12345678,'Denzel.Jones.Gib.@gmail.com','Monkey@130','notSalted';
-EXECUTE STP_CreateUser 'Dericia','Alexander','Armstrong',12345678,'Dericia.Alexander.Arm.@gmail.com','Monkey@131','notSalted';
-EXECUTE STP_CreateUser 'Dewayne','Brown','Crawford',12345678,'Dewayne.Brown.Cra.@gmail.com','Monkey@132','notSalted';
+EXECUTE STP_CreateUser 'Beyonce', 'Collins', 'Harvey', 12345678, 'Beyonce.Collins.Har.@gmail.com', 'Monkey@123',
+        'notSalted';
+EXECUTE STP_CreateUser 'Cassietta', 'Cooper', 'Andrews', 12345678, 'Cassietta.Cooper.And.@gmail.com', 'Monkey@124',
+        'notSalted';
+EXECUTE STP_CreateUser 'Cleotha', 'Watson', 'Cunningham', 12345678, 'Cleotha.Watson.Cun.@gmail.com', 'Monkey@125',
+        'notSalted';
+EXECUTE STP_CreateUser 'Deion', 'Williams', 'Hicks', 12345678, 'Deion.Williams.Hic.@gmail.com', 'Monkey@126',
+        'notSalted';
+EXECUTE STP_CreateUser 'Deiondre', 'Johnson', 'Bennett', 12345678, 'Deiondre.Johnson.Ben.@gmail.com', 'Monkey@127',
+        'notSalted';
+EXECUTE STP_CreateUser 'Deiondre', 'Butler', 'Stephens', 12345678, 'Deiondre.Butler.Ste.@gmail.com', 'Monkey@128',
+        'notSalted';
+EXECUTE STP_CreateUser 'Dele', 'Smith', 'Joseph', 12345678, 'Dele.Smith.Jos.@gmail.com', 'Monkey@129', 'notSalted';
+EXECUTE STP_CreateUser 'Denzel', 'Jones', 'Gibson', 12345678, 'Denzel.Jones.Gib.@gmail.com', 'Monkey@130', 'notSalted';
+EXECUTE STP_CreateUser 'Dericia', 'Alexander', 'Armstrong', 12345678, 'Dericia.Alexander.Arm.@gmail.com', 'Monkey@131',
+        'notSalted';
+EXECUTE STP_CreateUser 'Dewayne', 'Brown', 'Crawford', 12345678, 'Dewayne.Brown.Cra.@gmail.com', 'Monkey@132',
+        'notSalted';
 GO
 
 Execute STP_GetCredential 'Dewayne.Brown.Cra.@gmail.com', 'Monkey@132';

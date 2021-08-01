@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web.Mvc;
@@ -72,14 +71,14 @@ namespace SugarMonkey.Controllers
             ModelState.AddModelError("Failure", "Wrong Username and password combination !");
             return View(login);
         }
-        
+
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             Session.Abandon(); // it will clear the session at the end of request
             return RedirectToAction("index", "Home");
         }
-        
+
         public ActionResult ForgotPassword()
         {
             return View();
@@ -88,36 +87,19 @@ namespace SugarMonkey.Controllers
         [HttpPost]
         public ActionResult ForgotPassword(string eMail)
         {
-            string ResetPasswordCode = Guid.NewGuid().ToString();
-            string verifyUrl = "/Account/ResetPassword/" + ResetPasswordCode;
+            STP_SetResetPasswordCode_Result userEntity = UserManagement.SetResetPasswordCode(eMail);
+            string verifyUrl = "/Account/ResetPassword/" + userEntity.ResetPasswordCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
-            int userId = UserManagement.SetResetPasswordCode(eMail, ResetPasswordCode);
-
-            if (userId != null)
+            if (userEntity.UserID >= 10)
             {
-                getUser.ResetPasswordCode = ResetPasswordCode;
-                //This line I have added here to avoid confirm password not match issue , as we had added a confirm password property 
-                dbContext.Configuration.ValidateOnSaveEnabled = false;
-                dbContext.SaveChanges();
-
-
-                string subject = "Password Reset Request";
-                string body = "Hi " + getUser.FirstName +
-                              ", <br/> You recently requested to reset your password for your account. Click the link below to reset it. " +
-                              " <br/><br/><a href='" + link + "'>" + link + "</a> <br/><br/>" +
-                              "If you did not request a password reset, please ignore this email or reply to let us know.<br/><br/> Thank you";
-
-                SendEmail(getUser.Email, body, subject);
-
+                UserManagement.SendResetPasswordEmail(userEntity, link);
                 ViewBag.Message = "Reset password link has been sent to your email id.";
-            }
-            else
-            {
-                ViewBag.Message = "User doesn't exists.";
+
                 return View();
             }
 
+            ViewBag.Message = "User doesn't exists.";
             return View();
         }
 
@@ -168,23 +150,6 @@ namespace SugarMonkey.Controllers
             return View(model);
         }
 
-        private void SendEmail(string emailAddress, string body, string subject)
-        {
-            using (MailMessage mm = new MailMessage("youremail@gmail.com", emailAddress))
-            {
-                mm.Subject = subject;
-                mm.Body = body;
-
-                mm.IsBodyHtml = true;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.EnableSsl = true;
-                NetworkCredential networkCred = new NetworkCredential("youremail@gmail.com", "YourPassword");
-                smtp.UseDefaultCredentials = true;
-                smtp.Credentials = networkCred;
-                smtp.Port = 587;
-                smtp.Send(mm);
-            }
-        }
+       
     }
 }
