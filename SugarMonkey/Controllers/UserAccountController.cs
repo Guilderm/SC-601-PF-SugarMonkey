@@ -1,6 +1,4 @@
 ﻿using System.Linq;
-using System.Net;
-using System.Net.Mail;
 using System.Web.Mvc;
 using System.Web.Security;
 using SugarMonkey.Models;
@@ -149,7 +147,5 @@ namespace SugarMonkey.Controllers
             ViewBag.Message = message;
             return View(model);
         }
-
-       
     }
 }

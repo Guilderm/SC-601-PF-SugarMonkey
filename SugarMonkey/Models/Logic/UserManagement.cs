@@ -1,18 +1,7 @@
 ﻿using System;
 using System.Linq;
-using System.Net.Mail;
-using SugarMonkey.Models.View;
-using SugarMonkey.Models.Entities;
-
-using System;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Web.Mvc;
-using System.Web.Security;
-using SugarMonkey.Models;
-using SugarMonkey.Models.Entities;
-using SugarMonkey.Models.Logic;
 using SugarMonkey.Models.View;
 
 namespace SugarMonkey.Models.Logic
@@ -35,10 +24,11 @@ namespace SugarMonkey.Models.Logic
 
         public static STP_SetResetPasswordCode_Result SetResetPasswordCode(string eMail)
         {
-            string resetPasswordCode = Guid.NewGuid().ToString(); 
+            string resetPasswordCode = Guid.NewGuid().ToString();
             using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
-                STP_SetResetPasswordCode_Result userEntity = dbContext.STP_SetResetPasswordCode(eMail, resetPasswordCode).FirstOrDefault();
+                STP_SetResetPasswordCode_Result userEntity =
+                    dbContext.STP_SetResetPasswordCode(eMail, resetPasswordCode).FirstOrDefault();
                 return userEntity;
             }
         }
@@ -72,4 +62,4 @@ namespace SugarMonkey.Models.Logic
             }
         }
     }
-} 
+}
