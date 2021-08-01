@@ -27,5 +27,15 @@ namespace SugarMonkey.Models.Logic
                 return userId;
             }
         }
+
+        public static int getUser(string eMail, string ResetPasswordCode)
+        {
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            {
+                int userId = dbContext.STP_SetResetPasswordCode(eMail, ResetPasswordCode).FirstOrDefault() ?? 0;
+                return userId;
+            }
+        }
+        
     }
 }
