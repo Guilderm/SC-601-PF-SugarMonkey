@@ -4,8 +4,7 @@ namespace SugarMonkey.Models.View
 {
     public class UserEditInfo
     {
-        [Required] [Display(Name = "Nombre")]
-        public string FirstName { get; set; }
+        [Required] [Display(Name = "Nombre")] public string FirstName { get; set; }
 
         [Required]
         [Display(Name = "Primer Apellido")]

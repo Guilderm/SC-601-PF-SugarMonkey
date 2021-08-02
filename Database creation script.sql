@@ -379,12 +379,16 @@ GO
 Execute STP_GetCredential 'Dewayne.Brown.Cra.@gmail.com', 'Monkey@132';
 Go
 
+--Test STP_SetResetPasswordCode
 STP_SetResetPasswordCode 'Dewayne.Brown.Cra.@gmail.com', '555555'
 GO
 
 --Test STP_GetUsersInfoByID
 Execute STP_GetUsersInfoByID 100;
 GO
+
+--Test
+Execute  STP_UpdateCredentials 100, "newPassword", "Notsalted";
 
 --Get all user Data
 Execute STP_GetUsersInfo
