@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Security;
 using SugarMonkey.Models;
 using SugarMonkey.Models.Logic;
@@ -104,13 +103,20 @@ namespace SugarMonkey.Controllers
 
 
         [HttpGet]
-public ActionResult ResetPassword(string ResetPasswordCode)
+        public ActionResult ResetPassword(string ResetPasswordCode)
         {
             if (string.IsNullOrWhiteSpace(ResetPasswordCode))
             {
-                return HttpNotFound();};
+                return HttpNotFound();
+            }
+
+            ;
             ResetPasswordView resetPasswordView = UserManagement.GetUserByResetPasswordCode(ResetPasswordCode);
-            if (resetPasswordView.UserID > 10){ return HttpNotFound();}
+            if (resetPasswordView.UserID > 10)
+            {
+                return HttpNotFound();
+            }
+
             return View(resetPasswordView);
         }
 
@@ -123,16 +129,17 @@ public ActionResult ResetPassword(string ResetPasswordCode)
                 ViewBag.Message = "Something invalid";
                 return View(resetPasswordView);
             }
-           
-                STP_UpdateCredentials_Result userEntity = UserManagement.UpdateCredentials(resetPasswordView);
-            
-                if (userEntity.UserID > 10)
-                {
+
+            STP_UpdateCredentials_Result userEntity = UserManagement.UpdateCredentials(resetPasswordView);
+
+            if (userEntity.UserID > 10)
+            {
                 ViewBag.Message = "New password updated successfully";
                 return RedirectToAction("index", "Home");
             }
-                ViewBag.Message = "Something invalid";
-                return View(resetPasswordView);
+
+            ViewBag.Message = "Something invalid";
+            return View(resetPasswordView);
         }
     }
 }
