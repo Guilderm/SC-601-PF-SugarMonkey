@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Net;
-using System.Net.Mail;
+﻿using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
 using SugarMonkey.Models;
@@ -72,14 +69,14 @@ namespace SugarMonkey.Controllers
             ModelState.AddModelError("Failure", "Wrong Username and password combination !");
             return View(login);
         }
-        
+
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             Session.Abandon(); // it will clear the session at the end of request
             return RedirectToAction("index", "Home");
         }
-        
+
         public ActionResult ForgotPassword()
         {
             return View();
@@ -88,24 +85,19 @@ namespace SugarMonkey.Controllers
         [HttpPost]
         public ActionResult ForgotPassword(string eMail)
         {
-            string ResetPasswordCode = Guid.NewGuid().ToString();
-            string verifyUrl = "/Account/ResetPassword/" + ResetPasswordCode;
+            STP_SetResetPasswordCode_Result userEntity = UserManagement.SetResetPasswordCode(eMail);
+            string verifyUrl = "/Account/ResetPassword/" + userEntity.ResetPasswordCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
-            int userId = UserManagement.SetResetPasswordCode(eMail, ResetPasswordCode);
-
-            if (userId >0)
+            if (userEntity.UserID >= 10)
             {
-                
-
+                UserManagement.SendResetPasswordEmail(userEntity, link);
                 ViewBag.Message = "Reset password link has been sent to your email id.";
-            }
-            else
-            {
-                ViewBag.Message = "User doesn't exists.";
+
                 return View();
             }
 
+            ViewBag.Message = "User doesn't exists.";
             return View();
         }
 
