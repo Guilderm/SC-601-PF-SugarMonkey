@@ -204,6 +204,7 @@
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View\Login.cs" />
+    <Compile Include="Models\View\UserEditInfo.cs" />
     <Compile Include="Models\View\UserRegistration.cs" />
     <Compile Include="Models\ZipCode.cs">
       <DependentUpon>Entities.tt</DependentUpon>
@@ -250,6 +251,7 @@
     <Content Include="Views\UserAccount\UserRegistration.cshtml" />
     <Content Include="Views\UserAccount\ForgotPassword.cshtml" />
     <Content Include="Views\UserAccount\ResetPassword.cshtml" />
+    <Content Include="Views\UserAccount\UserEditInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Artifacts\Images\" />
