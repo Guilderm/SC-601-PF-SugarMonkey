@@ -281,15 +281,19 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE STP_GetCredential @Email varchar(50),
-                                   @Password varchar(50)
+CREATE PROCEDURE STP_GetUserByCredentials @Email varchar(50),
+                                          @Password varchar(50)
 AS
 BEGIN
-    SELECT UserID
+    DECLARE @UserID int;
+
+    SELECT @UserID = UserID
     FROM Users
              INNER JOIN [GeneralPurposeDB].[dbo].[Credentials] On [Users].[CredentialID] = [Credentials].[CredentialID]
     WHERE [Email] = @Email
       AND [Password] = @Password
+
+    execute STP_GetUsersInfoByID @UserID;
 END
 Go
 
@@ -388,7 +392,7 @@ Execute STP_GetUsersInfoByID 100;
 GO
 
 --Test
-Execute  STP_UpdateCredentials 100, "newPassword", "Notsalted";
+Execute STP_UpdateCredentials 100, "newPassword", "Notsalted";
 
 --Get all user Data
 Execute STP_GetUsersInfo

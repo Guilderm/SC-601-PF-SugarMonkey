@@ -23,7 +23,9 @@ WHILE @name is not null
         PRINT 'Dropped Procedure: ' + @name
         SELECT @name = (SELECT TOP 1 [name]
                         FROM sysobjects
-                        WHERE [type] = 'P' AND category = 0 AND [name] > @name
+                        WHERE [type] = 'P'
+                          AND category = 0
+                          AND [name] > @name
                         ORDER BY [name])
     END
 GO
@@ -41,7 +43,9 @@ WHILE @name IS NOT NULL
         PRINT 'Dropped View: ' + @name
         SELECT @name = (SELECT TOP 1 [name]
                         FROM sysobjects
-                        WHERE [type] = 'V' AND category = 0 AND [name] > @name
+                        WHERE [type] = 'V'
+                          AND category = 0
+                          AND [name] > @name
                         ORDER BY [name])
     END
 GO
@@ -52,7 +56,8 @@ DECLARE @SQL  VARCHAR(254)
 
 SELECT @name = (SELECT TOP 1 [name]
                 FROM sysobjects
-                WHERE [type] IN (N'FN', N'IF', N'TF', N'FS', N'FT') AND category = 0
+                WHERE [type] IN (N'FN', N'IF', N'TF', N'FS', N'FT')
+                  AND category = 0
                 ORDER BY [name])
 
 WHILE @name IS NOT NULL
@@ -162,7 +167,9 @@ WHILE @name IS NOT NULL
         PRINT 'Dropped Table: ' + @name
         SELECT @name = (SELECT TOP 1 [name]
                         FROM sysobjects
-                        WHERE [type] = 'U' AND category = 0 AND [name] > @name
+                        WHERE [type] = 'U'
+                          AND category = 0
+                          AND [name] > @name
                         ORDER BY [name])
     END
 GO

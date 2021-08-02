@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SugarMonkey.Models.View
+namespace SugarMonkey.Models.Views
 {
-    public class ResetPasswordView
+    public class ResetPasswordViewModel
     {
         public int UserID { get; set; }
 

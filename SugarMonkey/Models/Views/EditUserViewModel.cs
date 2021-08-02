@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SugarMonkey.Models.View
+namespace SugarMonkey.Models.Views
 {
-    public class UserEditView
+    public class EditUserViewModel
     {
         [Required] [Display(Name = "Nombre")] public string FirstName { get; set; }
 

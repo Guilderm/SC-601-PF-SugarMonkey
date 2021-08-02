@@ -84,7 +84,7 @@ namespace SugarMonkey.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("STP_GetAppSetting", nameParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> STP_GetCredential(string email, string password)
+        public virtual ObjectResult<STP_GetUserByCredentials_Result> STP_GetUserByCredentials(string email, string password)
         {
             var emailParameter = email != null ?
                 new ObjectParameter("Email", email) :
@@ -94,7 +94,7 @@ namespace SugarMonkey.Models
                 new ObjectParameter("Password", password) :
                 new ObjectParameter("Password", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("STP_GetCredential", emailParameter, passwordParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUserByCredentials_Result>("STP_GetUserByCredentials", emailParameter, passwordParameter);
         }
     
         public virtual ObjectResult<STP_GetUserByResetPasswordCode_Result> STP_GetUserByResetPasswordCode(string resetPasswordCode)

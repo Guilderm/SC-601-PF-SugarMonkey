@@ -1,10 +1,8 @@
-﻿using System.Net;
-using System.Net.Mail;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Security;
 using SugarMonkey.Models;
-using SugarMonkey.Models.Logic;
-using SugarMonkey.Models.View;
+using SugarMonkey.Models.BusinessLogic;
+using SugarMonkey.Models.Views;
 
 namespace SugarMonkey.Controllers
 {
@@ -23,26 +21,17 @@ namespace SugarMonkey.Controllers
         }
 
         [HttpPost]
-        public ActionResult UserRegistration(UserRegistrationView userRegistrationView)
+        public ActionResult UserRegistration(UserRegistrationViewModel userRegistrationViewModel)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
-                {
-                    dbContext.STP_CreateUser(userRegistrationView.FirstName,
-                        userRegistrationView.FirstLastName,
-                        userRegistrationView.SecondLastName,
-                        userRegistrationView.Cellphone,
-                        userRegistrationView.Email,
-                        userRegistrationView.Password,
-                        "notSalted");
-                }
-
-                ViewBag.Message = "El usuario fue creado exitosamente";
-                return RedirectToAction("index", "MainPage");
+                ViewBag.Message = "There is problem with the data";
+                return View("UserRegistration", userRegistrationViewModel);
             }
 
-            return View("UserRegistration", userRegistrationView);
+            STP_CreateUser_Result userEntity = UserBusinessLogic.CreateUser(userRegistrationViewModel);
+            ViewBag.Message = "El usuario fue creado exitosamente";
+            return RedirectToAction("index", "MainPage");
         }
 
         [HttpGet]
@@ -52,29 +41,29 @@ namespace SugarMonkey.Controllers
         }
 
         [HttpPost]
-        public ActionResult LoginUser(LoginView loginView)
+        public ActionResult LoginUser(LoginUserViewModel loginUserView)
         {
             if (!ModelState.IsValid)
             {
-                return View(loginView);
+                return View(loginUserView);
             }
 
-            int userId = (int) UserBusinessLogic.GetUserId(loginView);
+            STP_GetUserByCredentials_Result userEntity = UserBusinessLogic.GetUser(loginUserView);
 
-            if (userId > 0)
+            if (userEntity.UserID > 10)
             {
-                Session["UserID"] = userId;
+                Session["UserID"] = userEntity.UserID;
                 return RedirectToAction("index", "MainPage");
             }
 
             ModelState.AddModelError("Failure", "Wrong Username and password combination !");
-            return View(loginView);
+            return View(loginUserView);
         }
 
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            Session.Abandon(); // it will clear the session at the end of request
+            Session.Abandon();
             return RedirectToAction("index", "MainPage");
         }
 
@@ -87,52 +76,50 @@ namespace SugarMonkey.Controllers
         public ActionResult ForgotPassword(string eMail)
         {
             STP_SetResetPasswordCode_Result userEntity = UserBusinessLogic.SetResetPasswordCode(eMail);
-            string verifyUrl = "/Account/ResetPasswordView/" + userEntity.ResetPasswordCode;
+            string verifyUrl = "/Account/ResetPasswordViewModel/" + userEntity.ResetPasswordCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
             if (userEntity.UserID >= 10)
             {
                 UserBusinessLogic.SendResetPasswordEmail(userEntity, link);
                 ViewBag.Message = "Reset password link has been sent to your Email.";
-
                 return View();
             }
 
             ViewBag.Message = "User doesn't exists.";
-
             return View();
         }
 
 
         [HttpGet]
-        public ActionResult ResetPassword(string ResetPasswordCode)
+        public ActionResult ResetPassword(string resetPasswordCode)
         {
-            if (string.IsNullOrWhiteSpace(ResetPasswordCode))
+            if (string.IsNullOrWhiteSpace(resetPasswordCode))
             {
                 return HttpNotFound();
             }
 
-            ;
-            ResetPasswordView resetPasswordView = UserBusinessLogic.GetUserByResetPasswordCode(ResetPasswordCode);
-            if (resetPasswordView.UserID > 10)
+            ResetPasswordViewModel resetPasswordViewModel =
+                UserBusinessLogic.GetUserByResetPasswordCode(resetPasswordCode);
+            if (resetPasswordViewModel.UserID > 10)
             {
-                return HttpNotFound();
+                return View(resetPasswordViewModel);
             }
 
-            return View(resetPasswordView);
+            return HttpNotFound();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ResetPassword(ResetPasswordView resetPasswordView)
+        public ActionResult ResetPassword(ResetPasswordViewModel resetPasswordViewModel)
         {
             if (!ModelState.IsValid)
             {
                 ViewBag.Message = "Something invalid";
-                return View(resetPasswordView);
+                return View(resetPasswordViewModel);
             }
 
-            STP_UpdateCredentials_Result userEntity = UserBusinessLogic.UpdateCredentials(resetPasswordView);
+            STP_UpdateCredentials_Result userEntity = UserBusinessLogic.UpdateCredentials(resetPasswordViewModel);
 
             if (userEntity.UserID > 10)
             {
@@ -141,43 +128,18 @@ namespace SugarMonkey.Controllers
             }
 
             ViewBag.Message = "Something invalid";
-            return View(resetPasswordView);
-        }
-
-        private void SendEmail(string emailAddress, string body, string subject)
-        {
-            using (MailMessage mm = new MailMessage("youremail@gmail.com", emailAddress))
-            {
-                mm.Subject = subject;
-                mm.Body = body;
-
-                mm.IsBodyHtml = true;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.EnableSsl = true;
-                NetworkCredential networkCred = new NetworkCredential("youremail@gmail.com", "YourPassword");
-                smtp.UseDefaultCredentials = true;
-                smtp.Credentials = networkCred;
-                smtp.Port = 587;
-                smtp.Send(mm);
-            }
+            return View(resetPasswordViewModel);
         }
 
         [HttpPost]
-        public ActionResult UserEditInfo(UserEditView userEditView)
+        public ActionResult UserEditInfo(EditUserViewModel editUserViewModel)
         {
-            if (ModelState.IsValid)
-            {
-                using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
-                {
-                    dbContext.STP_GetUsersInfoByEmail(userEditView.Email);
-                }
+            if (!ModelState.IsValid) return View("UserEditInfo", editUserViewModel);
 
-                ViewBag.Message = "El usuario fue modificado exitosamente";
-                return RedirectToAction("index", "MainPage");
-            }
+            //TODO: Implement
 
-            return View("UserEditInfo", userEditView);
+            ViewBag.Message = "El usuario fue modificado exitosamente";
+            return RedirectToAction("index", "MainPage");
         }
     }
 }

@@ -196,6 +196,9 @@
     <Compile Include="Models\STP_CreateUser_Result.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\STP_GetUserByCredentials_Result.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\STP_GetUserByResetPasswordCode_Result.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
@@ -217,10 +220,10 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\View\ResetPasswordView.cs" />
-    <Compile Include="Models\View\LoginView.cs" />
-    <Compile Include="Models\View\UserEditView.cs" />
-    <Compile Include="Models\View\UserRegistrationView.cs" />
+    <Compile Include="Models\Views\ResetPasswordViewModel.cs" />
+    <Compile Include="Models\Views\LoginUserViewModel.cs" />
+    <Compile Include="Models\Views\EditUserViewModel.cs" />
+    <Compile Include="Models\Views\UserRegistrationViewModel.cs" />
     <Compile Include="Models\ZipCode.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
