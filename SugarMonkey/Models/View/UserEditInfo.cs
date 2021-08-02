@@ -2,7 +2,7 @@
 
 namespace SugarMonkey.Models.View
 {
-    public class UserRegistration
+    public class UserEditInfo
     {
         [Required] [Display(Name = "Nombre")]
         public string FirstName { get; set; }

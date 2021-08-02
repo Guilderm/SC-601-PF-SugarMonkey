@@ -141,5 +141,41 @@ namespace SugarMonkey.Controllers
             ViewBag.Message = "Something invalid";
             return View(resetPasswordView);
         }
+
+        private void SendEmail(string emailAddress, string body, string subject)
+        {
+            using (MailMessage mm = new MailMessage("youremail@gmail.com", emailAddress))
+            {
+                mm.Subject = subject;
+                mm.Body = body;
+
+                mm.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                NetworkCredential networkCred = new NetworkCredential("youremail@gmail.com", "YourPassword");
+                smtp.UseDefaultCredentials = true;
+                smtp.Credentials = networkCred;
+                smtp.Port = 587;
+                smtp.Send(mm);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult UserEditInfo(UserEditInfo userEditInfo)
+        {
+            if (ModelState.IsValid)
+            {
+                using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+                {
+                    dbContext.STP_GetUsersInfoByEmail(userEditInfo.Email);
+                }
+
+                ViewBag.Message = "El usuario fue modificado exitosamente";
+                return RedirectToAction("index", "Home");
+            }
+
+            return View("UserEditInfo", userEditInfo);
+        }
     }
 }
