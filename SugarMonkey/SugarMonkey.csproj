@@ -128,8 +128,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UserAccountController.cs" />
+    <Compile Include="Controllers\MainPageController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -166,9 +168,10 @@
     <Compile Include="Models\Entities\OrderEntity.cs" />
     <Compile Include="Models\Entities\ProductEntity.cs" />
     <Compile Include="Models\Entities\UserEntity.cs" />
-    <Compile Include="Models\Logic\OrderManagement.cs" />
-    <Compile Include="Models\Logic\ProductManagement.cs" />
-    <Compile Include="Models\Logic\UserManagement.cs" />
+    <Compile Include="Models\BusinessLogic\OrderBusinessLogic.cs" />
+    <Compile Include="Models\BusinessLogic\ProductBusinessLogic.cs" />
+    <Compile Include="Models\BusinessLogic\UserBusinessLogic.cs" />
+    <Compile Include="Models\BusinessLogic\Utilities.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
@@ -215,9 +218,9 @@
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View\ResetPasswordView.cs" />
-    <Compile Include="Models\View\Login.cs" />
-    <Compile Include="Models\View\UserEditInfo.cs" />
-    <Compile Include="Models\View\UserRegistration.cs" />
+    <Compile Include="Models\View\LoginView.cs" />
+    <Compile Include="Models\View\UserEditView.cs" />
+    <Compile Include="Models\View\UserRegistrationView.cs" />
     <Compile Include="Models\ZipCode.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
@@ -256,20 +259,21 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\UserAccount\LoginUser.cshtml" />
-    <Content Include="Views\UserAccount\UserRegistration.cshtml" />
-    <Content Include="Views\UserAccount\ForgotPassword.cshtml" />
-    <Content Include="Views\UserAccount\ResetPassword.cshtml" />
-    <Content Include="Views\UserAccount\UserEditInfo.cshtml" />
+    <Content Include="Views\MainPage\About.cshtml" />
+    <Content Include="Views\MainPage\Contact.cshtml" />
+    <Content Include="Views\MainPage\Index.cshtml" />
+    <Content Include="Views\User\LoginUser.cshtml" />
+    <Content Include="Views\User\UserRegistration.cshtml" />
+    <Content Include="Views\User\ForgotPassword.cshtml" />
+    <Content Include="Views\User\ResetPassword.cshtml" />
+    <Content Include="Views\User\UserEditInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Artifacts\Images\" />
     <Folder Include="Artifacts\Media\" />
-    <Folder Include="Models\Utilities\" />
     <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Views\Order\" />
+    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Artifacts\Vendors\Bootstrap 5.0.2\css\bootstrap.css.map" />

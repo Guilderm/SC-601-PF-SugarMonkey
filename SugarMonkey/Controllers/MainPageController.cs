@@ -2,7 +2,7 @@
 
 namespace SugarMonkey.Controllers
 {
-    public class HomeController : Controller
+    public class MainPageController : Controller
     {
         public ActionResult Index()
         {

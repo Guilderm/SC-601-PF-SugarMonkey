@@ -1,6 +1,6 @@
 ﻿namespace SugarMonkey.Models.Logic
 {
-    public class OrderManagement
+    public class ProductBusinessLogic
     {
     }
 }

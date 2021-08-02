@@ -8,12 +8,12 @@ using SugarMonkey.Models.View;
 
 namespace SugarMonkey.Controllers
 {
-    public class UserAccountController : Controller
+    public class UserController : Controller
     {
         [HttpGet]
         public ActionResult Index()
         {
-            return RedirectToAction("index", "Home");
+            return RedirectToAction("index", "MainPage");
         }
 
         [HttpGet]
@@ -23,26 +23,26 @@ namespace SugarMonkey.Controllers
         }
 
         [HttpPost]
-        public ActionResult UserRegistration(UserRegistration userRegistration)
+        public ActionResult UserRegistration(UserRegistrationView userRegistrationView)
         {
             if (ModelState.IsValid)
             {
                 using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
                 {
-                    dbContext.STP_CreateUser(userRegistration.FirstName,
-                        userRegistration.FirstLastName,
-                        userRegistration.SecondLastName,
-                        userRegistration.Cellphone,
-                        userRegistration.Email,
-                        userRegistration.Password,
+                    dbContext.STP_CreateUser(userRegistrationView.FirstName,
+                        userRegistrationView.FirstLastName,
+                        userRegistrationView.SecondLastName,
+                        userRegistrationView.Cellphone,
+                        userRegistrationView.Email,
+                        userRegistrationView.Password,
                         "notSalted");
                 }
 
                 ViewBag.Message = "El usuario fue creado exitosamente";
-                return RedirectToAction("index", "Home");
+                return RedirectToAction("index", "MainPage");
             }
 
-            return View("UserRegistration", userRegistration);
+            return View("UserRegistration", userRegistrationView);
         }
 
         [HttpGet]
@@ -52,30 +52,30 @@ namespace SugarMonkey.Controllers
         }
 
         [HttpPost]
-        public ActionResult LoginUser(Login login)
+        public ActionResult LoginUser(LoginView loginView)
         {
             if (!ModelState.IsValid)
             {
-                return View(login);
+                return View(loginView);
             }
 
-            int userId = (int) UserManagement.GetUserId(login);
+            int userId = (int) UserBusinessLogic.GetUserId(loginView);
 
             if (userId > 0)
             {
                 Session["UserID"] = userId;
-                return RedirectToAction("index", "Home");
+                return RedirectToAction("index", "MainPage");
             }
 
             ModelState.AddModelError("Failure", "Wrong Username and password combination !");
-            return View(login);
+            return View(loginView);
         }
 
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             Session.Abandon(); // it will clear the session at the end of request
-            return RedirectToAction("index", "Home");
+            return RedirectToAction("index", "MainPage");
         }
 
         public ActionResult ForgotPassword()
@@ -86,13 +86,13 @@ namespace SugarMonkey.Controllers
         [HttpPost]
         public ActionResult ForgotPassword(string eMail)
         {
-            STP_SetResetPasswordCode_Result userEntity = UserManagement.SetResetPasswordCode(eMail);
+            STP_SetResetPasswordCode_Result userEntity = UserBusinessLogic.SetResetPasswordCode(eMail);
             string verifyUrl = "/Account/ResetPasswordView/" + userEntity.ResetPasswordCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
             if (userEntity.UserID >= 10)
             {
-                UserManagement.SendResetPasswordEmail(userEntity, link);
+                UserBusinessLogic.SendResetPasswordEmail(userEntity, link);
                 ViewBag.Message = "Reset password link has been sent to your Email.";
 
                 return View();
@@ -113,7 +113,7 @@ namespace SugarMonkey.Controllers
             }
 
             ;
-            ResetPasswordView resetPasswordView = UserManagement.GetUserByResetPasswordCode(ResetPasswordCode);
+            ResetPasswordView resetPasswordView = UserBusinessLogic.GetUserByResetPasswordCode(ResetPasswordCode);
             if (resetPasswordView.UserID > 10)
             {
                 return HttpNotFound();
@@ -132,12 +132,12 @@ namespace SugarMonkey.Controllers
                 return View(resetPasswordView);
             }
 
-            STP_UpdateCredentials_Result userEntity = UserManagement.UpdateCredentials(resetPasswordView);
+            STP_UpdateCredentials_Result userEntity = UserBusinessLogic.UpdateCredentials(resetPasswordView);
 
             if (userEntity.UserID > 10)
             {
                 ViewBag.Message = "New password updated successfully";
-                return RedirectToAction("index", "Home");
+                return RedirectToAction("index", "MainPage");
             }
 
             ViewBag.Message = "Something invalid";
@@ -164,20 +164,20 @@ namespace SugarMonkey.Controllers
         }
 
         [HttpPost]
-        public ActionResult UserEditInfo(UserEditInfo userEditInfo)
+        public ActionResult UserEditInfo(UserEditView userEditView)
         {
             if (ModelState.IsValid)
             {
                 using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
                 {
-                    dbContext.STP_GetUsersInfoByEmail(userEditInfo.Email);
+                    dbContext.STP_GetUsersInfoByEmail(userEditView.Email);
                 }
 
                 ViewBag.Message = "El usuario fue modificado exitosamente";
-                return RedirectToAction("index", "Home");
+                return RedirectToAction("index", "MainPage");
             }
 
-            return View("UserEditInfo", userEditInfo);
+            return View("UserEditInfo", userEditView);
         }
     }
 }

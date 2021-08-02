@@ -6,18 +6,18 @@ using SugarMonkey.Models.View;
 
 namespace SugarMonkey.Models.Logic
 {
-    public class UserManagement
+    public class UserBusinessLogic
     {
-        public static int? GetUserId(Login login)
+        public static int? GetUserId(LoginView loginView)
         {
-            return ValidateCredentials(login);
+            return ValidateCredentials(loginView);
         }
 
-        private static int ValidateCredentials(Login login)
+        private static int ValidateCredentials(LoginView loginView)
         {
             using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
-                int userId = dbContext.STP_GetCredential(login.Email, login.Password).FirstOrDefault() ?? 0;
+                int userId = dbContext.STP_GetCredential(loginView.Email, loginView.Password).FirstOrDefault() ?? 0;
                 return userId;
             }
         }
