@@ -42,7 +42,7 @@ namespace SugarMonkey.Models
         public virtual DbSet<ZipCode> ZipCodes { get; set; }
         public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
     
-        public virtual int STP_CreateUser(string firstName, string firstLastName, string secondLastName, Nullable<int> cellphone, string email, string password, string salt)
+        public virtual ObjectResult<STP_CreateUser_Result> STP_CreateUser(string firstName, string firstLastName, string secondLastName, Nullable<int> cellphone, string email, string password, string salt)
         {
             var firstNameParameter = firstName != null ?
                 new ObjectParameter("FirstName", firstName) :
@@ -72,7 +72,7 @@ namespace SugarMonkey.Models
                 new ObjectParameter("Salt", salt) :
                 new ObjectParameter("Salt", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("STP_CreateUser", firstNameParameter, firstLastNameParameter, secondLastNameParameter, cellphoneParameter, emailParameter, passwordParameter, saltParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_CreateUser_Result>("STP_CreateUser", firstNameParameter, firstLastNameParameter, secondLastNameParameter, cellphoneParameter, emailParameter, passwordParameter, saltParameter);
         }
     
         public virtual ObjectResult<string> STP_GetAppSetting(string name)
@@ -95,6 +95,15 @@ namespace SugarMonkey.Models
                 new ObjectParameter("Password", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("STP_GetCredential", emailParameter, passwordParameter);
+        }
+    
+        public virtual ObjectResult<STP_GetUserByResetPasswordCode_Result> STP_GetUserByResetPasswordCode(string resetPasswordCode)
+        {
+            var resetPasswordCodeParameter = resetPasswordCode != null ?
+                new ObjectParameter("ResetPasswordCode", resetPasswordCode) :
+                new ObjectParameter("ResetPasswordCode", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUserByResetPasswordCode_Result>("STP_GetUserByResetPasswordCode", resetPasswordCodeParameter);
         }
     
         public virtual ObjectResult<STP_GetUsersInfo_Result> STP_GetUsersInfo()
@@ -159,17 +168,34 @@ namespace SugarMonkey.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("STP_SetAppSetting", nameParameter, valueParameter);
         }
     
-        public virtual ObjectResult<STP_SetResetPasswordCode_Result> STP_SetResetPasswordCode(string email, string setResetPasswordCode)
+        public virtual ObjectResult<STP_SetResetPasswordCode_Result> STP_SetResetPasswordCode(string email, string resetPasswordCode)
         {
             var emailParameter = email != null ?
                 new ObjectParameter("Email", email) :
                 new ObjectParameter("Email", typeof(string));
     
-            var setResetPasswordCodeParameter = setResetPasswordCode != null ?
-                new ObjectParameter("SetResetPasswordCode", setResetPasswordCode) :
-                new ObjectParameter("SetResetPasswordCode", typeof(string));
+            var resetPasswordCodeParameter = resetPasswordCode != null ?
+                new ObjectParameter("ResetPasswordCode", resetPasswordCode) :
+                new ObjectParameter("ResetPasswordCode", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_SetResetPasswordCode_Result>("STP_SetResetPasswordCode", emailParameter, setResetPasswordCodeParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_SetResetPasswordCode_Result>("STP_SetResetPasswordCode", emailParameter, resetPasswordCodeParameter);
+        }
+    
+        public virtual ObjectResult<STP_UpdateCredentials_Result> STP_UpdateCredentials(Nullable<int> userID, string password, string salt)
+        {
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            var saltParameter = salt != null ?
+                new ObjectParameter("Salt", salt) :
+                new ObjectParameter("Salt", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_UpdateCredentials_Result>("STP_UpdateCredentials", userIDParameter, passwordParameter, saltParameter);
         }
     }
 }

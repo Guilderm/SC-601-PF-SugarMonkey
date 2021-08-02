@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SugarMonkey.Models.Logic
+namespace SugarMonkey.Models.View
 {
-    public class ResetPassword
+    public class ResetPasswordView
     {
+        public int UserID { get; set; }
+
         [Required(ErrorMessage = "New password required", AllowEmptyStrings = false)]
         [DataType(DataType.Password)]
         public string NewPassword { get; set; }
@@ -11,7 +13,5 @@ namespace SugarMonkey.Models.Logic
         [DataType(DataType.Password)]
         [Compare("NewPassword", ErrorMessage = "New password and confirm password does not match")]
         public string ConfirmPassword { get; set; }
-
-        [Required] public string ResetCode { get; set; }
     }
 }

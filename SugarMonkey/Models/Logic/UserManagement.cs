@@ -61,5 +61,27 @@ namespace SugarMonkey.Models.Logic
                 smtp.Send(mm);
             }
         }
+
+        public static ResetPasswordView GetUserByResetPasswordCode(string resetPasswordCode)
+        {
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            {
+                STP_GetUserByResetPasswordCode_Result userEntity =
+                    dbContext.STP_GetUserByResetPasswordCode(resetPasswordCode).FirstOrDefault();
+                ResetPasswordView resetPassword = new ResetPasswordView {UserID = userEntity.UserID};
+                return resetPassword;
+            }
+        }
+
+        public static STP_UpdateCredentials_Result UpdateCredentials(ResetPasswordView resetPasswordView)
+        {
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            {
+                STP_UpdateCredentials_Result userEntity = dbContext
+                    .STP_UpdateCredentials(resetPasswordView.UserID, resetPasswordView.ConfirmPassword, "not salted")
+                    .FirstOrDefault();
+                return userEntity;
+            }
+        }
     }
 }

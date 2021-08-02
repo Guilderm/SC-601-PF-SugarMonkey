@@ -169,7 +169,6 @@
     <Compile Include="Models\Logic\OrderManagement.cs" />
     <Compile Include="Models\Logic\ProductManagement.cs" />
     <Compile Include="Models\Logic\UserManagement.cs" />
-    <Compile Include="Models\Logic\ResetPassword.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
@@ -191,6 +190,12 @@
     <Compile Include="Models\ShoppingCartItem.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\STP_CreateUser_Result.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\STP_GetUserByResetPasswordCode_Result.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\STP_GetUsersInfoByEmail_Result.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
@@ -203,9 +208,13 @@
     <Compile Include="Models\STP_SetResetPasswordCode_Result.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\STP_UpdateCredentials_Result.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\User.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\View\ResetPasswordView.cs" />
     <Compile Include="Models\View\Login.cs" />
     <Compile Include="Models\View\UserRegistration.cs" />
     <Compile Include="Models\ZipCode.cs">

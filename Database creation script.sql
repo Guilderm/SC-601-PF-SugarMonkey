@@ -205,7 +205,7 @@ BEGIN
          , [Cellphone]
          , [Email]
          , [Password]
-         , Users.[CredentialID]
+         , [Users].[CredentialID]
          , [ProfilePhotoPath]
          , [isCustomer]
          , [isAdmin]
@@ -227,7 +227,7 @@ BEGIN
          , [SecondLastName]
          , [Cellphone]
          , [Email]
-         , Users.[CredentialID]
+         , [Users].[CredentialID]
          , [ProfilePhotoPath]
          , [isCustomer]
          , [isAdmin]
@@ -250,7 +250,7 @@ BEGIN
 
     Select @UserID = UserID,
            @Email = Email
-    from [GeneralPurposeDB].[dbo].Users
+    from [GeneralPurposeDB].[dbo].[Users]
     where Email = @Email;
 
     execute STP_GetUsersInfoByID @UserID;
@@ -266,15 +266,18 @@ CREATE PROCEDURE STP_CreateUser @FirstName varchar(50),
                                 @Salt varchar(50)
 AS
 BEGIN
-    INSERT INTO [GeneralPurposeDB].[dbo].[Credentials]
-        ([Password], [ResetPasswordCode], [Salt])
-    VALUES (@Password, 'notSalted', @Salt);
+    INSERT INTO [GeneralPurposeDB].[dbo].[Credentials] ([Password], [Salt])
+    VALUES (@Password, @Salt);
 
     DECLARE @CredentialID int = SCOPE_IDENTITY();
 
     INSERT INTO [GeneralPurposeDB].[dbo].[Users]
     ([FirstName], [FirstLastName], [SecondLastName], [Cellphone], [Email], [CredentialID])
     VALUES (@FirstName, @FirstLastName, @SecondLastName, @Cellphone, @Email, @CredentialID);
+
+    DECLARE @UserID int = SCOPE_IDENTITY();
+
+    execute STP_GetUsersInfoByID @UserID;
 END
 GO
 
@@ -292,23 +295,64 @@ Go
 
 
 CREATE PROCEDURE STP_SetResetPasswordCode @Email varchar(50),
-                                          @SetResetPasswordCode varchar(50)
+                                          @ResetPasswordCode varchar(50)
 AS
 BEGIN
-    DECLARE @CredentialID varchar(50),
-        @UserID int;
+    DECLARE @UserID int,
+        @CredentialID varchar(50);
 
     Select @UserID = UserID,
            @CredentialID = CredentialID
 
-    from [GeneralPurposeDB].[dbo].Users
+    from [GeneralPurposeDB].[dbo].[Users]
     where Email = @Email;
 
     Update [GeneralPurposeDB].[dbo].[Credentials]
-    SET [ResetPasswordCode] = @SetResetPasswordCode
+    SET [ResetPasswordCode] = @ResetPasswordCode
     WHERE CredentialID = @CredentialID;
 
     execute STP_GetUsersInfoByID @UserID;
+END
+GO
+
+CREATE PROCEDURE STP_GetUserByResetPasswordCode @ResetPasswordCode varchar(50)
+AS
+BEGIN
+
+    DECLARE @UserID int,
+        @CredentialID varchar(50);
+
+    Select @UserID = UserID,
+           @CredentialID = [Users].[CredentialID]
+    FROM [GeneralPurposeDB].[dbo].[Users]
+             INNER JOIN [GeneralPurposeDB].[dbo].[Credentials] On [Users].[CredentialID] = [Credentials].[CredentialID]
+    WHERE ResetPasswordCode = @ResetPasswordCode;
+
+    Update [GeneralPurposeDB].[dbo].[Credentials]
+    SET [ResetPasswordCode] = null
+    WHERE CredentialID = @CredentialID;
+
+    Execute STP_GetUsersInfoByID @UserID;
+END
+GO
+
+CREATE PROCEDURE STP_UpdateCredentials @UserID int,
+                                       @Password varchar(50),
+                                       @Salt varchar(50)
+AS
+BEGIN
+    DECLARE @CredentialID varchar(50);
+
+    Select @CredentialID = CredentialID
+    FROM [GeneralPurposeDB].[dbo].[Users]
+    WHERE [UserID] = @UserID;
+
+    Update [GeneralPurposeDB].[dbo].[Credentials]
+    SET [Password] = @Password,
+        [Salt]     = @Salt
+    WHERE CredentialID = @CredentialID;
+
+    Execute STP_GetUsersInfoByID @UserID;
 END
 GO
 
@@ -338,5 +382,10 @@ Go
 STP_SetResetPasswordCode 'Dewayne.Brown.Cra.@gmail.com', '555555'
 GO
 
+--Test STP_GetUsersInfoByID
+Execute STP_GetUsersInfoByID 100;
+GO
+
+--Get all user Data
 Execute STP_GetUsersInfo
 Go

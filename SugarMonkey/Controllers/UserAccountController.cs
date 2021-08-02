@@ -86,66 +86,53 @@ namespace SugarMonkey.Controllers
         public ActionResult ForgotPassword(string eMail)
         {
             STP_SetResetPasswordCode_Result userEntity = UserManagement.SetResetPasswordCode(eMail);
-            string verifyUrl = "/Account/ResetPassword/" + userEntity.ResetPasswordCode;
+            string verifyUrl = "/Account/ResetPasswordView/" + userEntity.ResetPasswordCode;
             string link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
             if (userEntity.UserID >= 10)
             {
                 UserManagement.SendResetPasswordEmail(userEntity, link);
-                ViewBag.Message = "Reset password link has been sent to your email id.";
+                ViewBag.Message = "Reset password link has been sent to your Email.";
 
                 return View();
             }
 
             ViewBag.Message = "User doesn't exists.";
+
             return View();
         }
 
 
-        public ActionResult ResetPassword(string id)
+        [HttpGet]
+public ActionResult ResetPassword(string ResetPasswordCode)
         {
-            //Verify the reset password link
-            //Find account associated with this link
-            //redirect to reset password page
-            if (string.IsNullOrWhiteSpace(id)) return HttpNotFound();
-
-            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            if (string.IsNullOrWhiteSpace(ResetPasswordCode))
             {
-                Credential credential = dbContext.Credentials.FirstOrDefault(a => a.ResetPasswordCode == id);
-                if (credential == null) return HttpNotFound();
-                ResetPassword model = new ResetPassword();
-                model.ResetCode = id;
-                return View(model);
-            }
+                return HttpNotFound();};
+            ResetPasswordView resetPasswordView = UserManagement.GetUserByResetPasswordCode(ResetPasswordCode);
+            if (resetPasswordView.UserID > 10){ return HttpNotFound();}
+            return View(resetPasswordView);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ResetPassword(ResetPassword model)
+        public ActionResult ResetPassword(ResetPasswordView resetPasswordView)
         {
-            string message = "";
-            if (ModelState.IsValid)
-                using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Message = "Something invalid";
+                return View(resetPasswordView);
+            }
+           
+                STP_UpdateCredentials_Result userEntity = UserManagement.UpdateCredentials(resetPasswordView);
+            
+                if (userEntity.UserID > 10)
                 {
-                    Credential user = dbContext.Credentials
-                        .FirstOrDefault(a => a.ResetPasswordCode == model.ResetCode);
-                    if (user != null)
-                    {
-                        //you can encrypt password here, we are not doing it
-                        user.Password = model.NewPassword;
-                        //make resetpasswordcode empty string now
-                        user.ResetPasswordCode = "";
-                        //to avoid validation issues, disable it
-                        dbContext.Configuration.ValidateOnSaveEnabled = false;
-                        dbContext.SaveChanges();
-                        message = "New password updated successfully";
-                    }
-                }
-            else
-                message = "Something invalid";
-
-            ViewBag.Message = message;
-            return View(model);
+                ViewBag.Message = "New password updated successfully";
+                return RedirectToAction("index", "Home");
+            }
+                ViewBag.Message = "Something invalid";
+                return View(resetPasswordView);
         }
     }
 }
