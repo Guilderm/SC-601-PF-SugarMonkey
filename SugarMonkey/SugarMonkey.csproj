@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\MainPageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Models\AppSetting.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\BusinessLogic\adminBusinessLogic.cs" />
     <Compile Include="Models\Credential.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
@@ -165,6 +167,7 @@
     <Compile Include="Models\DeliveryOption.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entities\adminEntity.cs" />
     <Compile Include="Models\Entities\OrderEntity.cs" />
     <Compile Include="Models\Entities\ProductEntity.cs" />
     <Compile Include="Models\Entities\UserEntity.cs" />
@@ -275,6 +278,7 @@
     <Folder Include="Artifacts\Images\" />
     <Folder Include="Artifacts\Media\" />
     <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Views\Admin\" />
     <Folder Include="Views\Order\" />
     <Folder Include="Views\Product\" />
   </ItemGroup>

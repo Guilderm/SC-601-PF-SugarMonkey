@@ -380,9 +380,6 @@ EXECUTE STP_CreateUser 'Dewayne', 'Brown', 'Crawford', 12345678, 'Dewayne.Brown.
         'notSalted';
 GO
 
-Execute STP_GetCredential 'Dewayne.Brown.Cra.@gmail.com', 'Monkey@132';
-Go
-
 --Test STP_SetResetPasswordCode
 STP_SetResetPasswordCode 'Dewayne.Brown.Cra.@gmail.com', '555555'
 GO
