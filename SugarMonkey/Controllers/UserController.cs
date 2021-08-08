@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web;
+using System.Web.Mvc;
 using System.Web.Security;
 using SugarMonkey.Models;
 using SugarMonkey.Models.BusinessLogic;
@@ -53,6 +55,8 @@ namespace SugarMonkey.Controllers
             if (userEntity.UserID > 10)
             {
                 Session["UserID"] = userEntity.UserID;
+                //FormsAuthentication.SetAuthCookie(userEntity.UserID.ToString(), false);
+
                 return RedirectToAction("index", "MainPage");
             }
 
