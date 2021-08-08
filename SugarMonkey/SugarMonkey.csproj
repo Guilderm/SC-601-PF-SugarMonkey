@@ -273,6 +273,7 @@
     <Content Include="Views\User\ForgotPassword.cshtml" />
     <Content Include="Views\User\ResetPassword.cshtml" />
     <Content Include="Views\User\UserEditInfo.cshtml" />
+    <Content Include="Views\Product\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Artifacts\Images\" />
@@ -280,7 +281,6 @@
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\Admin\" />
     <Folder Include="Views\Order\" />
-    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Artifacts\Vendors\Bootstrap 5.0.2\css\bootstrap.css.map" />
