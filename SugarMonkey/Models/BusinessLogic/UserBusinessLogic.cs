@@ -34,6 +34,16 @@ namespace SugarMonkey.Models.BusinessLogic
             }
         }
 
+        public static STP_GetUsersInfoByID_Result GetUserByID(int userID)
+        {
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            {
+                STP_GetUsersInfoByID_Result userEntity = dbContext
+                    .STP_GetUsersInfoByID(userID).FirstOrDefault();
+                return userEntity;
+            }
+        }
+
         public static STP_SetResetPasswordCode_Result SetResetPasswordCode(string eMail)
         {
             string resetPasswordCode = Guid.NewGuid().ToString();
@@ -92,6 +102,18 @@ namespace SugarMonkey.Models.BusinessLogic
                 STP_UpdateCredentials_Result userEntity = dbContext
                     .STP_UpdateCredentials(resetPasswordViewModel.UserID, resetPasswordViewModel.ConfirmPassword,
                         "not salted")
+                    .FirstOrDefault();
+                return userEntity;
+            }
+        }
+
+        public static STP_UpdateCredentials_Result UpdateUser(EditUserViewModel editUserViewModel, int userID)
+        {
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            {
+                STP_UpdateCredentials_Result userEntity = dbContext
+                    .STP_UpdateUser(userID, editUserViewModel.FirstName, editUserViewModel.FirstLastName, editUserViewModel.SecondLastName,
+                    editUserViewModel.Cellphone, editUserViewModel.Email, editUserViewModel.Password, "not salted")
                     .FirstOrDefault();
                 return userEntity;
             }

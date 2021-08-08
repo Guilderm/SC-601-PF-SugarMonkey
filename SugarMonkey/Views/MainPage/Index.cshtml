@@ -15,10 +15,9 @@
     @ViewBag.Message
 </div>
 
-@*@if (/*Request.IsAuthenticated*/User.Identity.IsAuthenticated)*@
 @if (Session["UserID"] != null)
 {
-    <span>@*Welcome @Html.Encode(User.Identity.Name)*@ Welcome @Html.Encode(Session["UserID"])</span>
+    <span> Welcome @Html.Encode(Session["UserID"])</span>
 }
 else
 {

@@ -197,5 +197,42 @@ namespace SugarMonkey.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_UpdateCredentials_Result>("STP_UpdateCredentials", userIDParameter, passwordParameter, saltParameter);
         }
+
+        public virtual ObjectResult<STP_UpdateCredentials_Result> STP_UpdateUser(Nullable<int> userID, string firstName, string firstLastName, string secondLastName, Nullable<int> cellphone, string email, string password, string salt)
+        {
+            var userIDParameter = userID.HasValue ?
+                new ObjectParameter("UserID", userID) :
+                new ObjectParameter("UserID", typeof(int));
+
+            var firstNameParameter = firstName != null ?
+                new ObjectParameter("FirstName", firstName) :
+                new ObjectParameter("FirstName", typeof(string));
+
+            var firstLastNameParameter = firstLastName != null ?
+                new ObjectParameter("FirstLastName", firstLastName) :
+                new ObjectParameter("FirstLastName", typeof(string));
+
+            var secondLastNameParameter = secondLastName != null ?
+                new ObjectParameter("SecondLastName", secondLastName) :
+                new ObjectParameter("SecondLastName", typeof(string));
+
+            var cellphoneParameter = cellphone.HasValue ?
+                new ObjectParameter("Cellphone", cellphone) :
+                new ObjectParameter("Cellphone", typeof(int));
+
+            var emailParameter = email != null ?
+                new ObjectParameter("Email", email) :
+                new ObjectParameter("Email", typeof(string));
+
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+
+            var saltParameter = salt != null ?
+                new ObjectParameter("Salt", salt) :
+                new ObjectParameter("Salt", typeof(string));
+
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_UpdateCredentials_Result>("STP_UpdateCredentials", userIDParameter, firstNameParameter, firstLastNameParameter, secondLastNameParameter, cellphoneParameter, emailParameter, passwordParameter, saltParameter);
+        }
     }
 }
