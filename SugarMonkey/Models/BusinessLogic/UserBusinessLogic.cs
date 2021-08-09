@@ -24,15 +24,26 @@ namespace SugarMonkey.Models.BusinessLogic
             }
         }
 
-        public static STP_GetUserByCredentials_Result GetUser(LoginUserViewModel LoginUserViewModel)
+        public static STP_GetUserByCredentials_Result GetUser(LoginUserViewModel loginUserViewModel)
         {
             using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
                 STP_GetUserByCredentials_Result userEntity = dbContext
-                    .STP_GetUserByCredentials(LoginUserViewModel.Email, LoginUserViewModel.Password).FirstOrDefault();
+                    .STP_GetUserByCredentials(loginUserViewModel.Email, loginUserViewModel.Password).FirstOrDefault();
                 return userEntity;
             }
         }
+
+        public static STP_GetUsersInfoByID_Result GetUserById(int userId)
+        {
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            {
+                STP_GetUsersInfoByID_Result userEntity = dbContext
+                    .STP_GetUsersInfoByID(userId).FirstOrDefault();
+                return userEntity;
+            }
+        }
+
 
         public static STP_SetResetPasswordCode_Result SetResetPasswordCode(string eMail)
         {
@@ -80,7 +91,7 @@ namespace SugarMonkey.Models.BusinessLogic
             {
                 STP_GetUserByResetPasswordCode_Result userEntity =
                     dbContext.STP_GetUserByResetPasswordCode(resetPasswordCode).FirstOrDefault();
-                ResetPasswordViewModel resetPassword = new ResetPasswordViewModel {UserID = userEntity.UserID};
+                ResetPasswordViewModel resetPassword = new ResetPasswordViewModel {UserId = userEntity.UserID};
                 return resetPassword;
             }
         }
@@ -90,8 +101,20 @@ namespace SugarMonkey.Models.BusinessLogic
             using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
                 STP_UpdateCredentials_Result userEntity = dbContext
-                    .STP_UpdateCredentials(resetPasswordViewModel.UserID, resetPasswordViewModel.ConfirmPassword,
+                    .STP_UpdateCredentials(resetPasswordViewModel.UserId, resetPasswordViewModel.ConfirmPassword,
                         "not salted")
+                    .FirstOrDefault();
+                return userEntity;
+            }
+        }
+
+        public static STP_UpdateUser_Result UpdateUser(EditUserViewModel editUserViewModel, int userID)
+        {
+            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
+            {
+                STP_UpdateUser_Result userEntity = dbContext.STP_UpdateUser(userID, editUserViewModel.FirstName,
+                        editUserViewModel.FirstLastName, editUserViewModel.SecondLastName, editUserViewModel.Cellphone,
+                        editUserViewModel.Email, editUserViewModel.Password, "not salted")
                     .FirstOrDefault();
                 return userEntity;
             }

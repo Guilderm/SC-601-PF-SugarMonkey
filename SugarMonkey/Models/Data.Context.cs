@@ -197,5 +197,42 @@ namespace SugarMonkey.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_UpdateCredentials_Result>("STP_UpdateCredentials", userIDParameter, passwordParameter, saltParameter);
         }
+    
+        public virtual ObjectResult<STP_UpdateUser_Result> STP_UpdateUser(Nullable<int> userIDParameter, string firstNameParameter, string firstLastNameParameter, string secondLastNameParameter, Nullable<int> cellphoneParameter, string emailParameter, string passwordParameter, string saltParameter)
+        {
+            var userIDParameterParameter = userIDParameter.HasValue ?
+                new ObjectParameter("userIDParameter", userIDParameter) :
+                new ObjectParameter("userIDParameter", typeof(int));
+    
+            var firstNameParameterParameter = firstNameParameter != null ?
+                new ObjectParameter("firstNameParameter", firstNameParameter) :
+                new ObjectParameter("firstNameParameter", typeof(string));
+    
+            var firstLastNameParameterParameter = firstLastNameParameter != null ?
+                new ObjectParameter("firstLastNameParameter", firstLastNameParameter) :
+                new ObjectParameter("firstLastNameParameter", typeof(string));
+    
+            var secondLastNameParameterParameter = secondLastNameParameter != null ?
+                new ObjectParameter("secondLastNameParameter", secondLastNameParameter) :
+                new ObjectParameter("secondLastNameParameter", typeof(string));
+    
+            var cellphoneParameterParameter = cellphoneParameter.HasValue ?
+                new ObjectParameter("cellphoneParameter", cellphoneParameter) :
+                new ObjectParameter("cellphoneParameter", typeof(int));
+    
+            var emailParameterParameter = emailParameter != null ?
+                new ObjectParameter("emailParameter", emailParameter) :
+                new ObjectParameter("emailParameter", typeof(string));
+    
+            var passwordParameterParameter = passwordParameter != null ?
+                new ObjectParameter("passwordParameter", passwordParameter) :
+                new ObjectParameter("passwordParameter", typeof(string));
+    
+            var saltParameterParameter = saltParameter != null ?
+                new ObjectParameter("saltParameter", saltParameter) :
+                new ObjectParameter("saltParameter", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_UpdateUser_Result>("STP_UpdateUser", userIDParameterParameter, firstNameParameterParameter, firstLastNameParameterParameter, secondLastNameParameterParameter, cellphoneParameterParameter, emailParameterParameter, passwordParameterParameter, saltParameterParameter);
+        }
     }
 }

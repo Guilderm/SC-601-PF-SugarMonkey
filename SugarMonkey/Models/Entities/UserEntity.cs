@@ -14,7 +14,7 @@ namespace SugarMonkey.Models.Entities
         public string ProfilePhotoPath { get; set; }
         public bool? IsCustomer { get; set; }
         public bool? IsAdmin { get; set; }
-        public bool? ISActive { get; set; }
+        public bool? IsActive { get; set; }
         public DateTime? LastLogin { get; set; }
         public string Password { get; set; }
         public string ResetPasswordCode { get; set; }

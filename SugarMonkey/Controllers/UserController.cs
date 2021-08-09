@@ -101,7 +101,7 @@ namespace SugarMonkey.Controllers
 
             ResetPasswordViewModel resetPasswordViewModel =
                 UserBusinessLogic.GetUserByResetPasswordCode(resetPasswordCode);
-            if (resetPasswordViewModel.UserID > 10)
+            if (resetPasswordViewModel.UserId > 10)
             {
                 return View(resetPasswordViewModel);
             }
@@ -131,11 +131,45 @@ namespace SugarMonkey.Controllers
             return View(resetPasswordViewModel);
         }
 
+        [HttpGet]
+        public ActionResult UserEditInfo()
+        {
+            // Carga la informacion de usuario basado en el ID de la sesion
+            int userId = int.Parse(Session["UserID"].ToString());
+            STP_GetUsersInfoByID_Result userEntity = UserBusinessLogic.GetUserById(userId);
+
+            if (userEntity.UserID > 10)
+            {
+                // Llena el modelo de EditUserViewModel con la informacion cargada
+                EditUserViewModel editUserViewModel = new EditUserViewModel();
+                editUserViewModel.FirstName = userEntity.FirstName;
+                editUserViewModel.FirstLastName = userEntity.FirstLastName;
+                editUserViewModel.SecondLastName = userEntity.SecondLastName;
+                editUserViewModel.Cellphone = (int) userEntity.Cellphone;
+                editUserViewModel.Email = userEntity.Email;
+                editUserViewModel.Password = userEntity.Password;
+
+                return View(editUserViewModel);
+            }
+
+            return RedirectToAction("index", "MainPage");
+        }
+
         [HttpPost]
         public ActionResult UserEditInfo(EditUserViewModel editUserViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Message = "There is problem with the data";
+                return View("UserEditInfo", editUserViewModel);
+            }
+
             if (!ModelState.IsValid) return View("UserEditInfo", editUserViewModel);
 
+            // Carga la informacion de usuario basado en el ID de la sesion
+            int userId = int.Parse(Session["UserID"].ToString());
+            STP_UpdateCredentials_Result userEntity = UserBusinessLogic.UpdateUser(editUserViewModel, userId);
+            ViewBag.Message = "El usuario fue creado exitosamente";
             //TODO: Implement
 
             ViewBag.Message = "El usuario fue modificado exitosamente";

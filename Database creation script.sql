@@ -360,24 +360,60 @@ BEGIN
 END
 GO
 
-EXECUTE STP_CreateUser 'Beyonce', 'Collins', 'Harvey', 12345678, 'Beyonce.Collins.Har.@gmail.com', 'Monkey@123',
-        'notSalted';
-EXECUTE STP_CreateUser 'Cassietta', 'Cooper', 'Andrews', 12345678, 'Cassietta.Cooper.And.@gmail.com', 'Monkey@124',
-        'notSalted';
-EXECUTE STP_CreateUser 'Cleotha', 'Watson', 'Cunningham', 12345678, 'Cleotha.Watson.Cun.@gmail.com', 'Monkey@125',
-        'notSalted';
-EXECUTE STP_CreateUser 'Deion', 'Williams', 'Hicks', 12345678, 'Deion.Williams.Hic.@gmail.com', 'Monkey@126',
-        'notSalted';
-EXECUTE STP_CreateUser 'Deiondre', 'Johnson', 'Bennett', 12345678, 'Deiondre.Johnson.Ben.@gmail.com', 'Monkey@127',
-        'notSalted';
-EXECUTE STP_CreateUser 'Deiondre', 'Butler', 'Stephens', 12345678, 'Deiondre.Butler.Ste.@gmail.com', 'Monkey@128',
-        'notSalted';
-EXECUTE STP_CreateUser 'Dele', 'Smith', 'Joseph', 12345678, 'Dele.Smith.Jos.@gmail.com', 'Monkey@129', 'notSalted';
-EXECUTE STP_CreateUser 'Denzel', 'Jones', 'Gibson', 12345678, 'Denzel.Jones.Gib.@gmail.com', 'Monkey@130', 'notSalted';
-EXECUTE STP_CreateUser 'Dericia', 'Alexander', 'Armstrong', 12345678, 'Dericia.Alexander.Arm.@gmail.com', 'Monkey@131',
-        'notSalted';
-EXECUTE STP_CreateUser 'Dewayne', 'Brown', 'Crawford', 12345678, 'Dewayne.Brown.Cra.@gmail.com', 'Monkey@132',
-        'notSalted';
+
+CREATE PROCEDURE STP_UpdateUser @userIDParameter int,
+                                @firstNameParameter varchar(50),
+                                @firstLastNameParameter varchar(50),
+                                @secondLastNameParameter varchar(50),
+                                @cellphoneParameter int,
+                                @emailParameter varchar(50),
+                                @passwordParameter varchar(50),
+                                @saltParameter varchar(50)
+AS
+BEGIN
+    DECLARE @CredentialID varchar(50);
+
+    SELECT @CredentialID = CredentialID
+    FROM [GeneralPurposeDB].[dbo].[Users]
+    WHERE UserID = @userIDParameter;
+
+    UPDATE [GeneralPurposeDB].[dbo].[Users]
+    SET FirstName=@firstNameParameter,
+        FirstLastName=@firstLastNameParameter,
+        SecondLastName=@secondLastNameParameter,
+        Cellphone=@cellphoneParameter,
+        Email=@emailParameter
+    WHERE UserID = @userIDParameter;
+
+    Update [GeneralPurposeDB].[dbo].[Credentials]
+    SET [Password] = @passwordParameter,
+        [Salt]     = @saltParameter
+    WHERE CredentialID = @CredentialID;
+
+    Execute STP_GetUsersInfoByID @userIDParameter;
+END
+GO
+
+    EXECUTE STP_CreateUser 'Beyonce', 'Collins', 'Harvey', 12345678, 'Beyonce.Collins.Har.@gmail.com', 'Monkey@123',
+            'notSalted';
+    EXECUTE STP_CreateUser 'Cassietta', 'Cooper', 'Andrews', 12345678, 'Cassietta.Cooper.And.@gmail.com', 'Monkey@124',
+            'notSalted';
+    EXECUTE STP_CreateUser 'Cleotha', 'Watson', 'Cunningham', 12345678, 'Cleotha.Watson.Cun.@gmail.com', 'Monkey@125',
+            'notSalted';
+    EXECUTE STP_CreateUser 'Deion', 'Williams', 'Hicks', 12345678, 'Deion.Williams.Hic.@gmail.com', 'Monkey@126',
+            'notSalted';
+    EXECUTE STP_CreateUser 'Deiondre', 'Johnson', 'Bennett', 12345678, 'Deiondre.Johnson.Ben.@gmail.com', 'Monkey@127',
+            'notSalted';
+    EXECUTE STP_CreateUser 'Deiondre', 'Butler', 'Stephens', 12345678, 'Deiondre.Butler.Ste.@gmail.com', 'Monkey@128',
+            'notSalted';
+    EXECUTE STP_CreateUser 'Dele', 'Smith', 'Joseph', 12345678, 'Dele.Smith.Jos.@gmail.com', 'Monkey@129', 'notSalted';
+    EXECUTE STP_CreateUser 'Denzel', 'Jones', 'Gibson', 12345678, 'Denzel.Jones.Gib.@gmail.com', 'Monkey@130',
+            'notSalted';
+    EXECUTE STP_CreateUser 'Dericia', 'Alexander', 'Armstrong', 12345678, 'Dericia.Alexander.Arm.@gmail.com',
+            'Monkey@131',
+            'notSalted';
+    EXECUTE STP_CreateUser 'Dewayne', 'Brown', 'Crawford', 12345678, 'Dewayne.Brown.Cra.@gmail.com', 'Monkey@132',
+            'notSalted';
 GO
 
 --Test STP_SetResetPasswordCode
@@ -390,6 +426,7 @@ GO
 
 --Test
 Execute STP_UpdateCredentials 100, "newPassword", "Notsalted";
+GO
 
 --Get all user Data
 Execute STP_GetUsersInfo

@@ -142,7 +142,7 @@
     <Compile Include="Models\AppSetting.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BusinessLogic\adminBusinessLogic.cs" />
+    <Compile Include="Models\BusinessLogic\AdminBusinessLogic.cs" />
     <Compile Include="Models\Credential.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
@@ -167,7 +167,7 @@
     <Compile Include="Models\DeliveryOption.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entities\adminEntity.cs" />
+    <Compile Include="Models\Entities\AdminEntity.cs" />
     <Compile Include="Models\Entities\OrderEntity.cs" />
     <Compile Include="Models\Entities\ProductEntity.cs" />
     <Compile Include="Models\Entities\UserEntity.cs" />
@@ -218,6 +218,9 @@
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\STP_UpdateCredentials_Result.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\STP_UpdateUser_Result.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">

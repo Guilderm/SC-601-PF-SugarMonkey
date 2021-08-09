@@ -4,7 +4,7 @@ namespace SugarMonkey.Models.Views
 {
     public class ResetPasswordViewModel
     {
-        public int UserID { get; set; }
+        public int UserId { get; set; }
 
         [Required(ErrorMessage = "New password required", AllowEmptyStrings = false)]
         [DataType(DataType.Password)]
