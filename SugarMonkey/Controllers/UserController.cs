@@ -1,6 +1,4 @@
-﻿using System;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Security;
 using SugarMonkey.Models;
 using SugarMonkey.Models.BusinessLogic;
@@ -133,43 +131,14 @@ namespace SugarMonkey.Controllers
             return View(resetPasswordViewModel);
         }
 
-        [HttpGet]
-        public ActionResult UserEditInfo()
-        {
-            // Carga la informacion de usuario basado en el ID de la sesion
-            int userID = Int32.Parse(Session["UserID"].ToString());
-            STP_GetUsersInfoByID_Result userEntity = UserBusinessLogic.GetUserByID(userID);
-
-            if (userEntity.UserID > 10)
-            {
-                // Llena el modelo de EditUserViewModel con la informacion cargada
-                EditUserViewModel editUserViewModel = new EditUserViewModel();
-                editUserViewModel.FirstName = userEntity.FirstName;
-                editUserViewModel.FirstLastName = userEntity.FirstLastName;
-                editUserViewModel.SecondLastName = userEntity.SecondLastName;
-                editUserViewModel.Cellphone = (int)userEntity.Cellphone;
-                editUserViewModel.Email = userEntity.Email;
-                editUserViewModel.Password = userEntity.Password;
-
-                return View(editUserViewModel);
-            }
-
-            return RedirectToAction("index", "MainPage");
-        }
-
         [HttpPost]
         public ActionResult UserEditInfo(EditUserViewModel editUserViewModel)
         {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Message = "There is problem with the data";
-                return View("UserEditInfo", editUserViewModel);
-            }
+            if (!ModelState.IsValid) return View("UserEditInfo", editUserViewModel);
 
-            // Carga la informacion de usuario basado en el ID de la sesion
-            int userID = Int32.Parse(Session["UserID"].ToString());
-            STP_UpdateCredentials_Result userEntity = UserBusinessLogic.UpdateUser(editUserViewModel, userID);
-            ViewBag.Message = "El usuario fue creado exitosamente";
+            //TODO: Implement
+
+            ViewBag.Message = "El usuario fue modificado exitosamente";
             return RedirectToAction("index", "MainPage");
         }
     }
