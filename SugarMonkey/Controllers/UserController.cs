@@ -168,7 +168,7 @@ namespace SugarMonkey.Controllers
 
             // Carga la informacion de usuario basado en el ID de la sesion
             int userId = int.Parse(Session["UserID"].ToString());
-            STP_UpdateCredentials_Result userEntity = UserBusinessLogic.UpdateUser(editUserViewModel, userId);
+            STP_UpdateUser_Result userEntity = UserBusinessLogic.UpdateUser(editUserViewModel, userId);
             ViewBag.Message = "El usuario fue creado exitosamente";
             //TODO: Implement
 
