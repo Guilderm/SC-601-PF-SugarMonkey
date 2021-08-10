@@ -1,14 +1,17 @@
-﻿using System.Web.Mvc;
-using OnlineShopping.Filters;
+﻿using System.Linq;
+using System.Web.Mvc;
+using OnlineShopping.DAL;
+using SugarMonkey.Filters;
+using SugarMonkey.Repository;
 
-namespace OnlineShopping.Controllers
+namespace SugarMonkey.Controllers
 {
     [FrontPageActionFilter]
     public class HomeController : Controller
     {
         #region Other Class references ... // Instance on Unit of Work 
 
-        public GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
+        public GenericUnitOfWork UnitOfWork = new GenericUnitOfWork();
 
         #endregion
 
@@ -18,7 +21,7 @@ namespace OnlineShopping.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            ViewBag.FeaturedProducts = _unitOfWork.GetRepositoryInstance<Tbl_Product>()
+            ViewBag.FeaturedProducts = UnitOfWork.GetRepositoryInstance<Tbl_Product>()
                 .GetListByParameter(i => i.IsFeatured == true && i.IsDelete == false && i.IsActive == true).ToList();
             return View();
         }
@@ -27,7 +30,7 @@ namespace OnlineShopping.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            _unitOfWork.Dispose();
+            UnitOfWork.Dispose();
             base.Dispose(disposing);
         }
 

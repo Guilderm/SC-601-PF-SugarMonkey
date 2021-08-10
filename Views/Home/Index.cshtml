@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Online Shopping : Home Page";
     Layout = "~/Views/Shared/_FrontLayout.cshtml";
-    List<Tbl_Product> FeaturedProducts = (List<Tbl_Product>) ViewBag.FeaturedProducts;
+    List<Tbl_Product> featuredProducts = (List<Tbl_Product>) ViewBag.FeaturedProducts;
 }
 <style>
     .profPerson .ProfImg {
@@ -40,7 +40,7 @@
         <h1>Featured Products</h1>
         <div class="professionSLider">
             <div class="profSlider">
-                @foreach (var featured in FeaturedProducts)
+                @foreach (var featured in featuredProducts)
                 {
                     <div class="item">
                         <div class="profPerson">

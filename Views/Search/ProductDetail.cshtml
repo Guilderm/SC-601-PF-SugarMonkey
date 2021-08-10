@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "ProductDetail";
     Layout = "~/Views/Shared/_FrontLayout.cshtml";
-    List<Tbl_Product> SimilarProducts = (List<Tbl_Product>) ViewBag.SimilarProducts;
+    List<Tbl_Product> similarProducts = (List<Tbl_Product>) ViewBag.SimilarProducts;
 }
 <style>
     .servicesList .servicesBox .servicesImg img { height: 145px; }
@@ -55,9 +55,9 @@
             </div>
             <div class="viewList">
                 <ul class="servicesList">
-                    @if (SimilarProducts.Count > 0)
+                    @if (similarProducts.Count > 0)
                     {
-                        foreach (var ov in SimilarProducts)
+                        foreach (var ov in similarProducts)
                         {
                             <li>
                                 <!--Start ServicesBox-->

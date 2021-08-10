@@ -1,7 +1,10 @@
-﻿using System.Web.Mvc;
-using OnlineShopping.Controllers;
+﻿using System.Linq;
+using System.Web.Mvc;
+using OnlineShopping.DAL;
+using SugarMonkey.Controllers;
+using SugarMonkey.Repository;
 
-namespace OnlineShopping.Filters
+namespace SugarMonkey.Filters
 {
     public class FrontPageActionFilter : FilterAttribute, IActionFilter
     {
@@ -31,8 +34,8 @@ namespace OnlineShopping.Filters
                     break;
             }
 
-            GenericUnitOfWork _unitOfWork = controller._unitOfWork;
-            filterContext.Controller.ViewBag.CategoryAndSubCategory = _unitOfWork.GetRepositoryInstance<Tbl_Category>()
+            GenericUnitOfWork unitOfWork = controller._unitOfWork;
+            filterContext.Controller.ViewBag.CategoryAndSubCategory = unitOfWork.GetRepositoryInstance<Tbl_Category>()
                 .GetAllRecordsIQueryable().ToList();
         }
 

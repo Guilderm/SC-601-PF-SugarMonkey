@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Web.Mvc;
-using OnlineShopping.Filters;
+using OnlineShopping.DAL;
+using SugarMonkey.Filters;
+using SugarMonkey.Repository;
 
-namespace OnlineShopping.Controllers
+namespace SugarMonkey.Controllers
 {
     [FrontPageActionFilter]
     public class SearchController : Controller
@@ -18,7 +21,7 @@ namespace OnlineShopping.Controllers
         public ActionResult Index(string searchKey = "")
         {
             ViewBag.searchKey = searchKey;
-            List<USP_Search_Result> sr = _unitOfWork.GetRepositoryInstance<USP_Search_Result>()
+            List<USP_Search_Result> sr = UnitOfWork.GetRepositoryInstance<USP_Search_Result>()
                 .GetResultBySqlProcedure("USP_Search @searchKey",
                     new SqlParameter("searchKey", SqlDbType.VarChar) {Value = searchKey}).ToList();
             return View(sr);
@@ -31,8 +34,8 @@ namespace OnlineShopping.Controllers
         /// <returns></returns>
         public ActionResult ProductDetail(int pId)
         {
-            Tbl_Product pd = _unitOfWork.GetRepositoryInstance<Tbl_Product>().GetFirstOrDefault(pId);
-            ViewBag.SimilarProducts = _unitOfWork.GetRepositoryInstance<Tbl_Product>()
+            Tbl_Product pd = UnitOfWork.GetRepositoryInstance<Tbl_Product>().GetFirstOrDefault(pId);
+            ViewBag.SimilarProducts = UnitOfWork.GetRepositoryInstance<Tbl_Product>()
                 .GetListByParameter(i => i.CategoryId == pd.CategoryId).ToList();
             return View(pd);
         }
@@ -40,10 +43,10 @@ namespace OnlineShopping.Controllers
         #region Other Class references ...
 
         // Instance on Unit of Work         
-        public GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
+        public GenericUnitOfWork UnitOfWork = new GenericUnitOfWork();
         private int _memberId;
 
-        public int memberId
+        public int MemberId
         {
             get => Convert.ToInt32(Session["MemberId"]);
             set => _memberId = Convert.ToInt32(Session["MemberId"]);

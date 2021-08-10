@@ -3,8 +3,8 @@
 @model IEnumerable<Service_Based_Marketplace.Models.SearchServiceAndProfessional>
 @{
     Layout = null;
-    DateTime AvailableDate;
-    DateTime.TryParseExact(ViewBag.AvailableDate, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out AvailableDate);
+    DateTime availableDate;
+    DateTime.TryParseExact(ViewBag.AvailableDate, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out availableDate);
 }
 <style>
     .FilterBox {
@@ -306,8 +306,8 @@
                     <span class="availsort">Availability:</span>
                     @*<input type="text" class="availdate FilterCalendarDatePicker" value="@(AvailableDate!=DateTime.MinValue? AvailableDate.ToString("MMM d, yyyy") :"")" placeholder="-Select Date-">
                                 <input type="hidden" class="availdate" id="datepicker" name="AvailableDate" value="@(AvailableDate!=DateTime.MinValue? AvailableDate.ToString("MM/dd/yyyy"):"")" />*@
-                    <input type="text" class="availdate" id="datepicker" value="@(AvailableDate != DateTime.MinValue ? AvailableDate.ToString("MMM d, yyyy") : "")" placeholder="-Select Date-">
-                    <input type="hidden" class="availdate" name="AvailableDate" value="@(AvailableDate != DateTime.MinValue ? AvailableDate.ToString("MM/dd/yyyy") : "")"/>
+                    <input type="text" class="availdate" id="datepicker" value="@(availableDate != DateTime.MinValue ? availableDate.ToString("MMM d, yyyy") : "")" placeholder="-Select Date-">
+                    <input type="hidden" class="availdate" name="AvailableDate" value="@(availableDate != DateTime.MinValue ? availableDate.ToString("MM/dd/yyyy") : "")"/>
                 </div>
             </div>
             <div class="priceRight fr">

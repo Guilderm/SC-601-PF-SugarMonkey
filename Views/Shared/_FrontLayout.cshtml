@@ -1,6 +1,7 @@
-﻿@using OnlineShopping.Models
+﻿@using OnlineShopping.DAL
+@using OnlineShopping.Models
 @{
-    List<OnlineShopping.DAL.Tbl_Category> AllCategories = (List<OnlineShopping.DAL.Tbl_Category>) ViewBag.CategoryAndSubCategory;
+    List<Tbl_Category> allCategories = (List<Tbl_Category>) ViewBag.CategoryAndSubCategory;
 }
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -75,11 +76,11 @@
     <div class="categories transition">
         <ul class="categoriesList">
             <!--<div class="closeBtn">X Close</div>-->
-            @foreach (var cat in AllCategories)
+            @foreach (var cat in allCategories)
             {
-                <li class="@(AllCategories.Where(i => i.CategoryId == cat.CategoryId).Count() > 0 ? "subcat" : "")">
+                <li class="@(allCategories.Where(i => i.CategoryId == cat.CategoryId).Count() > 0 ? "subcat" : "")">
                     <a href="/Search/index?searchKey=@cat.CategoryName">@cat.CategoryName</a>
-                    <ul class="subCategories" style="display:@(AllCategories.Where(i => i.CategoryId == cat.CategoryId).Count() > 0 ? "" : "none")">
+                    <ul class="subCategories" style="display:@(allCategories.Where(i => i.CategoryId == cat.CategoryId).Count() > 0 ? "" : "none")">
                         <h1>All @cat.CategoryName</h1>
                         @foreach (var p in cat.Tbl_Product.ToList())
                         {

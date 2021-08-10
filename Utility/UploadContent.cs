@@ -5,8 +5,9 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Web;
 using System.Web.Helpers;
+using SugarMonkey.Repository;
 
-namespace OnlineShopping.Utility
+namespace SugarMonkey.Utility
 {
     public class UploadContent
     {
@@ -18,11 +19,11 @@ namespace OnlineShopping.Utility
         /// <param name="imagePrefix"></param>
         /// <param name="rootPath"></param>
         /// <param name="server"></param>
-        /// <param name="_unitOfWork"></param>
+        /// <param name="unitOfWork"></param>
         /// <param name="memberId"></param>
         /// <param name="serviceId"></param>
         public void UploadImage(HttpPostedFileBase originalImage, string imagePrefix, string rootPath,
-            HttpServerUtilityBase server, GenericUnitOfWork _unitOfWork, int memberId, int productId = 0,
+            HttpServerUtilityBase server, GenericUnitOfWork unitOfWork, int memberId, int productId = 0,
             int categoryId = 0)
         {
             bool existsOriginal = Directory.Exists(server.MapPath("~/" + rootPath + "Original/"));
@@ -77,10 +78,10 @@ namespace OnlineShopping.Utility
         /// <param name="server"></param>
         /// <returns></returns>
         public string UploadImage1(HttpPostedFileBase image, string imageSubPath, HttpServerUtilityBase server,
-            GenericUnitOfWork _unitOfWork, int memberId = 0)
+            GenericUnitOfWork unitOfWork, int memberId = 0)
         {
-            string ImgPath = imageSubPath + memberId + "_" + image.FileName;
-            var imgnew = server.MapPath(ImgPath);
+            string imgPath = imageSubPath + memberId + "_" + image.FileName;
+            var imgnew = server.MapPath(imgPath);
             bool exists = Directory.Exists(server.MapPath(imageSubPath));
             if (!exists)
                 Directory.CreateDirectory(server.MapPath(imageSubPath));
@@ -89,7 +90,7 @@ namespace OnlineShopping.Utility
                 memberId + "_", image.FileName, server);
             ResizeAndUploadImageByHttpPostedFileBase(image, imageSubPath + "/Medium/", new Size(234, 156),
                 memberId + "_", image.FileName, server);
-            return ImgPath;
+            return imgPath;
         }
 
         public void UploadMemberProfilePic()
@@ -136,8 +137,8 @@ namespace OnlineShopping.Utility
             bool success = false;
             try
             {
-                Image img_Original = Image.FromFile(originalImage);
-                Image image = ResizeImage(img_Original, size);
+                Image imgOriginal = Image.FromFile(originalImage);
+                Image image = ResizeImage(imgOriginal, size);
                 image.Save(Path.Combine(targetPath, outputImageName));
                 image.Dispose();
                 success = true;
@@ -162,28 +163,28 @@ namespace OnlineShopping.Utility
             float nPercent = 0;
             float nPercentW = 0;
             float nPercentH = 0;
-            int Height = size.Height;
-            int Width = size.Width;
+            int height = size.Height;
+            int width = size.Width;
 
-            nPercentW = Width / (float) sourceWidth;
-            nPercentH = Height / (float) sourceHeight;
+            nPercentW = width / (float) sourceWidth;
+            nPercentH = height / (float) sourceHeight;
             if (nPercentH < nPercentW)
             {
                 nPercent = nPercentH;
-                destX = Convert.ToInt16((Width -
+                destX = Convert.ToInt16((width -
                                          sourceWidth * nPercent) / 2);
             }
             else
             {
                 nPercent = nPercentW;
-                destY = Convert.ToInt16((Height -
+                destY = Convert.ToInt16((height -
                                          sourceHeight * nPercent) / 2);
             }
 
             int destWidth = (int) (sourceWidth * nPercent);
             int destHeight = (int) (sourceHeight * nPercent);
 
-            Bitmap bmPhoto = new Bitmap(Width, Height, PixelFormat.Format24bppRgb);
+            Bitmap bmPhoto = new Bitmap(width, height, PixelFormat.Format24bppRgb);
             bmPhoto.SetResolution(imgPhoto.HorizontalResolution, imgPhoto.VerticalResolution);
 
             Graphics grPhoto = Graphics.FromImage(bmPhoto);

@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json;
-using OnlineShopping.Filters;
+using OnlineShopping.DAL;
 using OnlineShopping.Models;
-using OnlineShopping.Utility;
+using SugarMonkey.Filters;
+using SugarMonkey.Repository;
+using SugarMonkey.Utility;
 
-namespace OnlineShopping.Controllers
+namespace SugarMonkey.Controllers
 {
     [AuthorizeUser(Roles = "Admin")]
     public class AdminController : Controller
@@ -46,9 +49,9 @@ namespace OnlineShopping.Controllers
         /// <returns></returns>
         public ActionResult Orders()
         {
-            List<Tbl_Cart> AllOrders = _unitOfWork.GetRepositoryInstance<Tbl_Cart>()
+            List<Tbl_Cart> allOrders = _unitOfWork.GetRepositoryInstance<Tbl_Cart>()
                 .GetListByParameter(i => i.CartStatusId == 3).ToList();
-            return View(AllOrders);
+            return View(allOrders);
         }
 
         /// <summary>
@@ -58,9 +61,9 @@ namespace OnlineShopping.Controllers
         /// <returns></returns>
         public ActionResult OrderDetail(int productId)
         {
-            List<Tbl_Cart> ProductOrders = _unitOfWork.GetRepositoryInstance<Tbl_Cart>()
+            List<Tbl_Cart> productOrders = _unitOfWork.GetRepositoryInstance<Tbl_Cart>()
                 .GetListByParameter(i => i.CartStatusId == 3 && i.ProductId == productId).ToList();
-            return View(ProductOrders);
+            return View(productOrders);
         }
 
         #region Disposing UnitOfWork Context ...
@@ -77,7 +80,7 @@ namespace OnlineShopping.Controllers
 
         // Instance on Unit of Work
         private readonly GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
-        private readonly UploadContent uc = new UploadContent();
+        private readonly UploadContent _uc = new UploadContent();
 
         #endregion
 
@@ -144,9 +147,9 @@ namespace OnlineShopping.Controllers
         {
             if (ModelState.IsValid)
             {
-                string EncryptedPassword = EncryptDecrypt.Encrypt(model.Password, true);
+                string encryptedPassword = EncryptDecrypt.Encrypt(model.Password, true);
                 var user = _unitOfWork.GetRepositoryInstance<Tbl_Members>().GetFirstOrDefaultByParameter(i =>
-                    i.EmailId == model.UserEmailId && i.Password == EncryptedPassword && i.IsActive == true &&
+                    i.EmailId == model.UserEmailId && i.Password == encryptedPassword && i.IsActive == true &&
                     i.IsDelete == false);
                 if (user != null)
                 {
@@ -209,13 +212,13 @@ namespace OnlineShopping.Controllers
         [ValidateInput(false)]
         public ActionResult ChangePassword(ChangePasswordViewModel cpm)
         {
-            int LoginMemberId = Convert.ToInt32(Session["MemberId"]);
-            var ExistingDetails = _unitOfWork.GetRepositoryInstance<Tbl_Members>()
+            int loginMemberId = Convert.ToInt32(Session["MemberId"]);
+            var existingDetails = _unitOfWork.GetRepositoryInstance<Tbl_Members>()
                 .GetFirstOrDefaultByParameter(i =>
-                    i.MemberId == LoginMemberId && i.IsActive == true && i.IsDelete == false);
-            if (EncryptDecrypt.Encrypt(cpm.OldPassword, true) == ExistingDetails.Password)
+                    i.MemberId == loginMemberId && i.IsActive == true && i.IsDelete == false);
+            if (EncryptDecrypt.Encrypt(cpm.OldPassword, true) == existingDetails.Password)
             {
-                ExistingDetails.Password = EncryptDecrypt.Encrypt(cpm.NewPassword, true);
+                existingDetails.Password = EncryptDecrypt.Encrypt(cpm.NewPassword, true);
                 _unitOfWork.SaveChanges();
                 ViewBag.PasswordChangeMsg = "Password changed successfully";
             }
@@ -236,9 +239,9 @@ namespace OnlineShopping.Controllers
 
         public ActionResult Categories()
         {
-            List<Tbl_Category> AllCategories = _unitOfWork.GetRepositoryInstance<Tbl_Category>()
+            List<Tbl_Category> allCategories = _unitOfWork.GetRepositoryInstance<Tbl_Category>()
                 .GetAllRecordsIQueryable().Where(i => i.IsDelete == false).ToList();
-            return View(AllCategories);
+            return View(allCategories);
         }
 
         /// <summary>
@@ -319,17 +322,17 @@ namespace OnlineShopping.Controllers
         /// <summary>
         ///     Check Category Exist
         /// </summary>
-        /// <param name="CategoryName"></param>
+        /// <param name="categoryName"></param>
         /// <returns></returns>
-        public JsonResult CheckCategoryExist(string CategoryName)
+        public JsonResult CheckCategoryExist(string categoryName)
         {
-            int CategoryId = 0;
+            int categoryId = 0;
             if (HttpUtility.ParseQueryString(Request.UrlReferrer.Query)["categoryId"] != null)
-                CategoryId = Convert.ToInt32(HttpUtility.ParseQueryString(Request.UrlReferrer.Query)["categoryId"]);
-            var CategoryExist = _unitOfWork.GetRepositoryInstance<Tbl_Category>().GetAllRecordsIQueryable().Where(i =>
-                i.CategoryName == CategoryName && i.CategoryId != CategoryId && i.IsActive == true &&
+                categoryId = Convert.ToInt32(HttpUtility.ParseQueryString(Request.UrlReferrer.Query)["categoryId"]);
+            var categoryExist = _unitOfWork.GetRepositoryInstance<Tbl_Category>().GetAllRecordsIQueryable().Where(i =>
+                i.CategoryName == categoryName && i.CategoryId != categoryId && i.IsActive == true &&
                 i.IsDelete == false).Count();
-            return CategoryExist == 0
+            return categoryExist == 0
                 ? Json(true, JsonRequestBehavior.AllowGet)
                 : Json(false, JsonRequestBehavior.AllowGet);
         }
@@ -388,12 +391,12 @@ namespace OnlineShopping.Controllers
         ///     Updating Product details to DB
         /// </summary>
         /// <param name="pd"></param>
-        /// <param name="_ProductImage"></param>
+        /// <param name="productImage"></param>
         /// <returns></returns>
         [HttpPost]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
-        public ActionResult UpdateProduct(ProductDetail pd, HttpPostedFileBase _ProductImage)
+        public ActionResult UpdateProduct(ProductDetail pd, HttpPostedFileBase productImage)
         {
             if (ModelState.IsValid)
             {
@@ -404,7 +407,7 @@ namespace OnlineShopping.Controllers
                 prod.IsActive = pd.IsActive;
                 prod.IsFeatured = pd.IsFeatured;
                 prod.Price = pd.Price;
-                prod.ProductImage = _ProductImage != null ? _ProductImage.FileName : prod.ProductImage;
+                prod.ProductImage = productImage != null ? productImage.FileName : prod.ProductImage;
                 prod.ProductName = pd.ProductName;
                 prod.ModifiedDate = DateTime.Now;
                 if (prod.ProductId == 0)
@@ -419,8 +422,8 @@ namespace OnlineShopping.Controllers
                     _unitOfWork.SaveChanges();
                 }
 
-                if (_ProductImage != null)
-                    uc.UploadImage(_ProductImage, prod.ProductId + "_", "/Content/ProductImage/", Server, _unitOfWork,
+                if (productImage != null)
+                    _uc.UploadImage(productImage, prod.ProductId + "_", "/Content/ProductImage/", Server, _unitOfWork,
                         0, prod.ProductId);
                 return RedirectToAction("Products");
             }
@@ -433,15 +436,15 @@ namespace OnlineShopping.Controllers
         /// <summary>
         ///     Check Product Exist
         /// </summary>
-        /// <param name="ProductName"></param>
+        /// <param name="productName"></param>
         /// <returns></returns>
-        public JsonResult CheckProductExist(string ProductName)
+        public JsonResult CheckProductExist(string productName)
         {
             int productId = 0;
             if (HttpUtility.ParseQueryString(Request.UrlReferrer.Query)["productId"] != null)
                 productId = Convert.ToInt32(HttpUtility.ParseQueryString(Request.UrlReferrer.Query)["productId"]);
             var productExist = _unitOfWork.GetRepositoryInstance<Tbl_Product>().GetAllRecordsIQueryable().Where(i =>
-                    i.ProductName == ProductName && i.ProductId != productId && i.IsActive == true &&
+                    i.ProductName == productName && i.ProductId != productId && i.IsActive == true &&
                     i.IsDelete == false)
                 .Count();
             return productExist == 0

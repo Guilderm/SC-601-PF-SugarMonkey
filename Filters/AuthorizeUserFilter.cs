@@ -2,35 +2,35 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OnlineShopping.Filters
+namespace SugarMonkey.Filters
 {
     public class AuthorizeUserAttribute : AuthorizeAttribute
     {
         // Checking user is authorize or not
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
-            bool IsValidUser = true;
+            bool isValidUser = true;
             // Authorization for valid member
             if (HttpContext.Current.Session["MemberId"] == null || HttpContext.Current.Session["MemberId"] == "0")
-                IsValidUser = false;
+                isValidUser = false;
 
-            if (IsValidUser)
+            if (isValidUser)
             {
                 // Authorization for valid role
                 if (!string.IsNullOrEmpty(Roles))
                 {
                     string privilegeLevels = string.Join("", HttpContext.Current.Request.Cookies["MemberRole"].Value);
                     if (Roles.Contains(privilegeLevels))
-                        IsValidUser = true;
+                        isValidUser = true;
                     else
-                        IsValidUser = false;
+                        isValidUser = false;
                 }
             }
 
-            return IsValidUser;
+            return isValidUser;
         }
 
-        // Based on Authorization result, redirct user to specific page
+        // Based on Authorization result, redirect user to specific page
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
             filterContext.Result = new RedirectToRouteResult(

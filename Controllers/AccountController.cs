@@ -3,11 +3,13 @@ using System.Configuration;
 using System.IO;
 using System.Web;
 using System.Web.Mvc;
-using OnlineShopping.Filters;
+using OnlineShopping.DAL;
 using OnlineShopping.Models;
-using OnlineShopping.Utility;
+using SugarMonkey.Filters;
+using SugarMonkey.Repository;
+using SugarMonkey.Utility;
 
-namespace OnlineShopping.Controllers
+namespace SugarMonkey.Controllers
 {
     [FrontPageActionFilter]
     public class AccountController : Controller
@@ -15,7 +17,7 @@ namespace OnlineShopping.Controllers
         #region Other class references...
 
         // Instance on Unit of Work
-        public GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
+        public GenericUnitOfWork UnitOfWork = new GenericUnitOfWork();
 
         #endregion
 
@@ -27,18 +29,18 @@ namespace OnlineShopping.Controllers
         {
             if (ModelState.IsValid)
             {
-                string EncryptedPassword = EncryptDecrypt.Encrypt(model.Password, true);
-                var user = _unitOfWork.GetRepositoryInstance<Tbl_Members>().GetFirstOrDefaultByParameter(i =>
-                    i.EmailId == model.UserEmailId && i.Password == EncryptedPassword && i.IsDelete == false);
+                string encryptedPassword = EncryptDecrypt.Encrypt(model.Password, true);
+                var user = UnitOfWork.GetRepositoryInstance<Tbl_Members>().GetFirstOrDefaultByParameter(i =>
+                    i.EmailId == model.UserEmailId && i.Password == encryptedPassword && i.IsDelete == false);
                 if (user != null && user.IsActive == true)
                 {
                     Session["MemberId"] = user.MemberId;
                     Response.Cookies["MemberName"].Value = user.FirstName;
-                    var roles = _unitOfWork.GetRepositoryInstance<Tbl_MemberRole>()
+                    var roles = UnitOfWork.GetRepositoryInstance<Tbl_MemberRole>()
                         .GetFirstOrDefaultByParameter(i => i.MemberId == user.MemberId);
                     if (roles != null && roles.RoleId != 1)
                     {
-                        Response.Cookies["MemberRole"].Value = _unitOfWork.GetRepositoryInstance<Tbl_Roles>()
+                        Response.Cookies["MemberRole"].Value = UnitOfWork.GetRepositoryInstance<Tbl_Roles>()
                             .GetFirstOrDefaultByParameter(i => i.RoleId == roles.RoleId).RoleName;
                     }
                     else
@@ -122,12 +124,12 @@ namespace OnlineShopping.Controllers
                 mem.Password = EncryptDecrypt.Encrypt(model.Password, true);
                 mem.IsActive = true;
                 mem.IsDelete = false;
-                _unitOfWork.GetRepositoryInstance<Tbl_Members>().Add(mem);
+                UnitOfWork.GetRepositoryInstance<Tbl_Members>().Add(mem);
                 // Adding Member Role                 
-                Tbl_MemberRole mem_Role = new Tbl_MemberRole();
-                mem_Role.MemberId = mem.MemberId;
-                mem_Role.RoleId = 2;
-                _unitOfWork.GetRepositoryInstance<Tbl_MemberRole>().Add(mem_Role);
+                Tbl_MemberRole memRole = new Tbl_MemberRole();
+                memRole.MemberId = mem.MemberId;
+                memRole.RoleId = 2;
+                UnitOfWork.GetRepositoryInstance<Tbl_MemberRole>().Add(memRole);
 
                 TempData["VerificationLinlMsg"] = "You are registered successfully.";
                 Session["MemberId"] = mem.MemberId;
@@ -140,12 +142,12 @@ namespace OnlineShopping.Controllers
         }
 
 
-        public JsonResult CheckEmailExist(string UserEmailId)
+        public JsonResult CheckEmailExist(string userEmailId)
         {
-            int LoginMemberId = Convert.ToInt32(Session["MemberId"]);
-            var EmailExist = _unitOfWork.GetRepositoryInstance<Tbl_Members>().GetFirstOrDefaultByParameter(i =>
-                i.MemberId != LoginMemberId && i.EmailId == UserEmailId && i.IsDelete == false);
-            return EmailExist == null
+            int loginMemberId = Convert.ToInt32(Session["MemberId"]);
+            var emailExist = UnitOfWork.GetRepositoryInstance<Tbl_Members>().GetFirstOrDefaultByParameter(i =>
+                i.MemberId != loginMemberId && i.EmailId == userEmailId && i.IsDelete == false);
+            return emailExist == null
                 ? Json(true, JsonRequestBehavior.AllowGet)
                 : Json(false, JsonRequestBehavior.AllowGet);
         }
@@ -165,7 +167,7 @@ namespace OnlineShopping.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ForgotPassword(ForgotPasswordViewModel fpm)
         {
-            if (_unitOfWork.GetRepositoryInstance<Tbl_Members>().GetFirstOrDefaultByParameter(i =>
+            if (UnitOfWork.GetRepositoryInstance<Tbl_Members>().GetFirstOrDefaultByParameter(i =>
                 i.EmailId == fpm.EmailId && i.IsActive == true && i.IsDelete == false) != null)
             {
                 string body = string.Empty;
@@ -193,15 +195,15 @@ namespace OnlineShopping.Controllers
         #region Reset Password ...
 
         [HttpGet]
-        public ActionResult ResetPassword(string EmailId)
+        public ActionResult ResetPassword(string emailId)
         {
             ResetPasswordViewModel rpm = new ResetPasswordViewModel();
-            if (EmailId != null)
+            if (emailId != null)
             {
                 try
                 {
                     ModelState.Clear();
-                    rpm.EmailId = EncryptDecrypt.Decrypt(EmailId, true);
+                    rpm.EmailId = EncryptDecrypt.Decrypt(emailId, true);
                 }
                 catch (Exception e)
                 {
@@ -219,15 +221,15 @@ namespace OnlineShopping.Controllers
         [ValidateInput(false)]
         public ActionResult ResetPassword(ResetPasswordViewModel rpm)
         {
-            var ExistingDetails = _unitOfWork.GetRepositoryInstance<Tbl_Members>()
+            var existingDetails = UnitOfWork.GetRepositoryInstance<Tbl_Members>()
                 .GetFirstOrDefaultByParameter(
                     i => i.EmailId == rpm.EmailId && i.IsActive == true && i.IsDelete == false);
-            if (ExistingDetails != null)
+            if (existingDetails != null)
             {
-                ExistingDetails.Password = EncryptDecrypt.Encrypt(rpm.NewPassword, true);
-                ExistingDetails.ModifiedOn = DateTime.UtcNow;
-                _unitOfWork.GetRepositoryInstance<Tbl_Members>().Update(ExistingDetails);
-                _unitOfWork.SaveChanges();
+                existingDetails.Password = EncryptDecrypt.Encrypt(rpm.NewPassword, true);
+                existingDetails.ModifiedOn = DateTime.UtcNow;
+                UnitOfWork.GetRepositoryInstance<Tbl_Members>().Update(existingDetails);
+                UnitOfWork.SaveChanges();
                 ViewBag.PasswordChangeMsg = "Password Changed Successfully";
             }
             else

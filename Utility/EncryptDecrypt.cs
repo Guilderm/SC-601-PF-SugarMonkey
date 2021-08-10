@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace OnlineShopping.Utility
+namespace SugarMonkey.Utility
 {
     public class EncryptDecrypt
     {
