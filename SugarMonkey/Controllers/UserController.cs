@@ -8,6 +8,7 @@ namespace SugarMonkey.Controllers
 {
     public class UserController : Controller
     {
+
         [HttpGet]
         public ActionResult Index()
         {
@@ -145,7 +146,7 @@ namespace SugarMonkey.Controllers
                 editUserViewModel.FirstName = userEntity.FirstName;
                 editUserViewModel.FirstLastName = userEntity.FirstLastName;
                 editUserViewModel.SecondLastName = userEntity.SecondLastName;
-                editUserViewModel.Cellphone = (int) userEntity.Cellphone;
+                editUserViewModel.Cellphone = (int)userEntity.Cellphone;
                 editUserViewModel.Email = userEntity.Email;
                 editUserViewModel.Password = userEntity.Password;
 

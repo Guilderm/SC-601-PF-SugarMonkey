@@ -226,10 +226,10 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Views\ResetPasswordViewModel.cs" />
-    <Compile Include="Models\Views\LoginUserViewModel.cs" />
-    <Compile Include="Models\Views\EditUserViewModel.cs" />
-    <Compile Include="Models\Views\UserRegistrationViewModel.cs" />
+    <Compile Include="Models\Views\AdminViewModel.cs" />
+    <Compile Include="Models\Views\OrderViewModel.cs" />
+    <Compile Include="Models\Views\ProductViewModel.cs" />
+    <Compile Include="Models\Views\UserViewModel.cs" />
     <Compile Include="Models\ZipCode.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
