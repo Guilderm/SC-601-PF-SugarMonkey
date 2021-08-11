@@ -1,7 +1,7 @@
 ﻿using System;
-using OnlineShopping.DAL;
+using SugarMonkey.DAL;
 
-namespace OnlineShopping.Repository
+namespace SugarMonkey.Repository
 {
     public class GenericUnitOfWork : IDisposable
     {

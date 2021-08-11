@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineShopping.DAL
+using System;
+
+namespace SugarMonkey.DAL
 {
-    using System;
-    
     public partial class USP_MemberShoppingCartDetails_Result
     {
         public int CartId { get; set; }

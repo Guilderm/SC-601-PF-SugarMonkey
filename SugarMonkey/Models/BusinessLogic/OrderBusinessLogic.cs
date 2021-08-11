@@ -1,4 +1,4 @@
-﻿namespace SugarMonkey.Models.Logic
+﻿namespace SugarMonkey.Models.BusinessLogic
 {
     public class OrderBusinessLogic
     {

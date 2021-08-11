@@ -1,7 +1,7 @@
-﻿@using OnlineShopping.Utility
-@using OnlineShopping.DAL
+﻿@using SugarMonkey.DAL
+@using SugarMonkey.Models
 @{
-    List<OnlineShopping.DAL.Tbl_Category> AllCategories = (List<OnlineShopping.DAL.Tbl_Category>)ViewBag.CategoryAndSubCategory;
+    List<Tbl_Category> AllCategories = (List<Tbl_Category>)ViewBag.CategoryAndSubCategory;
 }
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -83,7 +83,7 @@
 
         <!--Login Popup/Modal-->
         <div class="backBg" id="loginpopup">
-            @{Html.RenderPartial("_Login", new OnlineShopping.Models.LoginViewModel() { UserEmailId = (Request.Cookies["RememberMe_UserEmailId"] != null ? Request.Cookies["RememberMe_UserEmailId"].Value : ""), Password = (Request.Cookies["RememberMe_Password"] != null ? Request.Cookies["RememberMe_Password"].Value : ""), RememberMe = string.IsNullOrEmpty((Request.Cookies["RememberMe_UserEmailId"] != null ? Request.Cookies["RememberMe_UserEmailId"].Value : "")) ? false : true });}
+            @{Html.RenderPartial("_Login", new LoginViewModel() { UserEmailId = (Request.Cookies["RememberMe_UserEmailId"] != null ? Request.Cookies["RememberMe_UserEmailId"].Value : ""), Password = (Request.Cookies["RememberMe_Password"] != null ? Request.Cookies["RememberMe_Password"].Value : ""), RememberMe = string.IsNullOrEmpty((Request.Cookies["RememberMe_UserEmailId"] != null ? Request.Cookies["RememberMe_UserEmailId"].Value : "")) ? false : true });}
         </div>
         <!--End Popup/Modal-->
     </div>

@@ -1,7 +1,7 @@
 ﻿using System.Configuration;
 using System.Net.Mail;
 
-namespace OnlineShopping.Utility
+namespace SugarMonkey.Utility
 {
     public class EmailNotification
     {

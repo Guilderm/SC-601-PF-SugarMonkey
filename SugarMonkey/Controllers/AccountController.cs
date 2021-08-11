@@ -3,13 +3,13 @@ using System.Configuration;
 using System.IO;
 using System.Web;
 using System.Web.Mvc;
-using OnlineShopping.DAL;
-using OnlineShopping.Filters;
-using OnlineShopping.Models;
-using OnlineShopping.Repository;
-using OnlineShopping.Utility;
+using SugarMonkey.DAL;
+using SugarMonkey.Filters;
+using SugarMonkey.Models;
+using SugarMonkey.Repository;
+using SugarMonkey.Utility;
 
-namespace OnlineShopping.Controllers
+namespace SugarMonkey.Controllers
 {
     [FrontPageActionFilter]
     public class AccountController : Controller
@@ -17,11 +17,11 @@ namespace OnlineShopping.Controllers
         #region Other class references...
 
         // Instance on Unit of Work
-        public GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
+        private GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
 
         #endregion
 
-        #region Member Login ...
+        #region Member Login ...+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

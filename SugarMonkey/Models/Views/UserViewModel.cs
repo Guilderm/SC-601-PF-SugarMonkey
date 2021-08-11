@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-namespace SugarMonkey.Models
+
+namespace SugarMonkey.Models.Views
 {
-    public class LoginViewModel
+        public class LoginViewModel
     {
         [Required(ErrorMessage = "Email address is required")]
         [DataType(DataType.EmailAddress)]
@@ -73,8 +74,20 @@ namespace SugarMonkey.Models
         [StringLength(100, ErrorMessage = "Minimum {2} and Maximum {1} characters are allowed", MinimumLength = 5)]
         public string EmailId { get; set; }
     }
-
     public class ResetPasswordViewModel
+    {
+        public int UserId { get; set; }
+
+        [Required(ErrorMessage = "New password required", AllowEmptyStrings = false)]
+        [DataType(DataType.Password)]
+        public string NewPassword { get; set; }
+
+        [DataType(DataType.Password)]
+        [System.ComponentModel.DataAnnotations.Compare("NewPassword", ErrorMessage = "New password and confirm password does not match")]
+        public string ConfirmPassword { get; set; }
+    }
+    
+    public class PasswordResetViewModel
     {
         public string EmailId { get; set; }
 
@@ -84,5 +97,26 @@ namespace SugarMonkey.Models
 
         [System.ComponentModel.DataAnnotations.Compare("NewPassword", ErrorMessage = "Password doesn't match")]
         public string ConfirmPassword { get; set; }
+    }
+    public class UserRegistrationViewModel
+    {
+        [Required] [Display(Name = "Nombre")] public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Primer Apellido")]
+        public string FirstLastName { get; set; }
+
+        [Display(Name = "Segundo Apellido")] public string SecondLastName { get; set; }
+
+        [Display(Name = "Numero Celular")] public int Cellphone { get; set; }
+
+        [Required]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$",
+            ErrorMessage = "E-mail id is not valid")]
+        public string Email { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
     }
 }

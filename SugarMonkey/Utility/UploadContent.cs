@@ -5,9 +5,9 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Web;
 using System.Web.Helpers;
-using OnlineShopping.Repository;
+using SugarMonkey.Repository;
 
-namespace OnlineShopping.Utility
+namespace SugarMonkey.Utility
 {
     public class UploadContent
     {

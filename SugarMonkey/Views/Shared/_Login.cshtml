@@ -1,4 +1,4 @@
-﻿@model OnlineShopping.Models.LoginViewModel
+﻿@model SugarMonkey.Models.LoginViewModel
 @using (Ajax.BeginForm("_Login", "Account", FormMethod.Post, new AjaxOptions { OnSuccess = "OnSuccessLoginPopup", OnFailure = "OnSuccessLoginPopup", UpdateTargetId = "loginpopup", InsertionMode = InsertionMode.Replace }))
 {
      @Html.AntiForgeryToken()

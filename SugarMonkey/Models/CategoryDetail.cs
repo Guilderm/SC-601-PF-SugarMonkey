@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-namespace OnlineShopping.Models
+namespace SugarMonkey.Models
 {
     public class CategoryDetail
     {

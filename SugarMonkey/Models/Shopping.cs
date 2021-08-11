@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OnlineShopping.Models
+namespace SugarMonkey.Models
 {
     public class ShippingDetails
     {

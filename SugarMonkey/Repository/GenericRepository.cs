@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using OnlineShopping.DAL;
+using SugarMonkey.DAL;
 
-namespace OnlineShopping.Repository
+namespace SugarMonkey.Repository
 {
     // This is used to Isolate the EntityFramework based Data Access Layer from the MVC Controller class
 

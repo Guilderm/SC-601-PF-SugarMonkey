@@ -4,12 +4,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web.Mvc;
-using OnlineShopping.DAL;
-using OnlineShopping.Filters;
-using OnlineShopping.Models;
-using OnlineShopping.Repository;
+using SugarMonkey.DAL;
+using SugarMonkey.Filters;
+using SugarMonkey.Models;
+using SugarMonkey.Repository;
 
-namespace OnlineShopping.Controllers
+namespace SugarMonkey.Controllers
 {
     [FrontPageActionFilter]
     [AuthorizeUser]

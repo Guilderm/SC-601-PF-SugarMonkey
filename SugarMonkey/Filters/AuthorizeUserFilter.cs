@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace OnlineShopping.Filters
+namespace SugarMonkey.Filters
 {
     public class AuthorizeUserAttribute : AuthorizeAttribute
     {

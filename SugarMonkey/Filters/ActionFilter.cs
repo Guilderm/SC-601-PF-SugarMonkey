@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
-using OnlineShopping.Controllers;
-using OnlineShopping.DAL;
-using OnlineShopping.Repository;
+using SugarMonkey.Controllers;
+using SugarMonkey.DAL;
+using SugarMonkey.Repository;
 
-namespace OnlineShopping.Filters
+namespace SugarMonkey.Filters
 {
     public class FrontPageActionFilter : FilterAttribute, IActionFilter
     {

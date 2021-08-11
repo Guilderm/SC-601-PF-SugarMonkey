@@ -1,4 +1,4 @@
-﻿namespace SugarMonkey.Models.Entities
+﻿namespace SugarMonkey.Models.BusinessLogic
 {
     public class Utilities
     {
