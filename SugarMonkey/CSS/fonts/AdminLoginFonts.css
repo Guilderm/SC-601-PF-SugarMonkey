@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'SegoeUI';
+    font-style: normal;
+    font-weight: normal;
+    src: url('SegoeUI.eot?#iefix') format('embedded-opentype'), url('SegoeUI.woff') format('woff'), url('SegoeUI.ttf') format('truetype'), url('SegoeUI.svg#SegoeUI') format('svg');
+}
+
+
+@font-face {
+    font-family: 'SegoeUI-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('SegoeUI-Bold.eot?#iefix') format('embedded-opentype'), url('SegoeUI-Bold.woff') format('woff'), url('SegoeUI-Bold.ttf') format('truetype'), url('SegoeUI-Bold.svg#SegoeUI-Bold') format('svg');
+}
+
+
+@font-face {
+    font-family: 'Utsaah';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Utsaah.eot?#iefix') format('embedded-opentype'), url('Utsaah.woff') format('woff'), url('Utsaah.ttf') format('truetype'), url('Utsaah.svg#Utsaah') format('svg');
+}
+
+
+
+@font-face {
+    font-family: 'Utsaah-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Utsaah-Bold.eot?#iefix') format('embedded-opentype'), url('Utsaah-Bold.woff') format('woff'), url('Utsaah-Bold.ttf') format('truetype'), url('Utsaah-Bold.svg#Utsaah-Bold') format('svg');
+}
+
+
+@font-face {
+    font-family: 'SegoeUI-Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('SegoeUI-Light.eot?#iefix') format('embedded-opentype'), url('SegoeUI-Light.woff') format('woff'), url('SegoeUI-Light.ttf') format('truetype'), url('SegoeUI-Light.svg#SegoeUI-Light') format('svg');
+}
