@@ -795,7 +795,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="GeneralPurposeDBEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="GeneralPurposeDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Addresses" EntityType="Self.Address" />
           <EntitySet Name="AppSettings" EntityType="Self.AppSetting" />
           <EntitySet Name="Credentials" EntityType="Self.Credential" />
@@ -1070,7 +1070,7 @@ warning 6002: The table/view 'GeneralPurposeDB.sys.database_firewall_rules' does
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GeneralPurposeDBModelStoreContainer" CdmEntityContainer="GeneralPurposeDBEntities1">
+        <EntityContainerMapping StorageEntityContainer="GeneralPurposeDBModelStoreContainer" CdmEntityContainer="GeneralPurposeDBEntities">
           <EntitySetMapping Name="Addresses">
             <EntityTypeMapping TypeName="GeneralPurposeDBModel.Address">
               <MappingFragment StoreEntitySet="Addresses">

@@ -15,10 +15,10 @@ namespace SugarMonkey.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class GeneralPurposeDBEntities1 : DbContext
+    public partial class GeneralPurposeDBEntities : DbContext
     {
-        public GeneralPurposeDBEntities1()
-            : base("name=GeneralPurposeDBEntities1")
+        public GeneralPurposeDBEntities()
+            : base("name=GeneralPurposeDBEntities")
         {
         }
     
