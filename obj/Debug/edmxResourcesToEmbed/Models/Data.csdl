@@ -338,7 +338,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="GeneralPurposeDBEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="GeneralPurposeDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Addresses" EntityType="Self.Address" />
     <EntitySet Name="AppSettings" EntityType="Self.AppSetting" />
     <EntitySet Name="Credentials" EntityType="Self.Credential" />

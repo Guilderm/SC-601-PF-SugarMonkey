@@ -115,7 +115,7 @@ namespace SugarMonkey.Models.Views
         public string Password { get; set; }
     }
 
-    public class ResetPasswordViewModelOld
+    public class ResetPasswordViewModel_old
     {
         public int UserId { get; set; }
 
@@ -124,8 +124,7 @@ namespace SugarMonkey.Models.Views
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [System.ComponentModel.DataAnnotations.Compare("NewPassword",
-            ErrorMessage = "New password and confirm password does not match")]
+        [System.ComponentModel.DataAnnotations.Compare("NewPassword", ErrorMessage = "New password and confirm password does not match")]
         public string ConfirmPassword { get; set; }
     }
 

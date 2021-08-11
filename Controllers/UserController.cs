@@ -8,10 +8,11 @@ namespace SugarMonkey.Controllers
 {
     public class UserController : Controller
     {
+
         [HttpGet]
         public ActionResult Index()
         {
-            return RedirectToAction("index", "Main");
+            return RedirectToAction("index", "MainPage");
         }
 
         [HttpGet]
@@ -31,7 +32,7 @@ namespace SugarMonkey.Controllers
 
             STP_CreateUser_Result userEntity = UserBusinessLogic.CreateUser(userRegistrationViewModel);
             ViewBag.Message = "El usuario fue creado exitosamente";
-            return RedirectToAction("index", "Main");
+            return RedirectToAction("index", "MainPage");
         }
 
         [HttpGet]
@@ -53,7 +54,7 @@ namespace SugarMonkey.Controllers
             if (userEntity.UserID > 10)
             {
                 Session["UserID"] = userEntity.UserID;
-                return RedirectToAction("index", "Main");
+                return RedirectToAction("index", "MainPage");
             }
 
             ModelState.AddModelError("Failure", "Wrong Username and password combination !");
@@ -64,7 +65,7 @@ namespace SugarMonkey.Controllers
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
-            return RedirectToAction("index", "Main");
+            return RedirectToAction("index", "MainPage");
         }
 
         public ActionResult ForgotPassword()
@@ -124,7 +125,7 @@ namespace SugarMonkey.Controllers
             if (userEntity.UserID > 10)
             {
                 ViewBag.Message = "New password updated successfully";
-                return RedirectToAction("index", "Main");
+                return RedirectToAction("index", "MainPage");
             }
 
             ViewBag.Message = "Something invalid";
@@ -145,14 +146,14 @@ namespace SugarMonkey.Controllers
                 editUserViewModel.FirstName = userEntity.FirstName;
                 editUserViewModel.FirstLastName = userEntity.FirstLastName;
                 editUserViewModel.SecondLastName = userEntity.SecondLastName;
-                editUserViewModel.Cellphone = (int) userEntity.Cellphone;
+                editUserViewModel.Cellphone = (int)userEntity.Cellphone;
                 editUserViewModel.Email = userEntity.Email;
                 editUserViewModel.Password = userEntity.Password;
 
                 return View(editUserViewModel);
             }
 
-            return RedirectToAction("index", "Main");
+            return RedirectToAction("index", "MainPage");
         }
 
         [HttpPost]
@@ -173,7 +174,7 @@ namespace SugarMonkey.Controllers
             //TODO: Implement
 
             ViewBag.Message = "El usuario fue modificado exitosamente";
-            return RedirectToAction("index", "Main");
+            return RedirectToAction("index", "MainPage");
         }
     }
 }

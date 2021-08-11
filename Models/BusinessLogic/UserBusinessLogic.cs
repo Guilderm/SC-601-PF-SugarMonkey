@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using SugarMonkey.Models.Views;
@@ -107,11 +108,11 @@ namespace SugarMonkey.Models.BusinessLogic
             }
         }
 
-        public static STP_UpdateUser_Result UpdateUser(EditUserViewModel editUserViewModel, int userId)
+        public static STP_UpdateUser_Result UpdateUser(EditUserViewModel editUserViewModel, int userID)
         {
             using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
-                STP_UpdateUser_Result userEntity = dbContext.STP_UpdateUser(userId, editUserViewModel.FirstName,
+                STP_UpdateUser_Result userEntity = dbContext.STP_UpdateUser(userID, editUserViewModel.FirstName,
                         editUserViewModel.FirstLastName, editUserViewModel.SecondLastName, editUserViewModel.Cellphone,
                         editUserViewModel.Email, editUserViewModel.Password, "not salted")
                     .FirstOrDefault();
