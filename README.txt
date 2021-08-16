@@ -32,6 +32,15 @@ Tutorial used:
 Current host:
 
 
+Free food related Temaplate:
+FoodWagon - Free Bootstrap 5 HTML5 Restaurant & Food Website Template
+https://themewagon.com/themes/free-bootstrap-5-html5-restaurant-food-website-template-foodwagon/?utm_source=newsletter&utm_medium=new_template
+
+
+ASP.NET MVC Shopping Cart with C#, EF, SQL Server-Part1
+http://www.webdevelopmenthelp.net/2016/10/asp-net-mvc-shopping-cart-part1.html
+
+
 Menbers
 Kevin Andres López
 kelopez.48@gmail.com
@@ -42,7 +51,7 @@ ari_lw@hotmail.com
 Gestión de usuarios
 
 Juan Jose Guzman Meza
-jjguzmanmeza15@gmail.com 
+jjguzmanmeza15@gmail.com
 Gestión de Productos
 
 Guilder W. Milliner
