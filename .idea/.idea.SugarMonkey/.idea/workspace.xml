@@ -7,11 +7,236 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Testing">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/jquery.dataTables.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/jquery.dataTables.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/owl.carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/sweetalert.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/sweetalert.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/1_Penguins.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/2_Penguins.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/2_samsung-galaxy-on5-spotted-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/3_Jellyfish.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/3_download (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/4_Tulips.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/4_download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/5_3_download (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/5_expert3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/6_images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Medium/7_Htc-Desire-516-white--SDL232582179-1-71d4a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/1_Penguins.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/2_Penguins.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/2_samsung-galaxy-on5-spotted-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/3_Jellyfish.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/3_download (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/4_Tulips.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/4_download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/5_3_download (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/5_expert3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/6_images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Small/7_Htc-Desire-516-white--SDL232582179-1-71d4a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/AdminLoginbg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/CandidateProfileLoader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/CandidateProfileLoader2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/HomePageBanner1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/No Photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/OfflineProvider.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/OnlineProvider.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Cupcakes/cup1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Cupcakes/cup2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Cupcakes/cup3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Dulces/dul1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Dulces/dul2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Dulces/dul3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Dulces/dul4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Dulces/dul5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Dulces/dul6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Dulces/dul7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Galletas/gall1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Galletas/gall2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Galletas/gall3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Galletas/gall4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Galletas/gall5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Galletas/imagen2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Queques/imagen3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Queques/imagen4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Queques/queque1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Queques/queque2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Queques/queque3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Queques/queque4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Queques/queque5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Queques/queque6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Reposteria/rep1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Reposteria/rep2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Reposteria/rep3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/Product/Reposteria/rep4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/ProfilePic_Small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/aboutusBG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/availIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/banner11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/banner3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/banner4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/bgImg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/blankimg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/blankimg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/blankimg22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/blankimg_Old.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/bullet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/cal-icon-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/calleft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/callefthover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/calright.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/calrighthover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/checkbox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/clientImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/clientImg2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/close-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/close-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/close-img11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/close-img_Round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/closebtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/contactBG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/delete-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/detailspic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/doublearrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/down14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/downCaret.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/drop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/dropcalIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/edit-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/edit-icon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/expert1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/expert2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/expert3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/expert4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/expert5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/expert6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/fb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/flag_bn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/flag_de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/flag_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/flag_es.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/gridIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/gridIconclr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/leftarrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/linkedin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/listIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/listIconclr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/location.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/location1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/loginlock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/loginmsg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/msgg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/next-arrow-list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/orderedList9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/person_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/plus-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/prev-arrow-list.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/prof1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/prof2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/prof3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/prof4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/rightarrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/rightarrow1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/searchIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/service_detail_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/service_detail_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/slider-mover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/sliderLeftarrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/sliderRightarrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/sort_asc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/step1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/team1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/team2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/team3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/team4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/team5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/team6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/team7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/team8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Images/toggleIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Antlr3.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Antlr3.Runtime.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/EntityFramework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/EntityFramework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.TestPlatform.AdapterUtilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.VisualStudio.TestPlatform.TestFramework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.VisualStudio.TestPlatform.TestFramework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Microsoft.Web.Infrastructure.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/SugarMonkey.Tests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/SugarMonkey.Tests.dll.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/SugarMonkey.Tests.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/SugarMonkey.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/SugarMonkey.dll.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/SugarMonkey.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.Helpers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.Helpers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.Mvc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.Mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.Optimization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.Optimization.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.Razor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.Razor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.WebPages.Deployment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.WebPages.Deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.WebPages.Razor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.WebPages.Razor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.WebPages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/System.Web.WebPages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/bin/Debug/WebGrease.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Debug/SugarMonkey.Tests.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Debug/SugarMonkey.Tests.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Debug/SugarMonkey.Tests.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Debug/SugarMonkey.Tests.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Debug/SugarMonkey.Tests.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Debug/SugarMonkey.Tests.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Release/.NETFramework,Version=v4.8.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.Tests/obj/Release/SugarMonkey.Tests.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.pdb" afterDir="false" />
     </list>
@@ -72,7 +297,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629813882432</updated>
-      <workItem from="1629813917886" duration="3674000" />
+      <workItem from="1629813917886" duration="4293000" />
     </task>
     <task id="LOCAL-00001" summary="modifyed the artifact folder">
       <created>1629818721469</created>
