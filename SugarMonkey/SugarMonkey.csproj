@@ -390,17 +390,10 @@
     <Content Include="Artifacts\Old\CSS\owl.carousel.css" />
     <Content Include="Artifacts\Old\CSS\stylesheet.css" />
     <Content Include="Artifacts\Old\CSS\sweetalert.css" />
-    <Content Include="Artifacts\Old\Scripts\Add_Update_Member.js" />
-    <Content Include="Artifacts\Old\Scripts\CustomFunction.js" />
-    <Content Include="Artifacts\Old\Scripts\datepicker.js" />
-    <Content Include="Artifacts\Old\Scripts\function.js" />
-    <Content Include="Artifacts\Old\Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Artifacts\Old\Scripts\owl.carousel.min.js" />
     <Content Include="Artifacts\Scripts\SiteWide.js" />
     <Content Include="Artifacts\Styles\SiteWide.css" />
     <Content Include="Artifacts\Vendors\Bootstrap 5.0.2\css\bootstrap.css" />
     <Content Include="Artifacts\Vendors\Bootstrap 5.0.2\js\bootstrap.bundle.js" />
-    <None Include="Artifacts\Old\Scripts\_references.js" />
     <None Include="Artifacts\Vendors\JQuery\jquery-3.6.0.intellisense.js" />
     <Content Include="Artifacts\Vendors\JQuery\jquery-3.6.0.js" />
     <None Include="Artifacts\Vendors\JQuery\jquery.validate-vsdoc.js" />
@@ -705,7 +698,6 @@
   <ItemGroup>
     <Folder Include="Artifacts\Media\" />
     <Folder Include="Artifacts\Old\Content\ProductImage\" />
-    <Folder Include="Artifacts\Old\Images\Product\" />
     <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\Views\" />
     <Folder Include="obj\Release\TransformWebConfig\transformed\Views\" />
     <Folder Include="Properties\PublishProfiles\" />
