@@ -5,9 +5,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web.Mvc;
 using SugarMonkey.DAL;
-using SugarMonkey.Filters;
 using SugarMonkey.Models;
-using SugarMonkey.Repository;
+using SugarMonkey.Models.Old.Filters;
+using SugarMonkey.Models.Old.Repository;
+using SugarMonkey.Models.Views;
 
 namespace SugarMonkey.Controllers
 {
@@ -22,14 +23,16 @@ namespace SugarMonkey.Controllers
         /// <returns></returns>
         public ActionResult AddProductToCart(int productId)
         {
-            Tbl_Cart c = new Tbl_Cart();
-            c.AddedOn = DateTime.Now;
-            c.CartStatusId = 1;
-            c.MemberId = memberId;
-            c.ProductId = productId;
-            c.UpdatedOn = DateTime.Now;
-            _unitOfWork.GetRepositoryInstance<Tbl_Cart>().Add(c);
-            _unitOfWork.SaveChanges();
+            Tbl_Cart c = new Tbl_Cart
+            {
+                AddedOn = DateTime.Now,
+                CartStatusId = 1,
+                MemberId = MemberId,
+                ProductId = productId,
+                UpdatedOn = DateTime.Now
+            };
+            UnitOfWork.GetRepositoryInstance<Tbl_Cart>().Add(c);
+            UnitOfWork.SaveChanges();
             TempData["ProductAddedToCart"] = "Product added to cart successfully";
             return RedirectToAction("Index", "Search");
         }
@@ -40,10 +43,10 @@ namespace SugarMonkey.Controllers
         /// <returns>List of cart items</returns>
         public ActionResult MyCart()
         {
-            List<USP_MemberShoppingCartDetails_Result> cd = _unitOfWork
+            List<USP_MemberShoppingCartDetails_Result> cd = UnitOfWork
                 .GetRepositoryInstance<USP_MemberShoppingCartDetails_Result>().GetResultBySqlProcedure(
                     "USP_MemberShoppingCartDetails @memberId",
-                    new SqlParameter("memberId", SqlDbType.Int) {Value = memberId}).ToList();
+                    new SqlParameter("memberId", SqlDbType.Int) {Value = MemberId}).ToList();
             return View(cd);
         }
 
@@ -54,12 +57,12 @@ namespace SugarMonkey.Controllers
         /// <returns></returns>
         public ActionResult RemoveCartItem(int productId)
         {
-            Tbl_Cart c = _unitOfWork.GetRepositoryInstance<Tbl_Cart>().GetFirstOrDefaultByParameter(i =>
-                i.ProductId == productId && i.MemberId == memberId && i.CartStatusId == 1);
+            Tbl_Cart c = UnitOfWork.GetRepositoryInstance<Tbl_Cart>().GetFirstOrDefaultByParameter(i =>
+                i.ProductId == productId && i.MemberId == MemberId && i.CartStatusId == 1);
             c.CartStatusId = 2;
             c.UpdatedOn = DateTime.Now;
-            _unitOfWork.GetRepositoryInstance<Tbl_Cart>().Update(c);
-            _unitOfWork.SaveChanges();
+            UnitOfWork.GetRepositoryInstance<Tbl_Cart>().Update(c);
+            UnitOfWork.SaveChanges();
             return RedirectToAction("MyCart");
         }
 
@@ -69,10 +72,10 @@ namespace SugarMonkey.Controllers
         /// <returns></returns>
         public ActionResult CheckOut()
         {
-            List<USP_MemberShoppingCartDetails_Result> cd = _unitOfWork
+            List<USP_MemberShoppingCartDetails_Result> cd = UnitOfWork
                 .GetRepositoryInstance<USP_MemberShoppingCartDetails_Result>().GetResultBySqlProcedure(
                     "USP_MemberShoppingCartDetails @memberId",
-                    new SqlParameter("memberId", SqlDbType.Int) {Value = memberId}).ToList();
+                    new SqlParameter("memberId", SqlDbType.Int) {Value = MemberId}).ToList();
             ViewBag.TotalPrice = cd.Sum(i => i.Price);
             ViewBag.CartIds = string.Join(",", cd.Select(i => i.CartId).ToList());
             return View(cd);
@@ -85,26 +88,28 @@ namespace SugarMonkey.Controllers
         /// <returns></returns>
         public ActionResult PaymentSuccess(ShippingDetails shippingDetails)
         {
-            Tbl_ShippingDetails sd = new Tbl_ShippingDetails();
-            sd.MemberId = memberId;
-            sd.AddressLine = shippingDetails.Address;
-            sd.City = shippingDetails.City;
-            sd.State = shippingDetails.State;
-            sd.Country = shippingDetails.Country;
-            sd.ZipCode = shippingDetails.ZipCode;
-            sd.OrderId = Guid.NewGuid().ToString();
-            sd.AmountPaid = shippingDetails.TotalPrice;
-            sd.PaymentType = shippingDetails.PaymentType;
-            _unitOfWork.GetRepositoryInstance<Tbl_ShippingDetails>().Add(sd);
-            _unitOfWork.GetRepositoryInstance<Tbl_Cart>()
-                .UpdateByWhereClause(i => i.MemberId == memberId && i.CartStatusId == 1, j => j.CartStatusId = 3);
-            _unitOfWork.SaveChanges();
+            Tbl_ShippingDetails sd = new Tbl_ShippingDetails
+            {
+                MemberId = MemberId,
+                AddressLine = shippingDetails.Address,
+                City = shippingDetails.City,
+                State = shippingDetails.State,
+                Country = shippingDetails.Country,
+                ZipCode = shippingDetails.ZipCode,
+                OrderId = Guid.NewGuid().ToString(),
+                AmountPaid = shippingDetails.TotalPrice,
+                PaymentType = shippingDetails.PaymentType
+            };
+            UnitOfWork.GetRepositoryInstance<Tbl_ShippingDetails>().Add(sd);
+            UnitOfWork.GetRepositoryInstance<Tbl_Cart>()
+                .UpdateByWhereClause(i => i.MemberId == MemberId && i.CartStatusId == 1, j => j.CartStatusId = 3);
+            UnitOfWork.SaveChanges();
             if (!string.IsNullOrEmpty(Request["CartIds"]))
             {
                 int[] cartIdsToUpdate = Request["CartIds"].Split(',').Select(int.Parse).ToArray();
-                _unitOfWork.GetRepositoryInstance<Tbl_Cart>().UpdateByWhereClause(
+                UnitOfWork.GetRepositoryInstance<Tbl_Cart>().UpdateByWhereClause(
                     i => cartIdsToUpdate.Contains(i.CartId), j => j.ShippingDetailId = sd.ShippingDetailId);
-                _unitOfWork.SaveChanges();
+                UnitOfWork.SaveChanges();
             }
 
             return View(sd);
@@ -113,10 +118,10 @@ namespace SugarMonkey.Controllers
         #region Other Class references ...
 
         // Instance on Unit of Work         
-        public GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
+        public GenericUnitOfWork UnitOfWork = new GenericUnitOfWork();
         private int _memberId;
 
-        public int memberId
+        public int MemberId
         {
             get => Convert.ToInt32(Session["MemberId"]);
             set => _memberId = Convert.ToInt32(Session["MemberId"]);

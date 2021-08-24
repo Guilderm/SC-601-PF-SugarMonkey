@@ -3,8 +3,8 @@
 @model IEnumerable<Service_Based_Marketplace.Models.SearchServiceAndProfessional>
 @{
     Layout = null;
-    DateTime AvailableDate;
-    DateTime.TryParseExact(ViewBag.AvailableDate, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out AvailableDate);
+    DateTime availableDate;
+    DateTime.TryParseExact(ViewBag.AvailableDate, "MM/dd/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out availableDate);
 }
 <style>
     .FilterBox {
@@ -50,7 +50,7 @@
                 </div>
                 <div class="housekeepingSearch">
                     <button type="button" class="housesearchBtn" onclick="$('#dvFilterSearch').parent().submit();">
-                        <img src="/images/searchIcon.png" alt="img"/>
+                        <img src="../../Artifacts/Old/Images/searchIcon.png" alt="img"/>
                     </button>
                 </div>
 
@@ -74,7 +74,7 @@
                     </label>
                     <span>@ViewBag.AllTotalCount</span>
                 </div>
-                foreach (var item in ViewBag.AllVerifiedByAdminCount)
+                foreach (dynamic item in ViewBag.AllVerifiedByAdminCount)
                 {
                     <div class="customCheckbox">
                         <label class="css-label1">
@@ -112,7 +112,7 @@
                     </label>
                     <span>@ViewBag.TotalCountry</span>
                 </div>
-                foreach (var item in ViewBag.AllCountryCount)
+                foreach (dynamic item in ViewBag.AllCountryCount)
                 {
                     <div class="customCheckbox">
                         <label class="css-label1">
@@ -141,7 +141,7 @@
                     </label>
                     <span>@ViewBag.TotalLangaugeCount</span>
                 </div>
-                foreach (var item in ViewBag.AllLangaugeCount)
+                foreach (dynamic item in ViewBag.AllLangaugeCount)
                 {
                     <div class="customCheckbox">
                         <label class="css-label1">
@@ -173,7 +173,7 @@
         <div class="innerBox">
             @if (ViewBag.AllRatingCount != null)
             {
-                foreach (var item in ViewBag.AllRatingCount)
+                foreach (dynamic item in ViewBag.AllRatingCount)
                 {
                     if (item.Rating == 0)
                     {
@@ -306,8 +306,8 @@
                     <span class="availsort">Availability:</span>
                     @*<input type="text" class="availdate FilterCalendarDatePicker" value="@(AvailableDate!=DateTime.MinValue? AvailableDate.ToString("MMM d, yyyy") :"")" placeholder="-Select Date-">
                                 <input type="hidden" class="availdate" id="datepicker" name="AvailableDate" value="@(AvailableDate!=DateTime.MinValue? AvailableDate.ToString("MM/dd/yyyy"):"")" />*@
-                    <input type="text" class="availdate" id="datepicker" value="@(AvailableDate != DateTime.MinValue ? AvailableDate.ToString("MMM d, yyyy") : "")" placeholder="-Select Date-">
-                    <input type="hidden" class="availdate" name="AvailableDate" value="@(AvailableDate != DateTime.MinValue ? AvailableDate.ToString("MM/dd/yyyy") : "")"/>
+                    <input type="text" class="availdate" id="datepicker" value="@(availableDate != DateTime.MinValue ? availableDate.ToString("MMM d, yyyy") : "")" placeholder="-Select Date-">
+                    <input type="hidden" class="availdate" name="AvailableDate" value="@(availableDate != DateTime.MinValue ? availableDate.ToString("MM/dd/yyyy") : "")"/>
                 </div>
             </div>
             <div class="priceRight fr">
@@ -315,12 +315,12 @@
                     <ul>
                         <li>
                             <a title="Grid View" href="#tab1" class="active" onclick="$('#ViewType').val('GridView');">
-                                <img class="img" src="/images/gridIconclr.png" alt=""><img class="over" src="/images/gridIcon.png" alt="">
+                                <img class="img" src="../../Artifacts/Old/Images/gridIconclr.png" alt=""><img class="over" src="../../Artifacts/Old/Images/gridIcon.png" alt="">
                             </a>
                         </li>
                         <li>
                             <a title="List View" href="#tab2" onclick="$('#ViewType').val('ListView');">
-                                <img class="img" src="/images/listIcon.png" alt=""><img class="over" src="/images/listIconclr.png" alt="">
+                                <img class="img" src="../../Artifacts/Old/Images/listIcon.png" alt=""><img class="over" src="../../Artifacts/Old/Images/listIconclr.png" alt="">
                             </a>
                         </li>
                     </ul>
@@ -350,7 +350,7 @@
                                     <div class="nameLink">
                                         <a title="@Resource.ClickToBookService" href="/search/servicedetail?sId=@item.ServiceId&pId=@item.ProviderId">@item.ServiceName</a>
                                         <span style="float: right" class="OnlineProvider">
-                                            <img class="@item.ProviderId" src="/images/OfflineProvider.png" title="Offline"/>
+                                            <img class="@item.ProviderId" src="../../Artifacts/Old/Images/OfflineProvider.png" title="Offline"/>
                                         </span>
                                         <div class="byperson clearfix">
                                             <div class="prsonLeft fl">

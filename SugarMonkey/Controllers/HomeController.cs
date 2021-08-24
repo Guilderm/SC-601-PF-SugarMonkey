@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using SugarMonkey.DAL;
-using SugarMonkey.Filters;
-using SugarMonkey.Repository;
+using SugarMonkey.Models.Old.Filters;
+using SugarMonkey.Models.Old.Repository;
 
 namespace SugarMonkey.Controllers
 {
@@ -11,7 +11,7 @@ namespace SugarMonkey.Controllers
     {
         #region Other Class references ... // Instance on Unit of Work 
 
-        public GenericUnitOfWork _unitOfWork = new GenericUnitOfWork();
+        public GenericUnitOfWork UnitOfWork = new GenericUnitOfWork();
 
         #endregion
 
@@ -21,7 +21,7 @@ namespace SugarMonkey.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            ViewBag.FeaturedProducts = _unitOfWork.GetRepositoryInstance<Tbl_Product>()
+            ViewBag.FeaturedProducts = UnitOfWork.GetRepositoryInstance<Tbl_Product>()
                 .GetListByParameter(i => i.IsFeatured == true && i.IsDelete == false && i.IsActive == true).ToList();
             return View();
         }
@@ -30,7 +30,7 @@ namespace SugarMonkey.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            _unitOfWork.Dispose();
+            UnitOfWork.Dispose();
             base.Dispose(disposing);
         }
 

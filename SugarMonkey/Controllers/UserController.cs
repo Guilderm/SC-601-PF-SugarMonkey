@@ -1,13 +1,116 @@
-﻿using System.Web.Mvc;
-using System.Web.Security;
+﻿using System;
+using System.Linq;
+using System.Web.Mvc;
 using SugarMonkey.Models;
 using SugarMonkey.Models.BusinessLogic;
+using SugarMonkey.Models.Old.Repository;
+using SugarMonkey.Models.Old.Utility;
 using SugarMonkey.Models.Views;
 
 namespace SugarMonkey.Controllers
 {
+
     public class UserController : Controller
     {
+        private readonly GeneralPurposeDBEntities _dbContext = new GeneralPurposeDBEntities();
+
+        [HttpGet]
+        [AllowAnonymous]
+        public ActionResult LogUserIn()
+        {
+            if (IsUserLogIn())
+            {
+                return RedirectToAction("Index", "MainPage");
+            }
+
+            LogUserInViewModel logUserIn = new LogUserInViewModel
+            {
+                Email = Request.Cookies["RememberMe_UserEmailId"] != null
+                    ? Request.Cookies["RememberMe_UserEmailId"].Value
+                    : "",
+                Password = Request.Cookies["RememberMe_Password"] != null
+                    ? Request.Cookies["RememberMe_Password"].Value
+                    : ""
+            };
+            return View(logUserIn);
+        }
+
+        private bool IsUserLogIn()
+        {
+            bool alreadyLoggedIn = Session["MemberId"] != null;
+            return alreadyLoggedIn;
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult LogUserIn(LogUserInViewModel logUserIn)
+        {
+            //if (!ModelState.IsValid) return View(LogUserIn);
+            STP_GetUserByCredentials_Result user =
+                _dbContext.STP_GetUserByCredentials(logUserIn.Email, logUserIn.Password).FirstOrDefault();
+            if (user != null)
+            {
+                Session["MemberId"] = user.UserID;
+                Session["MemberName"] = user.FirstName;
+                Session["MemberRole"] = user.UserType;
+
+                if (Request["RememberMe1"] == "on")
+                {
+                    Response.Cookies["RememberMe_UserEmailId"].Value = user.Email;
+                    Response.Cookies["RememberMe_Password"].Value = user.Password;
+                }
+                else
+                {
+                    Response.Cookies["RememberMe_UserEmailId"].Expires = DateTime.Now.AddDays(-1);
+                    Response.Cookies["RememberMe_Password"].Expires = DateTime.Now.AddDays(-1);
+                }
+
+                return RedirectToAction("Index", "MainPage");
+            }
+
+            ModelState.AddModelError("Password", "Invalid email address or password");
+
+            return View(logUserIn);
+        }
+
+        public ActionResult LogOut()
+        {
+            Session.Clear();
+            if (Request.Cookies["MemberRole"] != null)
+                Response.Cookies["MemberRole"].Expires = DateTime.Now.AddDays(-1);
+            return RedirectToAction("Index", "MainPage");
+        }
+
+        public JsonResult CheckIfEmailExist(string userEmailId)
+        {
+            //TODO : Needs to be implemented
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public ActionResult ResetPassword(string emailId)
+        {
+            ResetPasswordViewModel rpm = new ResetPasswordViewModel();
+            if (emailId != null)
+            {
+                try
+                {
+                    ModelState.Clear();
+                    rpm.EmailId = EncryptDecrypt.Decrypt(emailId, true);
+                }
+                catch (Exception e)
+                {
+                    ModelState.AddModelError("", "Invalid email address");
+                }
+            }
+            else
+                ModelState.AddModelError("", "Invalid email address");
+
+            return View(rpm);
+        }
+
         [HttpGet]
         public ActionResult Index()
         {
@@ -21,51 +124,19 @@ namespace SugarMonkey.Controllers
         }
 
         [HttpPost]
-        public ActionResult UserRegistration(UserRegistrationViewModel userRegistrationViewModel)
+        public ActionResult UserRegistration(UserRegistrationEditViewModel userRegistrationEditViewModel)
         {
             if (!ModelState.IsValid)
             {
                 ViewBag.Message = "There is problem with the data";
-                return View("UserRegistration", userRegistrationViewModel);
+                return View("UserRegistration", userRegistrationEditViewModel);
             }
 
-            STP_CreateUser_Result userEntity = UserBusinessLogic.CreateUser(userRegistrationViewModel);
+            STP_CreateUser_Result userEntity = UserBusinessLogic.CreateUser(userRegistrationEditViewModel);
             ViewBag.Message = "El usuario fue creado exitosamente";
             return RedirectToAction("index", "MainPage");
         }
 
-        [HttpGet]
-        public ActionResult LoginUser()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult LoginUser(LoginUserViewModel loginUserView)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(loginUserView);
-            }
-
-            STP_GetUserByCredentials_Result userEntity = UserBusinessLogic.GetUser(loginUserView);
-
-            if (userEntity.UserID > 10)
-            {
-                Session["UserID"] = userEntity.UserID;
-                return RedirectToAction("index", "MainPage");
-            }
-
-            ModelState.AddModelError("Failure", "Wrong Username and password combination !");
-            return View(loginUserView);
-        }
-
-        public ActionResult Logout()
-        {
-            FormsAuthentication.SignOut();
-            Session.Abandon();
-            return RedirectToAction("index", "MainPage");
-        }
 
         public ActionResult ForgotPassword()
         {
@@ -88,25 +159,6 @@ namespace SugarMonkey.Controllers
 
             ViewBag.Message = "User doesn't exists.";
             return View();
-        }
-
-
-        [HttpGet]
-        public ActionResult ResetPassword(string resetPasswordCode)
-        {
-            if (string.IsNullOrWhiteSpace(resetPasswordCode))
-            {
-                return HttpNotFound();
-            }
-
-            ResetPasswordViewModel resetPasswordViewModel =
-                UserBusinessLogic.GetUserByResetPasswordCode(resetPasswordCode);
-            if (resetPasswordViewModel.UserId > 10)
-            {
-                return View(resetPasswordViewModel);
-            }
-
-            return HttpNotFound();
         }
 
         [HttpPost]
@@ -141,13 +193,15 @@ namespace SugarMonkey.Controllers
             if (userEntity.UserID > 10)
             {
                 // Llena el modelo de EditUserViewModel con la informacion cargada
-                EditUserViewModel editUserViewModel = new EditUserViewModel();
-                editUserViewModel.FirstName = userEntity.FirstName;
-                editUserViewModel.FirstLastName = userEntity.FirstLastName;
-                editUserViewModel.SecondLastName = userEntity.SecondLastName;
-                editUserViewModel.Cellphone = (int) userEntity.Cellphone;
-                editUserViewModel.Email = userEntity.Email;
-                editUserViewModel.Password = userEntity.Password;
+                EditUserViewModel editUserViewModel = new EditUserViewModel
+                {
+                    FirstName = userEntity.FirstName,
+                    FirstLastName = userEntity.FirstLastName,
+                    SecondLastName = userEntity.SecondLastName,
+                    Cellphone = (int)userEntity.Cellphone,
+                    Email = userEntity.Email,
+                    Password = userEntity.Password
+                };
 
                 return View(editUserViewModel);
             }

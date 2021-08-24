@@ -75,6 +75,11 @@ namespace SugarMonkey.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_CreateUser_Result>("STP_CreateUser", firstNameParameter, firstLastNameParameter, secondLastNameParameter, cellphoneParameter, emailParameter, passwordParameter, saltParameter);
         }
     
+        public virtual ObjectResult<STP_GetAllUsersInfo_Result> STP_GetAllUsersInfo()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetAllUsersInfo_Result>("STP_GetAllUsersInfo");
+        }
+    
         public virtual ObjectResult<string> STP_GetAppSetting(string name)
         {
             var nameParameter = name != null ?
@@ -104,11 +109,6 @@ namespace SugarMonkey.Models
                 new ObjectParameter("ResetPasswordCode", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUserByResetPasswordCode_Result>("STP_GetUserByResetPasswordCode", resetPasswordCodeParameter);
-        }
-    
-        public virtual ObjectResult<STP_GetUsersInfo_Result> STP_GetUsersInfo()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<STP_GetUsersInfo_Result>("STP_GetUsersInfo");
         }
     
         public virtual ObjectResult<STP_GetUsersInfoByEmail_Result> STP_GetUsersInfoByEmail(string email)

@@ -1,0 +1,65 @@
+﻿@model SugarMonkey.Models.Views.LogUserInViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<html>
+<head>
+    <title>Log in</title>
+    <link href="../../Artifacts/Old/CSS/admin_stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<style>
+    .AdminLogin {
+        background: rgb(236, 233, 233);
+        margin: 7% 30%;
+        padding: 6% 10%;
+    }
+
+    .dashinp { margin-bottom: 10px; }
+
+    .SignIn {
+        background-color: rgb(30, 95, 209);
+        color: #FFF;
+        margin: 10% 0 10% 30%;
+        padding: 5PX 30PX;
+        text-align: center;
+    }
+
+    .forgot {
+        font-size: 14px;
+        margin-top: 8%;
+    }
+</style>
+<div class="AdminLogin">
+    @using (Html.BeginForm("LogUserIn", "User", new {ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+    {
+        @Html.AntiForgeryToken()
+        <h1 style="margin-bottom: 20px; text-align: center;">Admin Login</h1>
+        <div class="loginDetail">
+            @Html.TextBoxFor(m => m.Email, new {@class = "dashinp", placeholder = "Username"})
+            @Html.ValidationMessageFor(m => m.Email)
+
+            @Html.PasswordFor(m => m.Password, new {type = "password", @class = "dashinp", placeholder = "Password"})
+            @Html.ValidationMessageFor(m => m.Password)
+
+            <label style="display: none;">@Html.RadioButton("UserType", 1, new {@checked = "checked"}) Admin</label>
+
+            <div class="forgot clearfix" style="display: none;">
+                @Html.CheckBoxFor(m => m.RememberMe, new {@class = "csscheck"})
+                <label for="RememberMe" class="csslabel fl">Keep Me Signed In</label>
+                <a class="fgt fr" href="/Account/ForgotPassword">Forgot Password?</a>
+            </div>
+            <div class="forgot clearfix">
+                <input type="checkbox" name="RememberMe1" class="csscheck" id="c1" checked>
+                <label for="c1" class="csslabel">Remember me</label>
+                <a href="/Account/ForgotPassword" class="fgt fr">Forgot Password?</a>
+            </div>
+            <input type="submit" value="Sign In" class="SignIn">
+        </div>
+    }
+</div>
+
+
+</body>
+</html>

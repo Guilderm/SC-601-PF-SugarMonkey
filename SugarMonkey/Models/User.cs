@@ -30,9 +30,7 @@ namespace SugarMonkey.Models
         public string Email { get; set; }
         public int CredentialID { get; set; }
         public string ProfilePhotoPath { get; set; }
-        public Nullable<bool> isCustomer { get; set; }
-        public Nullable<bool> isAdmin { get; set; }
-        public Nullable<bool> iSActive { get; set; }
+        public string UserType { get; set; }
         public Nullable<System.DateTime> lastLogin { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

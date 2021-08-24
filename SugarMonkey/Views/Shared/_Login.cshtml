@@ -1,18 +1,18 @@
-﻿@model SugarMonkey.Models.LoginViewModel
-@using (Ajax.BeginForm("_Login", "Account", FormMethod.Post, new AjaxOptions { OnSuccess = "OnSuccessLoginPopup", OnFailure = "OnSuccessLoginPopup", UpdateTargetId = "loginpopup", InsertionMode = InsertionMode.Replace }))
+﻿@model SugarMonkey.Models.Views.LogUserInViewModel
+@using (Ajax.BeginForm("_Login", "User", FormMethod.Post, new AjaxOptions { OnSuccess = "OnSuccessLoginPopup", OnFailure = "OnSuccessLoginPopup", UpdateTargetId = "loginpopup", InsertionMode = InsertionMode.Replace }))
 {
      @Html.AntiForgeryToken()
 <input type="hidden" name="returnUrl" id="returnUrl" />
 <div class="loginBox" id="loginPoupForm">
     <div class="closepop">
-        <img src="/images/closebtn.png" alt="">
+        <img src="../../Artifacts/Old/Images/closebtn.png" alt="">
     </div>
     <h1>Log In</h1>
     <h4 style="color:green;text-align:center">@TempData["EmailVarifiedMsg"]</h4>
     <div class="loginconentBox">
         <div class="cstmText">
-            @Html.TextBoxFor(m => m.UserEmailId, new { @class = "inputmsg", @placeholder = "EmailAddress", @onkeypress = "return OnlyLegalCharacters();" })
-            @Html.ValidationMessageFor(m => m.UserEmailId)
+            @Html.TextBoxFor(m => m.Email, new { @class = "inputmsg", @placeholder = "EmailAddress", @onkeypress = "return OnlyLegalCharacters();" })
+            @Html.ValidationMessageFor(m => m.Email)
         </div>
         <div class="cstmText">
             @Html.TextBoxFor(m => m.Password, new { @class = "inputlock",  @type = "Password", @placeholder = "Password", @onkeypress = "return OnlyLegalCharacters();" })

@@ -1,8 +1,9 @@
-﻿@model List<SugarMonkey.DAL.Tbl_Cart>
+﻿@using SugarMonkey.DAL
+@model List<SugarMonkey.DAL.Tbl_Cart>
 @{
     ViewBag.Title = "Orders";
     Layout = "~/Views/Admin/_AdminLayout.cshtml";
-    var orders = Model.GroupBy(i => i.ProductId).Select(i => i.FirstOrDefault()).ToList();
+    List<Tbl_Cart> orders = Model.GroupBy(i => i.ProductId).Select(i => i.FirstOrDefault()).ToList();
 }
 <div class="rightpart">
     <div class="sechBx clearfix">
@@ -25,7 +26,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach (var item in orders)
+                    @foreach (Tbl_Cart item in orders)
                     {
                         <tr>
                             <td>@(orders.IndexOf(item) + 1)</td>

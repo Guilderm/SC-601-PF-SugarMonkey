@@ -1,4 +1,5 @@
 ﻿@using System.Configuration
+@using SugarMonkey.DAL
 @model List<SugarMonkey.DAL.USP_MemberShoppingCartDetails_Result>
 @{
     ViewBag.Title = "MyCart";
@@ -36,7 +37,7 @@
                         <div class="tabContent" id="tab2">
                             <!--Start Services Man-->
                             <div class="servicesPerson1 clearfix">
-                                @foreach (var item in Model)
+                                @foreach (USP_MemberShoppingCartDetails_Result item in Model)
                                 {
                                     <!--Start detailServicesBox-->
                                     <div class="detailservicesBox clearfix">

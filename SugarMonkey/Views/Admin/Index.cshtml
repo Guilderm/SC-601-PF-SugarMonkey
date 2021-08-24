@@ -1,4 +1,4 @@
-﻿@model SugarMonkey.Models.LoginViewModel
+﻿@model SugarMonkey.Models.Views.LogUserInViewModel
 @{
     ViewBag.Title = "Index";
     Layout = null;
@@ -6,7 +6,7 @@
 <html>
 <head>
     <title>Online Shopping</title>
-    <link href="/CSS/admin_stylesheet.css" rel="stylesheet" type="text/css"/>
+    <link href="../../Artifacts/Old/CSS/admin_stylesheet.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <style>
@@ -37,8 +37,8 @@
         @Html.AntiForgeryToken()
         <h1 style="margin-bottom: 20px; text-align: center;">Admin Login</h1>
         <div class="loginDetail">
-            @Html.TextBoxFor(m => m.UserEmailId, new {@class = "dashinp", placeholder = "Username"})
-            @Html.ValidationMessageFor(m => m.UserEmailId)
+            @Html.TextBoxFor(m => m.Email, new {@class = "dashinp", placeholder = "Username"})
+            @Html.ValidationMessageFor(m => m.Email)
 
             @Html.PasswordFor(m => m.Password, new {type = "password", @class = "dashinp", placeholder = "Password"})
             @Html.ValidationMessageFor(m => m.Password)
@@ -60,9 +60,9 @@
     }
 </div>
 
-<script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../../Artifacts/Old/Scripts/jquery.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="../../Artifacts/Old/Scripts/jquery.unobtrusive-ajax.js"></script>
 </body>
 </html>

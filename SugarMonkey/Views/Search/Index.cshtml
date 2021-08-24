@@ -1,4 +1,5 @@
 ﻿@using System.Configuration
+@using SugarMonkey.DAL
 @model IEnumerable<SugarMonkey.DAL.USP_Search_Result>
 @{
     ViewBag.Title = "Search Result";
@@ -35,7 +36,7 @@
                         </div>
                         <div class="housekeepingSearch">
                             <button type="button" class="housesearchBtn" onclick="$(this).parent().parent().submit();">
-                                <img src="/images/searchIcon.png" alt="img"/>
+                                <img src="../../Artifacts/Old/Images/searchIcon.png" alt="img"/>
                             </button>
                         </div>
                     </div>
@@ -54,7 +55,7 @@
                             <div class="tabContent" id="tab1">
                                 <div class="servicesPerson clearfix">
                                     <ul class="prsonList">
-                                        @foreach (var item in Model)
+                                        @foreach (USP_Search_Result item in Model)
                                         {
                                             <li>
                                                 <!--Start ServicesBox-->

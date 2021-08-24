@@ -1,4 +1,6 @@
-﻿@using SugarMonkey.Models
+﻿@using SugarMonkey.DAL
+@using SugarMonkey.Models
+@using SugarMonkey.Models.Views
 @model List<SugarMonkey.DAL.USP_MemberShoppingCartDetails_Result>
 @{
     ViewBag.Title = "MyCart";
@@ -27,7 +29,7 @@
                     <div style="background-color: white; padding: 20px;">
                         <b>You have following @Model.Count() items in your cart</b>
                         <br/><br/>
-                        @foreach (var item in Model)
+                        @foreach (USP_MemberShoppingCartDetails_Result item in Model)
                         {
                             <h3>
                                 <a title="View Product Detail" href="/search/ProductDetail?pId=@item.ProductId"> <b> @item.ProductName</b>, </a> <span>Price : </span><b>@item.Price</b>

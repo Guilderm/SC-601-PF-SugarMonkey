@@ -11,13 +11,13 @@
                             <img src="/images/prev-arrow-list.png" alt="">
                         </a>*@
                         <a href="javascript:void(0)" class="@(ViewBag.PageNo > 4 ? "" : "active disablearrow")">
-                            <img src="/images/prev-arrow-list.png" alt="">
+                            <img src="../../Artifacts/Old/Images/prev-arrow-list.png" alt="">
                         </a>
                     }
                     else
                     {
                         <a href="javascript:void(0)" onclick="paging(@(ViewBag.PageNo - 1))" class="@(ViewBag.PageNo > 4 ? "" : "")">
-                            <img src="/images/prev-arrow-list.png" alt="">
+                            <img src="../../Artifacts/Old/Images/prev-arrow-list.png" alt="">
                         </a>
                     }
                 </li>
@@ -73,7 +73,7 @@
                 }
                 <li>
                     <a href="javascript:void(0)" onclick="@(ViewBag.PageNo < Math.Ceiling(double.Parse(ViewBag.TotalCount.ToString()) / double.Parse(ViewBag.PageSize.ToString())) ? "paging(" + (ViewBag.PageNo + 1) + ")" : "")" class="@(ViewBag.PageNo < Math.Ceiling(double.Parse(ViewBag.TotalCount.ToString()) / double.Parse(ViewBag.PageSize.ToString())) ? "" : "active disablearrow")">
-                        <img src="/images/next-arrow-list.png" alt="">
+                        <img src="../../Artifacts/Old/Images/next-arrow-list.png" alt="">
                     </a>
                 </li>
             </ul>

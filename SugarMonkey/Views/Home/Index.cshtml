@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Online Shopping : Home Page";
     Layout = "~/Views/Shared/_FrontLayout.cshtml";
-    List<Tbl_Product> FeaturedProducts = (List<Tbl_Product>) ViewBag.FeaturedProducts;
+    List<Tbl_Product> featuredProducts = (List<Tbl_Product>) ViewBag.FeaturedProducts;
 }
 <style>
     .profPerson .ProfImg {
@@ -28,7 +28,7 @@
                     </div>
                     <div class="searchIcon">
                         <button type="button" class="searchBtn" onclick="$(this).parent().parent().submit();">
-                            <img src="/images/searchIcon.png" alt="img">
+                            <img src="../../Artifacts/Old/Images/searchIcon.png" alt="img">
                         </button>
                     </div>
                 }
@@ -41,7 +41,7 @@
         <h1>Featured Products</h1>
         <div class="professionSLider">
             <div class="profSlider">
-                @foreach (var featured in FeaturedProducts)
+                @foreach (Tbl_Product featured in featuredProducts)
                 {
                     <div class="item">
                         <div class="profPerson">
@@ -77,10 +77,10 @@
                 }
             </div>
             <div class="left-symbol">
-                <img src="/Images/sliderRightarrow.png" alt="images">
+                <img src="../../Artifacts/Old/Images/sliderRightarrow.png" alt="images">
             </div>
             <div class="right-symbol">
-                <img src="/Images/sliderLeftarrow.png" alt="images">
+                <img src="../../Artifacts/Old/Images/sliderLeftarrow.png" alt="images">
             </div>
         </div>
     </div>

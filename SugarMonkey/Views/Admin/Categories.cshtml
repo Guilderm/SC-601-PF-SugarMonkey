@@ -1,4 +1,5 @@
-﻿@model List<SugarMonkey.DAL.Tbl_Category>
+﻿@using SugarMonkey.DAL
+@model List<SugarMonkey.DAL.Tbl_Category>
 @{
     ViewBag.Title = "Seekers";
     Layout = "~/Views/Admin/_AdminLayout.cshtml";
@@ -27,7 +28,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach (var item in Model)
+                    @foreach (Tbl_Category item in Model)
                     {
                         <tr>
                             <td>@(Model.IndexOf(item) + 1)</td>

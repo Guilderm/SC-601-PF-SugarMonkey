@@ -1,0 +1,93 @@
+﻿@model Product
+
+@{
+	ViewBag.Title = "InsertProduct";
+}
+
+<br />
+<br />
+
+<h2>Ingresar Producto</h2>
+
+@using (Html.BeginForm("InsertProduct", "Product", FormMethod.Post))
+{
+	<br />
+	<br />
+
+	<div class="row col-lg-12">
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Nombre
+				@Html.TextBoxFor(Model => Model.Name, new { @class = "form-control" })
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Descripcion
+				@Html.TextBoxFor(Model => Model.Description, new { @class = "form-control" })
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Categoria
+				@Html.DropDownListFor(Model => Model.CategoryID, ViewBag.ProductFilter as IEnumerable<SelectListItem>, new { @class = "form-control" })
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Precio
+				@Html.TextBoxFor(Model => Model.UnitPrice, new { @class = "form-control" })
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Ubicacion de la imagen
+				@Html.TextBoxFor(Model => Model.ImagePath, new { @class = "form-control" })
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Ubicacion de la imagen de miniatura
+				@Html.TextBoxFor(Model => Model.ThumbnailPath, new { @class = "form-control" })
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Descuento del producto
+				@Html.TextBoxFor(Model => Model.percentageOff, new { @class = "form-control" })
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Descuento empieza
+				@Html.TextBoxFor(model => model.SaleStarts, new { @class = "form-control", @Value = @DateTime.Now.ToShortDateString() })
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Descuento termina
+				@Html.TextBoxFor(model => model.SaleEnds, new { @class = "form-control", @Value = @DateTime.Now.ToShortDateString() })
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row col-lg-12">
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				<input type="submit" value="Ingresar" class="btn btn-info btn-block" />
+			</div>
+		</div>
+
+	</div>
+}

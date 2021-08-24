@@ -8,31 +8,22 @@ namespace SugarMonkey.Models.BusinessLogic
 {
     public class UserBusinessLogic
     {
-        public static STP_CreateUser_Result CreateUser(UserRegistrationViewModel userRegistrationViewModel)
+        public static STP_CreateUser_Result CreateUser(UserRegistrationEditViewModel userRegistrationEditViewModel)
         {
             using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
-                STP_CreateUser_Result userEntity = dbContext.STP_CreateUser(userRegistrationViewModel.FirstName,
-                    userRegistrationViewModel.FirstLastName,
-                    userRegistrationViewModel.SecondLastName,
-                    userRegistrationViewModel.Cellphone,
-                    userRegistrationViewModel.Email,
-                    userRegistrationViewModel.Password,
+                STP_CreateUser_Result userEntity = dbContext.STP_CreateUser(userRegistrationEditViewModel.FirstName,
+                    userRegistrationEditViewModel.FirstLastName,
+                    userRegistrationEditViewModel.SecondLastName,
+                    userRegistrationEditViewModel.Cellphone,
+                    userRegistrationEditViewModel.Email,
+                    userRegistrationEditViewModel.Password,
                     "notSalted").FirstOrDefault();
 
                 return userEntity;
             }
         }
 
-        public static STP_GetUserByCredentials_Result GetUser(LoginUserViewModel loginUserViewModel)
-        {
-            using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
-            {
-                STP_GetUserByCredentials_Result userEntity = dbContext
-                    .STP_GetUserByCredentials(loginUserViewModel.Email, loginUserViewModel.Password).FirstOrDefault();
-                return userEntity;
-            }
-        }
 
         public static STP_GetUsersInfoByID_Result GetUserById(int userId)
         {
@@ -108,11 +99,11 @@ namespace SugarMonkey.Models.BusinessLogic
             }
         }
 
-        public static STP_UpdateUser_Result UpdateUser(EditUserViewModel editUserViewModel, int userID)
+        public static STP_UpdateUser_Result UpdateUser(EditUserViewModel editUserViewModel, int userId)
         {
             using (GeneralPurposeDBEntities dbContext = new GeneralPurposeDBEntities())
             {
-                STP_UpdateUser_Result userEntity = dbContext.STP_UpdateUser(userID, editUserViewModel.FirstName,
+                STP_UpdateUser_Result userEntity = dbContext.STP_UpdateUser(userId, editUserViewModel.FirstName,
                         editUserViewModel.FirstLastName, editUserViewModel.SecondLastName, editUserViewModel.Cellphone,
                         editUserViewModel.Email, editUserViewModel.Password, "not salted")
                     .FirstOrDefault();
