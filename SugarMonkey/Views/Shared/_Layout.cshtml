@@ -17,19 +17,19 @@
         @Html.ActionLink("SugarMonkey", "Index", "MainPage", new {area = ""}, new {@class = "navbar-brand"})
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
 			<ul class="nav navbar-nav">
-				<li class="nav-item">@Html.ActionLink("FrontPage", "Index", "MainPage", null, new { @class = "nav-link" })</li>
-				<li class="nav-item">@Html.ActionLink("About", "About", "MainPage", null, new { @class = "nav-link" })</li>
-				<li class="nav-item">@Html.ActionLink("Contact", "Contact", "MainPage", null, new { @class = "nav-link" })</li>
-				<li class="nav-item"> @Html.ActionLink("Product", "Product", "Product", null, new { @class = "nav-link" })</li>
-				<li class="nav-item"> @Html.ActionLink("Insert Product", "InsertProduct", "Product", null, new { @class = "nav-link" })</li>
+				<li class="nav-item">@Html.ActionLink("Home", "Index", "MainPage", null, new { @class = "nav-link" })</li>
+				<li class="nav-item">@Html.ActionLink("Acerca de", "About", "MainPage", null, new { @class = "nav-link" })</li>
+				<li class="nav-item">@Html.ActionLink("Soporte", "Contact", "MainPage", null, new { @class = "nav-link" })</li>
+				<li class="nav-item"> @Html.ActionLink("Productos", "Product", "Product", null, new { @class = "nav-link" })</li>
+				<li class="nav-item"> @Html.ActionLink("Insertar Producto", "InsertProduct", "Product", null, new { @class = "nav-link" })</li>
 				@if (Session["MemberId"] != null)
 				{
-					<li class="nav-item"> @Html.ActionLink("Log Out", "Logout", "User", null, new { @class = "nav-link" })</li>
+					<li class="nav-item"> @Html.ActionLink("Cerrar Sesion", "Logout", "User", null, new { @class = "nav-link" })</li>
 				}
 				else
 				{
-					<li class="nav-item"> @Html.ActionLink("Register", "UserRegistration", "User", null, new { @class = "nav-link" })</li>
-					<li class="nav-item"> @Html.ActionLink("Login", "LogUserin", "User", null, new { @class = "nav-link" })</li>
+					<li class="nav-item"> @Html.ActionLink("Registrar", "UserRegistration", "User", null, new { @class = "nav-link" })</li>
+					<li class="nav-item"> @Html.ActionLink("Iniciar Sesion", "LogUserin", "User", null, new { @class = "nav-link" })</li>
 				}
 			</ul>
         </div>
