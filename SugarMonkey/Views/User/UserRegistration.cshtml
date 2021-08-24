@@ -4,7 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>UserRegistrationViewModel</h2>
+<h2>Registracion</h2>
+
+<body background="https://fondosmil.com/fondo/1846.jpg">
+
+</body>
 
 
 <div>
@@ -14,43 +18,43 @@
         <div class="row">
             <div class="col-lg-12">@ViewBag.Message</div>
         </div>
-        <br/>
+        <br />
         <div class="row">
             <div class="col-lg-2">@Html.LabelFor(userRegistration => userRegistration.FirstName)</div>
-            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.FirstName, new {@class = "form-control"})</div>
+            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.FirstName, new { @class = "form-control" })</div>
         </div>
-        <br/>
+        <br />
         <div class="row">
             <div class="col-lg-2">@Html.LabelFor(userRegistration => userRegistration.FirstLastName)</div>
-            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.FirstLastName, new {@class = "form-control"})</div>
+            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.FirstLastName, new { @class = "form-control" })</div>
         </div>
-        <br/>
+        <br />
         <div class="row">
             <div class="col-lg-2">@Html.LabelFor(userRegistration => userRegistration.SecondLastName)</div>
-            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.SecondLastName, new {@class = "form-control"})</div>
+            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.SecondLastName, new { @class = "form-control" })</div>
         </div>
-        <br/>
+        <br />
         <div class="row">
             <div class="col-lg-2">@Html.LabelFor(userRegistration => userRegistration.Cellphone)</div>
-            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.Cellphone, new {@class = "form-control"})</div>
+            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.Cellphone, new { @class = "form-control" })</div>
         </div>
-        <br/>
+        <br />
         <div class="row">
             <div class="col-lg-2">@Html.LabelFor(userRegistration => userRegistration.Email)</div>
-            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.Email, new {@class = "form-control"})</div>
+            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.Email, new { @class = "form-control" })</div>
         </div>
-        <br/>
+        <br />
         <div class="row">
             <div class="col-lg-2">@Html.LabelFor(userRegistration => userRegistration.Password)</div>
-            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.Password, new {@class = "form-control", type = "Password"})</div>
+            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.Password, new { @class = "form-control", type = "Password" })</div>
         </div>
-        <br/>
+        <br />
         <div class="row">
             <div class="col-lg-2">@Html.LabelFor(userRegistration => userRegistration.ConfirmPassword)</div>
-            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.ConfirmPassword, new {@class = "form-control", type = "Password"})</div>
+            <div class="col-lg-10">@Html.TextBoxFor(userRegistration => userRegistration.ConfirmPassword, new { @class = "form-control", type = "Password" })</div>
         </div>
-        <br/>
-        <input type="submit" value="Registrarme" class="btn btn-primary"/>
+        <br />
+        <input type="submit" value="Registrarme" class="btn btn-primary" />
     }
 
 </div>
