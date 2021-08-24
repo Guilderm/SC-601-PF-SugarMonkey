@@ -8,7 +8,316 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-bold-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-bold-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-bold-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-bold-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-bold-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-medium-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-medium-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-medium-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-medium-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-medium-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-regular-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-regular-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-regular-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-regular-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-regular-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-thin-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-thin-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-thin-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-thin-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/adminfonts/roboto-thin-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/admin_function.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery-1.10.2.intellisense.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery-1.10.2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery-1.10.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.unobtrusive-ajax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.unobtrusive-ajax.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.validate-vsdoc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.validate.unobtrusive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/jquery.validate.unobtrusive.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/modernizr-2.6.2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/respond.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/respond.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/sweetalert-dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/sweetalert.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/langs/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advhr/css/advhr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advhr/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advhr/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advhr/js/rule.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advhr/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advhr/rule.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advimage/css/advimage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advimage/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advimage/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advimage/image.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advimage/img/sample.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advimage/js/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advimage/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advlink/css/advlink.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advlink/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advlink/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advlink/js/advlink.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advlink/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advlink/link.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advlist/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/advlist/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/autolink/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/autolink/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/autoresize/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/autoresize/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/autosave/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/autosave/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/bbcode/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/bbcode/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/contextmenu/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/contextmenu/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/directionality/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/directionality/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/emotions.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-cool.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-cry.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-embarassed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-foot-in-mouth.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-frown.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-innocent.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-kiss.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-laughing.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-money-mouth.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-sealed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-smile.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-surprised.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-tongue-out.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-undecided.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-wink.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/img/smiley-yell.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/js/emotions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/emotions/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example/dialog.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example/img/example.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example/js/dialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example/langs/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example_dependency/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/example_dependency/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullpage/css/fullpage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullpage/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullpage/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullpage/fullpage.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullpage/js/fullpage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullpage/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullscreen/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullscreen/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/fullscreen/fullscreen.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/iespell/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/iespell/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/alert.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/button.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/buttons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/confirm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/corners.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/horizontal.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/vertical.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/window.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/inlinepopups/template.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/insertdatetime/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/insertdatetime/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/layer/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/layer/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/legacyoutput/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/legacyoutput/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/lists/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/lists/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/media/css/media.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/media/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/media/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/media/js/embed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/media/js/media.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/media/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/media/media.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/media/moxieplayer.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/nonbreaking/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/nonbreaking/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/noneditable/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/noneditable/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/pagebreak/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/pagebreak/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/paste/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/paste/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/paste/js/pastetext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/paste/js/pasteword.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/paste/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/paste/pastetext.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/paste/pasteword.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/preview/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/preview/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/preview/example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/preview/jscripts/embed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/preview/preview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/print/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/print/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/save/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/save/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/searchreplace/css/searchreplace.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/searchreplace/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/searchreplace/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/searchreplace/js/searchreplace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/searchreplace/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/searchreplace/searchreplace.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/spellchecker/css/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/spellchecker/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/spellchecker/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/spellchecker/img/wline.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/style/css/props.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/style/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/style/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/style/js/props.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/style/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/style/props.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/style/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/tabfocus/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/tabfocus/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/cell.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/css/cell.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/css/row.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/css/table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/js/cell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/js/merge_cells.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/js/row.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/js/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/merge_cells.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/row.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/table/table.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/template/blank.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/template/css/template.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/template/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/template/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/template/js/template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/template/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/template/template.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/visualblocks/css/visualblocks.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/visualblocks/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/visualblocks/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/visualchars/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/visualchars/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/wordcount/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/wordcount/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/abbr.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/acronym.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/attributes.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/cite.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/css/attributes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/css/popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/del.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/editor_plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/ins.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/js/abbr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/js/acronym.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/js/attributes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/js/cite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/js/del.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/js/element_common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/js/ins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/plugins/xhtmlxtras/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/about.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/anchor.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/charmap.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/color_picker.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/editor_template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/editor_template_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/image.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/colorpicker.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/flash.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/iframe.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/pagebreak.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/quicktime.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/realmedia.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/shockwave.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/trans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/video.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/img/windowsmedia.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/js/about.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/js/anchor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/js/charmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/js/color_picker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/js/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/js/link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/js/source_editor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/langs/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/langs/en_dlg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/link.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/shortcuts.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/img/buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/img/items.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/img/menu_arrow.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/img/menu_check.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/img/progress.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/img/tabs.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/default/ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/highcontrast/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/highcontrast/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/highcontrast/ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/o2k7/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/o2k7/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/o2k7/ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/o2k7/ui_black.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/advanced/source_editor.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/editor_template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/editor_template_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/img/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/langs/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/skins/default/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/skins/default/ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/skins/o2k7/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/skins/o2k7/img/button_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/themes/simple/skins/o2k7/ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/tiny_mce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/tiny_mce_popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/tiny_mce_src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/utils/editable_selects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/utils/form_utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/utils/mctabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Scripts/tiny_mce/utils/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Controllers/ProductController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/ProductBusinessLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/ProductBusinessLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/Product.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/Product.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/ProductPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/ProductPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/build.force" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +328,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SugarMonkey" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/guild/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/Models/Views/UserViewModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/guild/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/Views/User/UserRegistration.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xB1sfJ9DZNYNDYfaw3E5RvY6XL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -71,6 +378,7 @@
       <updated>1629813882432</updated>
       <workItem from="1629813917886" duration="4293000" />
       <workItem from="1629824782029" duration="1636000" />
+      <workItem from="1629835736583" duration="838000" />
     </task>
     <task id="LOCAL-00001" summary="modifyed the artifact folder">
       <created>1629818721469</created>
