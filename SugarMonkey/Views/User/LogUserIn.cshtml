@@ -31,22 +31,22 @@
         margin-top: 8%;
     }
 </style>
-<div class="AdminLogin">
-    @using (Html.BeginForm("LogUserIn", "User", new {ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+<div class="AdminLogin" style="background-color:antiquewhite">
+    @using (Html.BeginForm("LogUserIn", "User", new { ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
         <h1 style="margin-bottom: 20px; text-align: center;">Admin Login</h1>
         <div class="loginDetail">
-            @Html.TextBoxFor(m => m.Email, new {@class = "dashinp", placeholder = "Username"})
+            @Html.TextBoxFor(m => m.Email, new { @class = "dashinp", placeholder = "Username" })
             @Html.ValidationMessageFor(m => m.Email)
 
-            @Html.PasswordFor(m => m.Password, new {type = "password", @class = "dashinp", placeholder = "Password"})
+            @Html.PasswordFor(m => m.Password, new { type = "password", @class = "dashinp", placeholder = "Password" })
             @Html.ValidationMessageFor(m => m.Password)
 
-            <label style="display: none;">@Html.RadioButton("UserType", 1, new {@checked = "checked"}) Admin</label>
+            <label style="display: none;">@Html.RadioButton("UserType", 1, new { @checked = "checked" }) Admin</label>
 
             <div class="forgot clearfix" style="display: none;">
-                @Html.CheckBoxFor(m => m.RememberMe, new {@class = "csscheck"})
+                @Html.CheckBoxFor(m => m.RememberMe, new { @class = "csscheck" })
                 <label for="RememberMe" class="csslabel fl">Keep Me Signed In</label>
                 <a class="fgt fr" href="/Account/ForgotPassword">Forgot Password?</a>
             </div>
