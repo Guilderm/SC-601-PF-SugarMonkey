@@ -58,5 +58,13 @@ namespace SugarMonkey.Controllers
             }
             return View();
         }
+
+        [HttpPost]
+        public ActionResult ConsultarProductAJAX(Product obj)
+        {
+
+            return Json(modelo.ConsultarProductAJAX(obj), JsonRequestBehavior.AllowGet);
+
+        }
     }
 }

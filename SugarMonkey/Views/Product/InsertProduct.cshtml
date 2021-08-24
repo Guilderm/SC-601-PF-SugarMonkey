@@ -92,9 +92,20 @@
 
 		<div class="col-lg-3 form-group">
 			<div class="col-md-12">
-				<input type="submit" value="Ingresar" class="btn btn-info btn-block" />
+				<input type="submit" name="Process" value="Ingresar" class="btn btn-info btn-block" />
+			</div>
+		</div>
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				<input type="submit" name="Process" value="Actualizar" class="btn btn-warning btn-block" />
 			</div>
 		</div>
 
 	</div>
+}
+
+@section Scripts
+{
+	@Scripts.Render("~/Funciones/InsertProductJS.js")
 }
