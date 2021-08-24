@@ -81,11 +81,12 @@ namespace SugarMonkey.Models.Views
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
-    
+
     public class UserRegistrationEditViewModel
     {
         [Required(ErrorMessage = "First name is required")]
-        [Display(Name = "Nombre")] public string FirstName { get; set; }
+        [Display(Name = "Nombre")]
+        public string FirstName { get; set; }
 
         [Required(ErrorMessage = "First name is required")]
         [Display(Name = "Primer Apellido")]
@@ -106,10 +107,10 @@ namespace SugarMonkey.Models.Views
         [StringLength(100, ErrorMessage = "Minimum {2} and Maximum {1} characters are allowed", MinimumLength = 5)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        
+
         [Required(ErrorMessage = "Confirm password is required")]
         [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Password doesn't match")]
-        [Display(Name = "Confirm Password")] 
+        [Display(Name = "Confirm Password")]
         public string ConfirmPassword { get; set; }
     }
 }
