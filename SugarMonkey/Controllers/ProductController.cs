@@ -24,6 +24,15 @@ namespace SugarMonkey.Controllers
             return View("Product", modelo.ConsultarProducts(obj.CategoryID.ToString()));
         }
 
+        [HttpGet]
+        public ActionResult InsertProduct()
+        {
+            ViewBag.ProductFilter = modelo.ListaCategoryBag();
+            ViewBag.ShowProduct = modelo.ListaProductsBag();
+
+            return View();
+        }
+
         [HttpPost]
         public ActionResult InsertProduct(Product obj, string Process)
         {
