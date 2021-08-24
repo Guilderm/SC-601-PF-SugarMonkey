@@ -109,6 +109,7 @@ namespace SugarMonkey.Models.Views
         
         [Required(ErrorMessage = "Confirm password is required")]
         [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Password doesn't match")]
+        [Display(Name = "Confirm Password")] 
         public string ConfirmPassword { get; set; }
     }
 }
