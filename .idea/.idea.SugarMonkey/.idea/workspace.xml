@@ -311,6 +311,7 @@
       <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/Product.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/Product.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/ProductPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/ProductPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
@@ -379,6 +380,7 @@
       <workItem from="1629813917886" duration="4293000" />
       <workItem from="1629824782029" duration="1636000" />
       <workItem from="1629835736583" duration="838000" />
+      <workItem from="1629843551162" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="modifyed the artifact folder">
       <created>1629818721469</created>
