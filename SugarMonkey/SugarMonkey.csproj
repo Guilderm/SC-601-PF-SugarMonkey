@@ -454,7 +454,6 @@
     <Content Include="bin\System.Web.WebPages.Razor.xml" />
     <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\WebGrease.dll" />
-    <Content Include="Funciones\InsertProductJS.js" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\Productos\Cupcakes\cup1.jpg" />
     <Content Include="Imagenes\Productos\Cupcakes\cup2.jpg" />

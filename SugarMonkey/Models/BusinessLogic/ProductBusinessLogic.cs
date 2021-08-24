@@ -69,9 +69,10 @@ namespace SugarMonkey.Models.BusinessLogic
 
         public void UpdateProduct(Product obj)
         {
-            using (var context = new GeneralPurposeDBEntities())
+            using (var contexto = new GeneralPurposeDBEntities())
             {
-                var productFound = (from x in context.Products
+                //LinQ y Lambda
+                var productFound = (from x in contexto.Products
                                     where x.ProductID == obj.ProductID
                                     select x).FirstOrDefault();
 
@@ -87,29 +88,8 @@ namespace SugarMonkey.Models.BusinessLogic
                     productFound.percentageOff = obj.percentageOff;
                     productFound.SaleStarts = obj.SaleStarts;
                     productFound.SaleEnds = obj.SaleEnds;
-                    context.SaveChanges();
+                    contexto.SaveChanges();
                 }
-            }
-        }
-
-        public Product ConsultarProductAJAX(Product obj)
-        {
-            using (var context = new GeneralPurposeDBEntities())
-            {
-                var productFound = (from x in context.Products
-                                 where x.ProductID == obj.ProductID
-                                 select x).FirstOrDefault();
-                if (productFound != null)
-                {
-                    productFound.Name = obj.Name;
-                    productFound.Description = obj.Description;
-                    productFound.CategoryID = obj.CategoryID;
-                    productFound.UnitPrice = obj.UnitPrice;
-                    productFound.ImagePath = obj.ImagePath;
-                    productFound.ThumbnailPath = obj.ThumbnailPath;
-                    productFound.percentageOff = obj.percentageOff;
-                }
-                return productFound;
             }
         }
     }
