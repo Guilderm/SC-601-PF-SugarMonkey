@@ -464,8 +464,8 @@ INSERT INTO [dbo].[Products]
            ,'Cupcakes con cola de sirena'
            ,100
            ,1000
-           ,'~/Imagenes/Productos/Cupcakes/cup1.jpg'
-           ,'~/Imagenes/Productos/Cupcakes/cup1.jpg'
+           ,'/Imagenes/Productos/Cupcakes/cup1.jpg'
+           ,'/Imagenes/Productos/Cupcakes/cup1.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -486,8 +486,8 @@ INSERT INTO [dbo].[Products]
            ,'Cupcakes con coronas de rey y flores'
            ,100
            ,1000
-           ,'~/Imagenes/Productos/Cupcakes/cup2.jpg'
-           ,'~/Imagenes/Productos/Cupcakes/cup2.jpg'
+           ,'/Imagenes/Productos/Cupcakes/cup2.jpg'
+           ,'/Imagenes/Productos/Cupcakes/cup2.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -508,8 +508,8 @@ INSERT INTO [dbo].[Products]
            ,'Cupcakes con imagenes de Moana'
            ,100
            ,1000
-           ,'~/Imagenes/Productos/Cupcakes/cup3.jpg'
-           ,'~/Imagenes/Productos/Cupcakes/cup3.jpg'
+           ,'/Imagenes/Productos/Cupcakes/cup3.jpg'
+           ,'/Imagenes/Productos/Cupcakes/cup3.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -530,8 +530,8 @@ INSERT INTO [dbo].[Products]
            ,'Dulces en paleta en forma de rosa'
            ,101
            ,1500
-           ,'~/Imagenes/Productos/Dulces/dul1.jpg'
-           ,'~/Imagenes/Productos/Dulces/dul1.jpg'
+           ,'/Imagenes/Productos/Dulces/dul1.jpg'
+           ,'/Imagenes/Productos/Dulces/dul1.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -552,8 +552,8 @@ INSERT INTO [dbo].[Products]
            ,'Dulces suspiros en bolsas'
            ,101
            ,1500
-           ,'~/Imagenes/Productos/Dulces/dul2.jpg'
-           ,'~/Imagenes/Productos/Dulces/dul2.jpg'
+           ,'/Imagenes/Productos/Dulces/dul2.jpg'
+           ,'/Imagenes/Productos/Dulces/dul2.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -574,8 +574,8 @@ INSERT INTO [dbo].[Products]
            ,'Dulces de fresas cubiertas por caramelo'
            ,101
            ,1500
-           ,'~/Imagenes/Productos/Dulces/dul3.jpg'
-           ,'~/Imagenes/Productos/Dulces/dul3.jpg'
+           ,'/Imagenes/Productos/Dulces/dul3.jpg'
+           ,'/Imagenes/Productos/Dulces/dul3.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -596,8 +596,8 @@ INSERT INTO [dbo].[Products]
            ,'Cajetas en forma de bolita individuales'
            ,101
            ,1500
-           ,'~/Imagenes/Productos/Dulces/dul4.jpg'
-           ,'~/Imagenes/Productos/Dulces/dul4.jpg'
+           ,'/Imagenes/Productos/Dulces/dul4.jpg'
+           ,'/Imagenes/Productos/Dulces/dul4.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -618,8 +618,8 @@ INSERT INTO [dbo].[Products]
            ,'Dulces marshmallow cubiertos de caramelo'
            ,101
            ,1500
-           ,'~/Imagenes/Productos/Dulces/dul5.jpg'
-           ,'~/Imagenes/Productos/Dulces/dul5.jpg'
+           ,'/Imagenes/Productos/Dulces/dul5.jpg'
+           ,'/Imagenes/Productos/Dulces/dul5.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -640,8 +640,8 @@ INSERT INTO [dbo].[Products]
            ,'Dulces con forma de conejo y en paleta'
            ,101
            ,1500
-           ,'~/Imagenes/Productos/Dulces/dul6.jpg'
-           ,'~/Imagenes/Productos/Dulces/dul6.jpg'
+           ,'/Imagenes/Productos/Dulces/dul6.jpg'
+           ,'/Imagenes/Productos/Dulces/dul6.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
@@ -662,8 +662,8 @@ INSERT INTO [dbo].[Products]
            ,'Dulces marshmallow en paleta decorados'
            ,101
            ,1500
-           ,'~/Imagenes/Productos/Dulces/dul7.jpg'
-           ,'~/Imagenes/Productos/Dulces/dul7.jpg'
+           ,'/Imagenes/Productos/Dulces/dul7.jpg'
+           ,'/Imagenes/Productos/Dulces/dul7.jpg'
            ,0
            ,08/24/2021
            ,08/24/2021)
