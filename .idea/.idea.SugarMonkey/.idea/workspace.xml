@@ -7,33 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/master_SugarMonkey.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/SugarMonkey/config/applicationhost.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/SugarMonkey/v16/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/.idea/.idea.SugarMonkey/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/.idea/.idea.SugarMonkey/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/.idea/.idea.SugarMonkey/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/.idea/.idea.SugarMonkey/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/.idea/config/applicationhost.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/.vs/SugarMonkey/config/applicationhost.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/.vs/SugarMonkey/v16/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/obj/Debug/SugarMonkey.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Trying to get it to work" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SugarMonkey" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xB1sfJ9DZNYNDYfaw3E5RvY6XL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -81,8 +65,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1629813882432</updated>
-      <workItem from="1629813917886" duration="2612000" />
+      <workItem from="1629813917886" duration="2910000" />
     </task>
+    <task id="LOCAL-00001" summary="modifyed the artifact folder">
+      <created>1629818721469</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629818721469</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Trying to get it to work">
+      <created>1629818875604</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629818875604</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,5 +100,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="modifyed the artifact folder" />
+    <MESSAGE value="Trying to get it to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to get it to work" />
   </component>
 </project>
