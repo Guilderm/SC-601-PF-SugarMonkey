@@ -7,8 +7,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="">
+    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Added JQuery in layout">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/HomeController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Home/About.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Home/Contact.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Home/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shared/_FrontLayout.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shared/_Login.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CSharp.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Managed.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.VisualBasic.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Collections.Immutable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Numerics.Vectors.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Reflection.Metadata.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Text.Encoding.CodePages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.rsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,12 +56,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/SugarMonkey" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/guild/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/Models/Views/UserViewModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/guild/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/Views/User/UserRegistration.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xB1sfJ9DZNYNDYfaw3E5RvY6XL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

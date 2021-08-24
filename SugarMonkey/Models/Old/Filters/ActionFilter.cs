@@ -14,9 +14,6 @@ namespace SugarMonkey.Models.Old.Filters
             string controllerName = filterContext.RequestContext.HttpContext.Request.RawUrl.Split('/')[1].ToLower();
             switch (controllerName)
             {
-                case "home":
-                    controller = (HomeController) filterContext.Controller;
-                    break;
                 case "search":
                     controller = (SearchController) filterContext.Controller;
                     break;
@@ -30,7 +27,7 @@ namespace SugarMonkey.Models.Old.Filters
                     controller = (ShoppingController) filterContext.Controller;
                     break;
                 default:
-                    controller = (HomeController) filterContext.Controller;
+                    controller = (MainPageController) filterContext.Controller;
                     break;
             }
 
