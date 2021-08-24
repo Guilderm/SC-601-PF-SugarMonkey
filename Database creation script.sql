@@ -425,3 +425,246 @@ GO
 --Get all user Data
 Execute STP_GetAllUsersInfo
 Go
+
+--Insert categories
+INSERT INTO [dbo].[ProductsCategories]
+           ([Name])
+     VALUES('Cupcakes')
+
+INSERT INTO [dbo].[ProductsCategories]
+           ([Name])
+     VALUES('Dulces')
+
+INSERT INTO [dbo].[ProductsCategories]
+           ([Name])
+     VALUES('Galletas')
+
+INSERT INTO [dbo].[ProductsCategories]
+           ([Name])
+     VALUES('Queques')
+
+INSERT INTO [dbo].[ProductsCategories]
+           ([Name])
+     VALUES('Reposteria')
+GO
+
+--Insert products
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Cupcakes de sirena'
+           ,'Cupcakes con cola de sirena'
+           ,100
+           ,1000
+           ,'~/Imagenes/Productos/Cupcakes/cup1.jpg'
+           ,'~/Imagenes/Productos/Cupcakes/cup1.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Cupcakes de rey'
+           ,'Cupcakes con coronas de rey y flores'
+           ,100
+           ,1000
+           ,'~/Imagenes/Productos/Cupcakes/cup2.jpg'
+           ,'~/Imagenes/Productos/Cupcakes/cup2.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Cupcakes de Moana'
+           ,'Cupcakes con imagenes de Moana'
+           ,100
+           ,1000
+           ,'~/Imagenes/Productos/Cupcakes/cup3.jpg'
+           ,'~/Imagenes/Productos/Cupcakes/cup3.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Dulces paletas'
+           ,'Dulces en paleta en forma de rosa'
+           ,101
+           ,1500
+           ,'~/Imagenes/Productos/Dulces/dul1.jpg'
+           ,'~/Imagenes/Productos/Dulces/dul1.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Suspiros'
+           ,'Dulces suspiros en bolsas'
+           ,101
+           ,1500
+           ,'~/Imagenes/Productos/Dulces/dul2.jpg'
+           ,'~/Imagenes/Productos/Dulces/dul2.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Dulces fresas'
+           ,'Dulces de fresas cubiertas por caramelo'
+           ,101
+           ,1500
+           ,'~/Imagenes/Productos/Dulces/dul3.jpg'
+           ,'~/Imagenes/Productos/Dulces/dul3.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Cajetas'
+           ,'Cajetas en forma de bolita individuales'
+           ,101
+           ,1500
+           ,'~/Imagenes/Productos/Dulces/dul4.jpg'
+           ,'~/Imagenes/Productos/Dulces/dul4.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Marshmallow'
+           ,'Dulces marshmallow cubiertos de caramelo'
+           ,101
+           ,1500
+           ,'~/Imagenes/Productos/Dulces/dul5.jpg'
+           ,'~/Imagenes/Productos/Dulces/dul5.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Dulces conejo'
+           ,'Dulces con forma de conejo y en paleta'
+           ,101
+           ,1500
+           ,'~/Imagenes/Productos/Dulces/dul6.jpg'
+           ,'~/Imagenes/Productos/Dulces/dul6.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
+
+INSERT INTO [dbo].[Products]
+           ([Name]
+           ,[Description]
+           ,[CategoryID]
+           ,[UnitPrice]
+           ,[ImagePath]
+           ,[ThumbnailPath]
+           ,[percentageOff]
+           ,[SaleStarts]
+           ,[SaleEnds])
+     VALUES
+           ('Marshmallows en paleta'
+           ,'Dulces marshmallow en paleta decorados'
+           ,101
+           ,1500
+           ,'~/Imagenes/Productos/Dulces/dul7.jpg'
+           ,'~/Imagenes/Productos/Dulces/dul7.jpg'
+           ,0
+           ,08/24/2021
+           ,08/24/2021)
+GO
