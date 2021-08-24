@@ -455,6 +455,34 @@
     <Content Include="bin\System.Web.WebPages.xml" />
     <Content Include="bin\WebGrease.dll" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\Productos\Cupcakes\cup1.jpg" />
+    <Content Include="Imagenes\Productos\Cupcakes\cup2.jpg" />
+    <Content Include="Imagenes\Productos\Cupcakes\cup3.jpg" />
+    <Content Include="Imagenes\Productos\Dulces\dul1.jpg" />
+    <Content Include="Imagenes\Productos\Dulces\dul2.jpg" />
+    <Content Include="Imagenes\Productos\Dulces\dul3.jpg" />
+    <Content Include="Imagenes\Productos\Dulces\dul4.jpg" />
+    <Content Include="Imagenes\Productos\Dulces\dul5.jpg" />
+    <Content Include="Imagenes\Productos\Dulces\dul6.jpg" />
+    <Content Include="Imagenes\Productos\Dulces\dul7.jpg" />
+    <Content Include="Imagenes\Productos\Galletas\gall1.jpg" />
+    <Content Include="Imagenes\Productos\Galletas\gall2.jpg" />
+    <Content Include="Imagenes\Productos\Galletas\gall3.jpg" />
+    <Content Include="Imagenes\Productos\Galletas\gall4.jpg" />
+    <Content Include="Imagenes\Productos\Galletas\gall5.jpg" />
+    <Content Include="Imagenes\Productos\Galletas\imagen2.jpg" />
+    <Content Include="Imagenes\Productos\Queques\imagen3.jpg" />
+    <Content Include="Imagenes\Productos\Queques\imagen4.jpg" />
+    <Content Include="Imagenes\Productos\Queques\queque1.jpg" />
+    <Content Include="Imagenes\Productos\Queques\queque2.jpg" />
+    <Content Include="Imagenes\Productos\Queques\queque3.jpg" />
+    <Content Include="Imagenes\Productos\Queques\queque4.jpg" />
+    <Content Include="Imagenes\Productos\Queques\queque5.jpg" />
+    <Content Include="Imagenes\Productos\Queques\queque6.jpg" />
+    <Content Include="Imagenes\Productos\Reposteria\rep1.jpg" />
+    <Content Include="Imagenes\Productos\Reposteria\rep2.jpg" />
+    <Content Include="Imagenes\Productos\Reposteria\rep3.jpg" />
+    <Content Include="Imagenes\Productos\Reposteria\rep4.jpg" />
     <Content Include="Models\Data.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Data.edmx</DependentUpon>
@@ -671,6 +699,8 @@
     <Content Include="Views\Shopping\PaymentSuccess.cshtml" />
     <Content Include="Views\Shopping\_ShippingAddress.cshtml" />
     <Content Include="Views\User\LogUserIn.cshtml" />
+    <Content Include="Views\Product\ProductPartial.cshtml" />
+    <Content Include="Views\Product\InsertProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Artifacts\Media\" />
