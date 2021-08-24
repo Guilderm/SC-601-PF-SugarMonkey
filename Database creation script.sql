@@ -82,9 +82,7 @@ CREATE TABLE [Users]
     [Email]            varchar(50)  NOT NULL UNIQUE,
     [CredentialID]     int          NOT NULL FOREIGN KEY REFERENCES Credentials (CredentialID),
     [ProfilePhotoPath] varchar(100) NULL,
-    [isCustomer]       BIT          NULL DEFAULT 1,
-    [isAdmin]          BIT          NULL DEFAULT 0,
-    [iSActive]         BIT          NULL DEFAULT 0,
+    [UserType] varchar(50)  NULL DEFAULT 'Customer',
     [lastLogin]        DATETIME     NULL,
 )
 GO
@@ -194,7 +192,7 @@ CREATE TABLE [OrderedItems]
 )
 GO
 
-CREATE PROCEDURE STP_GetUsersInfo
+CREATE PROCEDURE STP_GetAllUsersInfo
 AS
 BEGIN
     SELECT [UserID]
@@ -207,9 +205,7 @@ BEGIN
          , [Password]
          , [Users].[CredentialID]
          , [ProfilePhotoPath]
-         , [isCustomer]
-         , [isAdmin]
-         , [iSActive]
+         , [UserType]
          , [lastLogin]
          , [ResetPasswordCode]
          , [Salt]
@@ -229,9 +225,7 @@ BEGIN
          , [Email]
          , [Users].[CredentialID]
          , [ProfilePhotoPath]
-         , [isCustomer]
-         , [isAdmin]
-         , [iSActive]
+         , [UserType]
          , [lastLogin]
          , [Password]
          , [ResetPasswordCode]
@@ -429,5 +423,5 @@ Execute STP_UpdateCredentials 100, "newPassword", "Notsalted";
 GO
 
 --Get all user Data
-Execute STP_GetUsersInfo
+Execute STP_GetAllUsersInfo
 Go
