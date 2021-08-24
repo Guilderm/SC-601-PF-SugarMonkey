@@ -3,8 +3,6 @@ using System.Linq;
 using System.Web.Mvc;
 using SugarMonkey.Models;
 using SugarMonkey.Models.BusinessLogic;
-using SugarMonkey.Models.Old.Repository;
-using SugarMonkey.Models.Old.Utility;
 using SugarMonkey.Models.Views;
 
 namespace SugarMonkey.Controllers
@@ -98,7 +96,7 @@ namespace SugarMonkey.Controllers
                 try
                 {
                     ModelState.Clear();
-                    rpm.EmailId = EncryptDecrypt.Decrypt(emailId, true);
+                   //TODO: To be implemented
                 }
                 catch (Exception e)
                 {

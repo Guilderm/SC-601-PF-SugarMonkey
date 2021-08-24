@@ -128,12 +128,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\MainPageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\SearchController.cs" />
-    <Compile Include="Controllers\ShoppingController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -177,60 +174,6 @@
     <Compile Include="Models\BusinessLogic\ProductBusinessLogic.cs" />
     <Compile Include="Models\BusinessLogic\UserBusinessLogic.cs" />
     <Compile Include="Models\BusinessLogic\Utilities.cs" />
-    <Compile Include="Models\Old\CategoryDetail.cs" />
-    <Compile Include="Models\Old\DAL\Online_Shopping.Context.cs" />
-    <Compile Include="Models\Old\DAL\Online_Shopping.cs" />
-    <Compile Include="Models\Old\DAL\Online_Shopping.Designer.cs">
-      <DependentUpon>Online_Shopping.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Online_Shopping1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Online_Shopping1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Online_Shopping.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Tbl_Cart.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Tbl_CartStatus.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Tbl_Category.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Tbl_MemberRole.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Tbl_Members.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Tbl_Product.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Tbl_Roles.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\Tbl_ShippingDetails.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\USP_MemberShoppingCartDetails_Result.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\DAL\USP_Search_Result.cs">
-      <DependentUpon>Online_Shopping.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Old\Filters\ActionFilter.cs" />
-    <Compile Include="Models\Old\Filters\AuthorizeUserFilter.cs" />
-    <Compile Include="Models\Old\Repository\GenericRepository.cs" />
-    <Compile Include="Models\Old\Repository\GenericUnitOfWork.cs" />
-    <Compile Include="Models\Old\Repository\IRepository.cs" />
-    <Compile Include="Models\Old\Utility\EmailNotification.cs" />
-    <Compile Include="Models\Old\Utility\EncryptDecrypt.cs" />
-    <Compile Include="Models\Old\Utility\UploadContent.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
@@ -294,101 +237,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Artifacts\favicon.png" />
-    <Content Include="Artifacts\Old\Content\bootstrap.css" />
-    <Content Include="Artifacts\Old\Content\bootstrap.min.css" />
-    <Content Include="Artifacts\Old\Content\Site.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery-ui.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery-ui.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.accordion.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.button.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.core.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.dialog.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.resizable.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.selectable.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.slider.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.tabs.min.css" />
-    <Content Include="Artifacts\Old\Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Artifacts\Old\CSS\admin_stylesheet.css" />
-    <Content Include="Artifacts\Old\CSS\CustomStyleSheet.css" />
-    <Content Include="Artifacts\Old\CSS\fonts\AdminLoginFonts.css" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI-Bold.eot" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI-Bold.svg" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI-Bold.ttf" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI-Bold.woff" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI-Light.eot" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI-Light.svg" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI-Light.ttf" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI-Light.woff" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI.eot" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI.svg" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI.ttf" />
-    <Content Include="Artifacts\Old\CSS\fonts\SegoeUI.woff" />
-    <Content Include="Artifacts\Old\CSS\fonts\SEGOEUIL.otf" />
-    <Content Include="Artifacts\Old\CSS\fonts\SEGOEUIL.svg" />
-    <Content Include="Artifacts\Old\CSS\fonts\SEGOEUIL.ttf" />
-    <Content Include="Artifacts\Old\CSS\fonts\SEGOEUIL.woff" />
-    <Content Include="Artifacts\Old\CSS\fonts\Utsaah-Bold.eot" />
-    <Content Include="Artifacts\Old\CSS\fonts\Utsaah-Bold.svg" />
-    <Content Include="Artifacts\Old\CSS\fonts\Utsaah-Bold.ttf" />
-    <Content Include="Artifacts\Old\CSS\fonts\Utsaah-Bold.woff" />
-    <Content Include="Artifacts\Old\CSS\fonts\Utsaah.eot" />
-    <Content Include="Artifacts\Old\CSS\fonts\UTSAAH.otf" />
-    <Content Include="Artifacts\Old\CSS\fonts\UTSAAH.svg" />
-    <Content Include="Artifacts\Old\CSS\fonts\UTSAAH.ttf" />
-    <Content Include="Artifacts\Old\CSS\fonts\UTSAAH.woff" />
-    <Content Include="Artifacts\Old\CSS\fonts\UTSAAHB.otf" />
-    <Content Include="Artifacts\Old\CSS\fonts\UTSAAHB.svg" />
-    <Content Include="Artifacts\Old\CSS\fonts\UTSAAHB.ttf" />
-    <Content Include="Artifacts\Old\CSS\fonts\UTSAAHB.woff" />
-    <Content Include="Artifacts\Old\CSS\fullcalendar\fullcalendar.print.css" />
-    <Content Include="Artifacts\Old\CSS\fullcalendar\fullCalender.css" />
-    <Content Include="Artifacts\Old\CSS\jquery.dataTables.css" />
-    <Content Include="Artifacts\Old\CSS\owl.carousel.css" />
-    <Content Include="Artifacts\Old\CSS\stylesheet.css" />
-    <Content Include="Artifacts\Old\CSS\sweetalert.css" />
     <Content Include="Artifacts\Scripts\SiteWide.js" />
     <Content Include="Artifacts\Styles\SiteWide.css" />
     <Content Include="Artifacts\Vendors\Bootstrap 5.0.2\css\bootstrap.css" />
@@ -485,19 +333,6 @@
       <DependentUpon>Data.edmx</DependentUpon>
       <LastGenOutput>Data.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Old\DAL\Online_Shopping.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Online_Shopping.Context1.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Old\DAL\Online_Shopping.edmx.diagram">
-      <DependentUpon>Online_Shopping.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\Old\DAL\Online_Shopping.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Online_Shopping1.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Old\EmailTemplates\ForgotPassword.html" />
-    <Content Include="Models\Old\EmailTemplates\Registration.html" />
     <Content Include="obj\Debug\SugarMonkey.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\SugarMonkey.dll" />
     <Content Include="obj\Debug\SugarMonkey.pdb" />
@@ -664,34 +499,12 @@
     <Content Include="Views\User\ResetPassword.cshtml" />
     <Content Include="Views\User\UserEditInfo.cshtml" />
     <Content Include="Views\Product\Product.cshtml" />
-    <Content Include="Views\Admin\Categories.cshtml" />
-    <Content Include="Views\Admin\ChangePassword.cshtml" />
-    <Content Include="Views\Admin\Dashboard.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\OrderDetail.cshtml" />
-    <Content Include="Views\Admin\Orders.cshtml" />
-    <Content Include="Views\Admin\ProductDetail.cshtml" />
-    <Content Include="Views\Admin\Products.cshtml" />
-    <Content Include="Views\Admin\UpdateCategory.cshtml" />
-    <Content Include="Views\Admin\UpdateProduct.cshtml" />
-    <Content Include="Views\Admin\_AdminLayout.cshtml" />
-    <Content Include="Views\Admin\_AdminMenu.cshtml" />
-    <Content Include="Views\Search\Index.cshtml" />
-    <Content Include="Views\Search\MyCart.cshtml" />
-    <Content Include="Views\Search\ProductDetail.cshtml" />
-    <Content Include="Views\Search\_filterSearch.cshtml" />
-    <Content Include="Views\Search\_Paging.cshtml" />
-    <Content Include="Views\Shopping\CheckOut.cshtml" />
-    <Content Include="Views\Shopping\MyCart.cshtml" />
-    <Content Include="Views\Shopping\PaymentSuccess.cshtml" />
-    <Content Include="Views\Shopping\_ShippingAddress.cshtml" />
     <Content Include="Views\User\LogUserIn.cshtml" />
     <Content Include="Views\Product\ProductPartial.cshtml" />
     <Content Include="Views\Product\InsertProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Artifacts\Media\" />
-    <Folder Include="Artifacts\Old\Content\ProductImage\" />
     <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\Views\" />
     <Folder Include="obj\Release\TransformWebConfig\transformed\Views\" />
     <Folder Include="Properties\PublishProfiles\" />
@@ -699,10 +512,6 @@
   <ItemGroup>
     <Content Include="Artifacts\Vendors\Bootstrap 5.0.2\css\bootstrap.css.map" />
     <Content Include="Artifacts\Vendors\Bootstrap 5.0.2\js\bootstrap.bundle.js.map" />
-    <EntityDeploy Include="Models\Old\DAL\Online_Shopping.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Online_Shopping1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
