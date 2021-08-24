@@ -23,5 +23,31 @@ namespace SugarMonkey.Controllers
 
             return View("Product", modelo.ConsultarProducts(obj.CategoryID.ToString()));
         }
+
+        [HttpPost]
+        public ActionResult InsertProduct(Product obj, string Process)
+        {
+            ViewBag.ProductFilter = modelo.ListaCategoryBag();
+            ViewBag.ShowProduct = modelo.ListaProductsBag();
+
+            if (Process == "Ingresar")
+            {
+                modelo.InsertProduct(
+                    obj.Name,
+                    obj.Description,
+                    obj.CategoryID,
+                    obj.UnitPrice,
+                    obj.ImagePath,
+                    obj.ThumbnailPath,
+                    obj.percentageOff,
+                    obj.SaleStarts,
+                    obj.SaleEnds);
+            }
+            else if (Process == "Actualizar")
+            {
+                modelo.UpdateProduct(obj);
+            }
+            return View();
+        }
     }
 }

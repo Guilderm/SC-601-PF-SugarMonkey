@@ -1,4 +1,4 @@
-﻿@model Product
+﻿@model SugarMonkey.Models.Product
 
 @{
 	ViewBag.Title = "InsertProduct";
@@ -15,6 +15,13 @@
 	<br />
 
 	<div class="row col-lg-12">
+
+		<div class="col-lg-3 form-group">
+			<div class="col-md-12">
+				Producto ID
+				@Html.DropDownListFor(Model => Model.ProductID, ViewBag.ShowProduct as IEnumerable<SelectListItem>, new { @class = "form-control" })
+			</div>
+		</div>
 
 		<div class="col-lg-3 form-group">
 			<div class="col-md-12">
