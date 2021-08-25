@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GeneralPurposeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ZipCodeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Addresses__UserI__67352964" FromRole="Addresses" ToRole="Users" />
+    <NavigationProperty Name="ZipCode" Relationship="Self.FK__Addresses__ZipCo__68294D9D" FromRole="Addresses" ToRole="ZipCodes" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__AddressI__7B3C2211" FromRole="Addresses" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="AppSetting">
+    <Key>
+      <PropertyRef Name="SettingID" />
+    </Key>
+    <Property Name="SettingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Default" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Credential">
+    <Key>
+      <PropertyRef Name="CredentialID" />
+    </Key>
+    <Property Name="CredentialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ResetPasswordCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Salt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__Credentia__617C500E" FromRole="Credentials" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="DeliveryOption">
+    <Key>
+      <PropertyRef Name="DeliveryOptionID" />
+    </Key>
+    <Property Name="DeliveryOptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Delivery__7C30464A" FromRole="DeliveryOptions" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="OrderedItem">
+    <Key>
+      <PropertyRef Name="OrderDetailID" />
+    </Key>
+    <Property Name="OrderDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="AmountDiscounted" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="Self.FK__OrderedIt__Order__0000D72E" FromRole="OrderedItems" ToRole="Orders" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__OrderedIt__Produ__00F4FB67" FromRole="OrderedItems" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TotalDiscounts" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SalesTax" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PurchaseDate" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TrackingNumber" Type="Int32" Nullable="false" />
+    <Property Name="AddressID" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryOptionID" Type="Int32" Nullable="false" />
+    <Property Name="SpecialInstructions" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrderedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OrderStageID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Address" Relationship="Self.FK__Orders__AddressI__7B3C2211" FromRole="Orders" ToRole="Addresses" />
+    <NavigationProperty Name="DeliveryOption" Relationship="Self.FK__Orders__Delivery__7C30464A" FromRole="Orders" ToRole="DeliveryOptions" />
+    <NavigationProperty Name="OrderedItems" Relationship="Self.FK__OrderedIt__Order__0000D72E" FromRole="Orders" ToRole="OrderedItems" />
+    <NavigationProperty Name="OrderStage" Relationship="Self.FK__Orders__OrderSta__7D246A83" FromRole="Orders" ToRole="OrderStages" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Orders__UserID__7A47FDD8" FromRole="Orders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="OrderStage">
+    <Key>
+      <PropertyRef Name="OrderStageID" />
+    </Key>
+    <Property Name="OrderStageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__OrderSta__7D246A83" FromRole="OrderStages" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ThumbnailPath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="percentageOff" Type="Int32" Nullable="false" />
+    <Property Name="SaleStarts" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SaleEnds" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OrderedItems" Relationship="Self.FK__OrderedIt__Produ__00F4FB67" FromRole="Products" ToRole="OrderedItems" />
+    <NavigationProperty Name="ProductsCategory" Relationship="Self.FK__Products__Catego__6CEE02BA" FromRole="Products" ToRole="ProductsCategories" />
+    <NavigationProperty Name="ShoppingCartItems" Relationship="Self.FK__ShoppingC__Produ__739B0049" FromRole="Products" ToRole="ShoppingCartItems" />
+  </EntityType>
+  <EntityType Name="ProductsCategory">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__6CEE02BA" FromRole="ProductsCategories" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="ShoppingCartItem">
+    <Key>
+      <PropertyRef Name="ShoppingItemID" />
+    </Key>
+    <Property Name="ShoppingItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShoppingCartID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__ShoppingC__Produ__739B0049" FromRole="ShoppingCartItems" ToRole="Products" />
+    <NavigationProperty Name="ShoppingCart" Relationship="Self.FK__ShoppingC__Shopp__72A6DC10" FromRole="ShoppingCartItems" ToRole="ShoppingCarts" />
+  </EntityType>
+  <EntityType Name="ShoppingCart">
+    <Key>
+      <PropertyRef Name="ShoppingCartID" />
+    </Key>
+    <Property Name="ShoppingCartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ShoppingCartItems" Relationship="Self.FK__ShoppingC__Shopp__72A6DC10" FromRole="ShoppingCarts" ToRole="ShoppingCartItems" />
+    <NavigationProperty Name="User" Relationship="Self.FK__ShoppingC__UserI__6FCA6F65" FromRole="ShoppingCarts" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SecondLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cellphone" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CredentialID" Type="Int32" Nullable="false" />
+    <Property Name="ProfilePhotoPath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lastLogin" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Addresses" Relationship="Self.FK__Addresses__UserI__67352964" FromRole="Users" ToRole="Addresses" />
+    <NavigationProperty Name="Credential" Relationship="Self.FK__Users__Credentia__617C500E" FromRole="Users" ToRole="Credentials" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__UserID__7A47FDD8" FromRole="Users" ToRole="Orders" />
+    <NavigationProperty Name="ShoppingCarts" Relationship="Self.FK__ShoppingC__UserI__6FCA6F65" FromRole="Users" ToRole="ShoppingCarts" />
+  </EntityType>
+  <EntityType Name="ZipCode">
+    <Key>
+      <PropertyRef Name="ZipCodeID" />
+    </Key>
+    <Property Name="ZipCodeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Canton" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ZipCode1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Addresses" Relationship="Self.FK__Addresses__ZipCo__68294D9D" FromRole="ZipCodes" ToRole="Addresses" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK__Addresses__UserI__67352964">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Addresses" Type="Self.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Addresses">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Addresses__ZipCo__68294D9D">
+    <End Role="ZipCodes" Type="Self.ZipCode" Multiplicity="1" />
+    <End Role="Addresses" Type="Self.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZipCodes">
+        <PropertyRef Name="ZipCodeID" />
+      </Principal>
+      <Dependent Role="Addresses">
+        <PropertyRef Name="ZipCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__AddressI__7B3C2211">
+    <End Role="Addresses" Type="Self.Address" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__Credentia__617C500E">
+    <End Role="Credentials" Type="Self.Credential" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Credentials">
+        <PropertyRef Name="CredentialID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="CredentialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__Delivery__7C30464A">
+    <End Role="DeliveryOptions" Type="Self.DeliveryOption" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryOptions">
+        <PropertyRef Name="DeliveryOptionID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="DeliveryOptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderedIt__Order__0000D72E">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="OrderedItems" Type="Self.OrderedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderedItems">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderedIt__Produ__00F4FB67">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="OrderedItems" Type="Self.OrderedItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderedItems">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__OrderSta__7D246A83">
+    <End Role="OrderStages" Type="Self.OrderStage" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderStages">
+        <PropertyRef Name="OrderStageID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="OrderStageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__UserID__7A47FDD8">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Products__Catego__6CEE02BA">
+    <End Role="ProductsCategories" Type="Self.ProductsCategory" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductsCategories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShoppingC__Produ__739B0049">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="ShoppingCartItems" Type="Self.ShoppingCartItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ShoppingCartItems">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShoppingC__Shopp__72A6DC10">
+    <End Role="ShoppingCarts" Type="Self.ShoppingCart" Multiplicity="1" />
+    <End Role="ShoppingCartItems" Type="Self.ShoppingCartItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShoppingCarts">
+        <PropertyRef Name="ShoppingCartID" />
+      </Principal>
+      <Dependent Role="ShoppingCartItems">
+        <PropertyRef Name="ShoppingCartID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShoppingC__UserI__6FCA6F65">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="ShoppingCarts" Type="Self.ShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ShoppingCarts">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GeneralPurposeDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Addresses" EntityType="Self.Address" />
+    <EntitySet Name="AppSettings" EntityType="Self.AppSetting" />
+    <EntitySet Name="Credentials" EntityType="Self.Credential" />
+    <EntitySet Name="DeliveryOptions" EntityType="Self.DeliveryOption" />
+    <EntitySet Name="OrderedItems" EntityType="Self.OrderedItem" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="OrderStages" EntityType="Self.OrderStage" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductsCategories" EntityType="Self.ProductsCategory" />
+    <EntitySet Name="ShoppingCartItems" EntityType="Self.ShoppingCartItem" />
+    <EntitySet Name="ShoppingCarts" EntityType="Self.ShoppingCart" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="ZipCodes" EntityType="Self.ZipCode" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+    <AssociationSet Name="FK__Addresses__UserI__67352964" Association="Self.FK__Addresses__UserI__67352964">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Addresses" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Addresses__ZipCo__68294D9D" Association="Self.FK__Addresses__ZipCo__68294D9D">
+      <End Role="ZipCodes" EntitySet="ZipCodes" />
+      <End Role="Addresses" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__AddressI__7B3C2211" Association="Self.FK__Orders__AddressI__7B3C2211">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__Credentia__617C500E" Association="Self.FK__Users__Credentia__617C500E">
+      <End Role="Credentials" EntitySet="Credentials" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__Delivery__7C30464A" Association="Self.FK__Orders__Delivery__7C30464A">
+      <End Role="DeliveryOptions" EntitySet="DeliveryOptions" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderedIt__Order__0000D72E" Association="Self.FK__OrderedIt__Order__0000D72E">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderedItems" EntitySet="OrderedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderedIt__Produ__00F4FB67" Association="Self.FK__OrderedIt__Produ__00F4FB67">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderedItems" EntitySet="OrderedItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__OrderSta__7D246A83" Association="Self.FK__Orders__OrderSta__7D246A83">
+      <End Role="OrderStages" EntitySet="OrderStages" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__UserID__7A47FDD8" Association="Self.FK__Orders__UserID__7A47FDD8">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Products__Catego__6CEE02BA" Association="Self.FK__Products__Catego__6CEE02BA">
+      <End Role="ProductsCategories" EntitySet="ProductsCategories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShoppingC__Produ__739B0049" Association="Self.FK__ShoppingC__Produ__739B0049">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShoppingC__Shopp__72A6DC10" Association="Self.FK__ShoppingC__Shopp__72A6DC10">
+      <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
+      <End Role="ShoppingCartItems" EntitySet="ShoppingCartItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShoppingC__UserI__6FCA6F65" Association="Self.FK__ShoppingC__UserI__6FCA6F65">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ShoppingCarts" EntitySet="ShoppingCarts" />
+    </AssociationSet>
+    <FunctionImport Name="STP_CreateUser" ReturnType="Collection(GeneralPurposeDBModel.STP_CreateUser_Result)">
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="FirstLastName" Mode="In" Type="String" />
+      <Parameter Name="SecondLastName" Mode="In" Type="String" />
+      <Parameter Name="Cellphone" Mode="In" Type="Int32" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="Salt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_GetAllUsersInfo" ReturnType="Collection(GeneralPurposeDBModel.STP_GetAllUsersInfo_Result)" />
+    <FunctionImport Name="STP_GetAppSetting" ReturnType="Collection(String)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_GetUserByCredentials" ReturnType="Collection(GeneralPurposeDBModel.STP_GetUserByCredentials_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_GetUserByResetPasswordCode" ReturnType="Collection(GeneralPurposeDBModel.STP_GetUserByResetPasswordCode_Result)">
+      <Parameter Name="ResetPasswordCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_GetUsersInfoByEmail" ReturnType="Collection(GeneralPurposeDBModel.STP_GetUsersInfoByEmail_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_GetUsersInfoByID" ReturnType="Collection(GeneralPurposeDBModel.STP_GetUsersInfoByID_Result)">
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="STP_NewAppSetting">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Default" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_ResetAppSetting" />
+    <FunctionImport Name="STP_SetAppSetting">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_SetResetPasswordCode" ReturnType="Collection(GeneralPurposeDBModel.STP_SetResetPasswordCode_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="ResetPasswordCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_UpdateCredentials" ReturnType="Collection(GeneralPurposeDBModel.STP_UpdateCredentials_Result)">
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="Salt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STP_UpdateUser" ReturnType="Collection(GeneralPurposeDBModel.STP_UpdateUser_Result)">
+      <Parameter Name="userIDParameter" Mode="In" Type="Int32" />
+      <Parameter Name="firstNameParameter" Mode="In" Type="String" />
+      <Parameter Name="firstLastNameParameter" Mode="In" Type="String" />
+      <Parameter Name="secondLastNameParameter" Mode="In" Type="String" />
+      <Parameter Name="cellphoneParameter" Mode="In" Type="Int32" />
+      <Parameter Name="emailParameter" Mode="In" Type="String" />
+      <Parameter Name="passwordParameter" Mode="In" Type="String" />
+      <Parameter Name="saltParameter" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="STP_CreateUser_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STP_GetAllUsersInfo_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstName1" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Salt" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STP_GetUserByCredentials_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STP_GetUserByResetPasswordCode_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STP_GetUsersInfoByEmail_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STP_GetUsersInfoByID_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STP_SetResetPasswordCode_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STP_UpdateCredentials_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STP_UpdateUser_Result">
+    <Property Type="Int32" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FirstLastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="SecondLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cellphone" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CredentialID" Nullable="false" />
+    <Property Type="String" Name="ProfilePhotoPath" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UserType" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="lastLogin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ResetPasswordCode" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>
