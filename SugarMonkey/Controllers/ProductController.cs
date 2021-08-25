@@ -1,12 +1,12 @@
-﻿using SugarMonkey.Models;
+﻿using System.Web.Mvc;
+using SugarMonkey.Models;
 using SugarMonkey.Models.BusinessLogic;
-using System.Web.Mvc;
 
 namespace SugarMonkey.Controllers
 {
     public class ProductController : Controller
     {
-        ProductBusinessLogic modelo = new ProductBusinessLogic();
+        private readonly ProductBusinessLogic modelo = new ProductBusinessLogic();
 
         [HttpGet]
         public ActionResult Product()
@@ -56,6 +56,7 @@ namespace SugarMonkey.Controllers
             {
                 modelo.UpdateProduct(obj);
             }
+
             return View();
         }
     }

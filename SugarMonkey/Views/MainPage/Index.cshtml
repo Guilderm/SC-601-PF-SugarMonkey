@@ -1,21 +1,18 @@
-﻿@using System.Web.SessionState
-@using Microsoft.Ajax.Utilities
-@{
+﻿@{
     ViewBag.Title = "Home Page";
 }
 
 <head>
 
-    <img src="https://static.wixstatic.com/media/7745dd_ea332e8f995a4f99be7a5af5eff049cd~mv2.png/v1/fill/w_196,h_196,al_c,q_85,usm_0.66_1.00_0.01/SM%20LOGO%20FINAL.webp" />
+    <img src="https://static.wixstatic.com/media/7745dd_ea332e8f995a4f99be7a5af5eff049cd~mv2.png/v1/fill/w_196,h_196,al_c,q_85,usm_0.66_1.00_0.01/SM%20LOGO%20FINAL.webp"/>
 
 </head>
-<h4 align=center>
+<h4 align="center">
     Bienvenidos a Sugar Monkey donde se encuentra la mejor reposteria de Costa Cica
 </h4>
 <body background="https://st2.depositphotos.com/4596757/6946/v/600/depositphotos_69465279-stock-illustration-pink-band.jpg" style="align-content:center">
 
 </body>
-
 
 
 <div class="text-danger">
@@ -25,13 +22,12 @@
 <div>
     @if (Session["MemberId"] != null)
     {
-        <P>Bienvenido @Html.Encode(Session["MemberId"])   @Html.Encode(Session["MemberName"])   @Html.Encode(Session["MemberRole"])</P>
+        <P>Bienvenido @Html.Encode(Session["MemberId"]) @Html.Encode(Session["MemberName"]) @Html.Encode(Session["MemberRole"])</P>
 
         <P></P>
     }
     else
     {
-
         @Html.ActionLink("Inicio Sesion", "LogUserin", "User", null, new { @class = "nav-link" })
         @Html.ActionLink("Registracion", "UserRegistration", "User", null, new { @class = "nav-link" })
     }

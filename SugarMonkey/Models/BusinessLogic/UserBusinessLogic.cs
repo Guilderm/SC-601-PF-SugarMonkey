@@ -82,7 +82,7 @@ namespace SugarMonkey.Models.BusinessLogic
             {
                 STP_GetUserByResetPasswordCode_Result userEntity =
                     dbContext.STP_GetUserByResetPasswordCode(resetPasswordCode).FirstOrDefault();
-                ResetPasswordViewModel resetPassword = new ResetPasswordViewModel {UserId = userEntity.UserID};
+                ResetPasswordViewModel resetPassword = new ResetPasswordViewModel { UserId = userEntity.UserID };
                 return resetPassword;
             }
         }

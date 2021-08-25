@@ -7,7 +7,6 @@ using SugarMonkey.Models.Views;
 
 namespace SugarMonkey.Controllers
 {
-
     public class UserController : Controller
     {
         private readonly GeneralPurposeDBEntities _dbContext = new GeneralPurposeDBEntities();
@@ -96,7 +95,7 @@ namespace SugarMonkey.Controllers
                 try
                 {
                     ModelState.Clear();
-                   //TODO: To be implemented
+                    //TODO: To be implemented
                 }
                 catch (Exception e)
                 {

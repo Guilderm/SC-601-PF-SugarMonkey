@@ -1,11 +1,12 @@
-﻿@model IEnumerable<SugarMonkey.Models.Product>
+﻿@using SugarMonkey.Models
+@model IEnumerable<SugarMonkey.Models.Product>
 
 @{
     ViewBag.Title = "Product";
 }
 
-<br />
-<br />
+<br/>
+<br/>
 Product
 <h2>Productos</h2>
 
@@ -14,15 +15,15 @@ Product
 </body>
 
 
-<br />
-<br />
+<br/>
+<br/>
 
 <div class="row col-lg-12">
 
     <div class="col-lg-3 form-group">
         <div class="col-md-12">
             Categoria
-            @Html.Partial("ProductPartial", new SugarMonkey.Models.Product())
+            @Html.Partial("ProductPartial", new Product())
         </div>
     </div>
     <p></p>
@@ -34,7 +35,7 @@ Product
                 <img src="@item.ImagePath" width="300"/>
                 Precio: @item.UnitPrice
                 Descripcion: @item.Description
-                <input type="submit" value="Añadir a carrito" class="btn btn-info btn-block" />
+                <input type="submit" value="Añadir a carrito" class="btn btn-info btn-block"/>
             </div>
         </div>
     }

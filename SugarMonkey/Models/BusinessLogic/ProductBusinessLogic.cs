@@ -12,8 +12,8 @@ namespace SugarMonkey.Models.BusinessLogic
             using (var context = new GeneralPurposeDBEntities())
             {
                 var resultado = (from x in context.Products
-                                 where (category == "0" ? true : x.CategoryID.ToString() == category)
-                                 select x).ToList();
+                    where category == "0" ? true : x.CategoryID.ToString() == category
+                    select x).ToList();
                 return resultado;
             }
         }
@@ -37,18 +37,20 @@ namespace SugarMonkey.Models.BusinessLogic
             using (var context = new GeneralPurposeDBEntities())
             {
                 var resultado = (from x in context.Products
-                                 select x).ToList();
+                    select x).ToList();
 
                 ListaProducts.Add(new SelectListItem { Value = "0", Text = "Seleccione..." });
                 foreach (var item in resultado)
                 {
                     ListaProducts.Add(new SelectListItem { Value = item.ProductID.ToString(), Text = item.Name });
                 }
+
                 return ListaProducts;
             }
         }
 
-        public void InsertProduct(string name, string description, int CategoryID, decimal price, string imagePath, string thumbnail, int discount, DateTime starts, DateTime ends)
+        public void InsertProduct(string name, string description, int CategoryID, decimal price, string imagePath,
+            string thumbnail, int discount, DateTime starts, DateTime ends)
         {
             using (var context = new GeneralPurposeDBEntities())
             {
@@ -73,8 +75,8 @@ namespace SugarMonkey.Models.BusinessLogic
             {
                 //LinQ y Lambda
                 var productFound = (from x in contexto.Products
-                                    where x.ProductID == obj.ProductID
-                                    select x).FirstOrDefault();
+                    where x.ProductID == obj.ProductID
+                    select x).FirstOrDefault();
 
                 if (productFound != null)
                 {

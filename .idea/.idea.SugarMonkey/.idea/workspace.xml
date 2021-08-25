@@ -7,104 +7,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Removed the home controler">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/CustomStyleSheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/admin_stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/jquery.dataTables.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/owl.carousel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/CSS/sweetalert.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/1_Penguins.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/2_Penguins.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/2_samsung-galaxy-on5-spotted-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/3_Jellyfish.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/3_download (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/4_Tulips.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/4_download.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/5_3_download (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/5_expert3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/6_images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/7_Htc-Desire-516-white--SDL232582179-1-71d4a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/Htc-Desire-516-white--SDL232582179-1-71d4a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/images (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/mobile-dev4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/ProductImage/Large/ubuntu-mobile-os-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/Site.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.accordion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.all.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.autocomplete.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.button.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.core.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.progressbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.resizable.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.selectable.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.slider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Old/Content/themes/base/jquery.ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/AdminController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/SearchController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/ShoppingController.cs" beforeDir="false" />
+    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Removed extra data">
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/App_Start/RouteConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/App_Start/RouteConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Styles/SiteWide.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Styles/SiteWide.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.intellisense.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.intellisense.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate-vsdoc.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate-vsdoc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.unobtrusive.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.unobtrusive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Controllers/ProductController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/CategoryDetail.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping.Context.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping.Context.tt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping.edmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping.edmx.diagram" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping.tt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping1.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Online_Shopping1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Tbl_Cart.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Tbl_CartStatus.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Tbl_Category.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Tbl_MemberRole.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Tbl_Members.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Tbl_Product.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Tbl_Roles.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/Tbl_ShippingDetails.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/USP_MemberShoppingCartDetails_Result.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/DAL/USP_Search_Result.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/EmailTemplates/ForgotPassword.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/EmailTemplates/Registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/Filters/ActionFilter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/Filters/AuthorizeUserFilter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/Repository/GenericRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/Repository/GenericUnitOfWork.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/Repository/IRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/Utility/EmailNotification.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/Utility/EncryptDecrypt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Old/Utility/UploadContent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/ProductBusinessLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/ProductBusinessLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/UserBusinessLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/UserBusinessLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Data.Context.tt" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/Data.Context.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Data.tt" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/Data.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Views/UserViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/Views/UserViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/Categories.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/ChangePassword.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/Dashboard.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/OrderDetail.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/Orders.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/ProductDetail.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/Products.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/UpdateCategory.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/UpdateProduct.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/_AdminLayout.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Admin/_AdminMenu.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Search/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Search/MyCart.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Search/ProductDetail.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Search/_Paging.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Search/_filterSearch.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shopping/CheckOut.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shopping/MyCart.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shopping/PaymentSuccess.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shopping/_ShippingAddress.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/About.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/Contact.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/Contact.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Order/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Order/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/Product.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/Product.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/ProductPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/ProductPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/User/ForgotPassword.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/User/ForgotPassword.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/User/ResetPassword.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/User/ResetPassword.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/User/UserEditInfo.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/User/UserEditInfo.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/User/UserRegistration.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/User/UserRegistration.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Web.Debug.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Web.Debug.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Web.Release.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Web.Release.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CSharp.Core.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CSharp.Core.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Managed.Core.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Managed.Core.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.VisualBasic.Core.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.VisualBasic.Core.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/packages.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629846075562</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Removed extra data">
+      <created>1629847444314</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629847444314</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +206,7 @@
     <MESSAGE value="added ConfirmPassword to user registration" />
     <MESSAGE value="adding in the workspace file" />
     <MESSAGE value="Removed the home controler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the home controler" />
+    <MESSAGE value="Removed extra data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed extra data" />
   </component>
 </project>
