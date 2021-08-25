@@ -7,59 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="trying to get it to work">
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/Antlr3.Runtime.pdb" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/EntityFramework.SqlServer.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/EntityFramework.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/Newtonsoft.Json.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/System.Web.Helpers.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/System.Web.Mvc.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/System.Web.Optimization.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/System.Web.Razor.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/System.Web.WebPages.Deployment.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/System.Web.WebPages.Razor.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/System.Web.WebPages.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.CSharp.Core.targets" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.Managed.Core.targets" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/Microsoft.VisualBasic.Core.targets" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/System.Buffers.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/System.Collections.Immutable.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/System.Memory.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/System.Numerics.Vectors.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/System.Reflection.Metadata.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/System.Text.Encoding.CodePages.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/System.Threading.Tasks.Extensions.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/VBCSCompiler.exe" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/VBCSCompiler.exe.config" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/csc.exe" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/csc.exe.config" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/csc.rsp" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/csi.exe" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/csi.exe.config" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/csi.rsp" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/vbc.exe" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/vbc.exe.config" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/roslyn/vbc.rsp" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/SugarMonkey.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/SugarMonkey.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/SugarMonkey.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/SugarMonkey.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/SugarMonkey.dll" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/SugarMonkey.pdb" afterDir="false" />
-      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/_WPPLastBuildInfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="gettin this to work" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +19,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/guild/RiderProjects/SC-601-PF-SugarMonkey/SugarMonkey/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xB1sfJ9DZNYNDYfaw3E5RvY6XL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -212,7 +161,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629853326295</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Adding bin">
+      <created>1629854159383</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1629854159383</updated>
+    </task>
+    <task id="LOCAL-00015" summary="gettin this to work">
+      <created>1629854633331</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1629854633331</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +208,8 @@
     <MESSAGE value="adding back in bin" />
     <MESSAGE value="adding anversion files" />
     <MESSAGE value="trying to get it to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to get it to work" />
+    <MESSAGE value="Adding bin" />
+    <MESSAGE value="gettin this to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="gettin this to work" />
   </component>
 </project>
