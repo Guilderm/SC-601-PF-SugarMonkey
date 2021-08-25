@@ -7,53 +7,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Removed extra data">
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/App_Start/RouteConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/App_Start/RouteConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Styles/SiteWide.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Styles/SiteWide.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/Bootstrap 5.0.2/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.intellisense.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.intellisense.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery-3.6.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate-vsdoc.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate-vsdoc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.unobtrusive.js" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Artifacts/Vendors/JQuery/jquery.validate.unobtrusive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Controllers/ProductController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/ProductBusinessLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/ProductBusinessLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/UserBusinessLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/BusinessLogic/UserBusinessLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Data.Context.tt" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/Data.Context.tt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Data.tt" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/Data.tt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Models/Views/UserViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Models/Views/UserViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/SugarMonkey.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/About.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/Contact.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/Contact.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/MainPage/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Order/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Order/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/Product.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/Product.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Product/ProductPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Product/ProductPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/User/ForgotPassword.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/User/ForgotPassword.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/User/ResetPassword.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/User/ResetPassword.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/User/UserEditInfo.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/User/UserEditInfo.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/User/UserRegistration.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/User/UserRegistration.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Views/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Views/Web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Web.Debug.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Web.Debug.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Web.Release.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Web.Release.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/Web.config" afterDir="false" />
+    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Clean up the project">
+      <change beforePath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
+      <change beforePath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CSharp.Core.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CSharp.Core.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Managed.Core.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Managed.Core.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.VisualBasic.Core.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.VisualBasic.Core.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CSharp.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Managed.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.VisualBasic.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Collections.Immutable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Numerics.Vectors.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Reflection.Metadata.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Text.Encoding.CodePages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.rsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +55,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/SugarMonkey/Views/Product/InsertProduct.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/guild/RiderProjects/SC-601-PF-SugarMonkey/SugarMonkey/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xB1sfJ9DZNYNDYfaw3E5RvY6XL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -178,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629847444314</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Clean up the project">
+      <created>1629847819035</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1629847819035</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +205,7 @@
     <MESSAGE value="adding in the workspace file" />
     <MESSAGE value="Removed the home controler" />
     <MESSAGE value="Removed extra data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed extra data" />
+    <MESSAGE value="Clean up the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up the project" />
   </component>
 </project>
