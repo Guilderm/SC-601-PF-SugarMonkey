@@ -7,43 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Clean up the project">
+    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="adding anversion files">
       <change beforePath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
+      <change beforePath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.dll.config" beforeDir="false" afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.dll.config" afterDir="false" />
       <change beforePath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SugarMonkey/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll.config" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.dll.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SugarMonkey/bin/SugarMonkey.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CSharp.Core.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.CodeAnalysis.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.Managed.Core.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/Microsoft.VisualBasic.Core.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Collections.Immutable.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Numerics.Vectors.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Reflection.Metadata.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Text.Encoding.CodePages.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/VBCSCompiler.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csc.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/csi.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SugarMonkey/bin/roslyn/vbc.rsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629847819035</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adding back in bin">
+      <created>1629849944193</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629849944193</updated>
+    </task>
+    <task id="LOCAL-00012" summary="adding anversion files">
+      <created>1629850422969</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1629850422969</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +191,8 @@
     <MESSAGE value="Removed the home controler" />
     <MESSAGE value="Removed extra data" />
     <MESSAGE value="Clean up the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up the project" />
+    <MESSAGE value="adding back in bin" />
+    <MESSAGE value="adding anversion files" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding anversion files" />
   </component>
 </project>
