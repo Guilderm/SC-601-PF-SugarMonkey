@@ -32,6 +32,6 @@ C:\Users\guild\OneDrive\Fidelitas\SC-601 - Programación Avanzada\Final Project\
 C:\Users\guild\OneDrive\Fidelitas\SC-601 - Programación Avanzada\Final Project\SugarMonkey\SugarMonkey\bin\roslyn\VBCSCompiler.exe
 C:\Users\guild\OneDrive\Fidelitas\SC-601 - Programación Avanzada\Final Project\SugarMonkey\SugarMonkey\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\guild\OneDrive\Fidelitas\SC-601 - Programación Avanzada\Final Project\SugarMonkey\SugarMonkey\obj\Debug\SugarMonkey.csproj.CoreCompileInputs.cache
+C:\Users\guild\OneDrive\Fidelitas\SC-601 - Programación Avanzada\Final Project\SugarMonkey\SugarMonkey\obj\Debug\SugarMonkey.csproj.CopyComplete
 C:\Users\guild\OneDrive\Fidelitas\SC-601 - Programación Avanzada\Final Project\SugarMonkey\SugarMonkey\obj\Debug\SugarMonkey.dll
 C:\Users\guild\OneDrive\Fidelitas\SC-601 - Programación Avanzada\Final Project\SugarMonkey\SugarMonkey\obj\Debug\SugarMonkey.pdb
-C:\Users\guild\OneDrive\Fidelitas\SC-601 - Programación Avanzada\Final Project\SugarMonkey\SugarMonkey\obj\Debug\SugarMonkey.csproj.AssemblyReference.cache
