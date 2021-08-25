@@ -7,7 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="gettin this to work" />
+    <list default="true" id="72d1a613-a41d-4bed-8f65-327e77f69357" name="Changes" comment="Clean and build">
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Debug/edmxResourcesToEmbed/Models/Data.csdl" afterDir="false" />
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Debug/edmxResourcesToEmbed/Models/Data.msl" afterDir="false" />
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Debug/edmxResourcesToEmbed/Models/Data.ssdl" afterDir="false" />
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/edmxResourcesToEmbed/Models/Data.csdl" afterDir="false" />
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/edmxResourcesToEmbed/Models/Data.msl" afterDir="false" />
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/edmxResourcesToEmbed/Models/Data.ssdl" afterDir="false" />
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/edmxResourcesToEmbed/Models/Entities.csdl" afterDir="false" />
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/edmxResourcesToEmbed/Models/Entities.msl" afterDir="false" />
+      <change afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Release/edmxResourcesToEmbed/Models/Entities.ssdl" afterDir="false" />
+      <change beforePath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Debug/SugarMonkey.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$USER_HOME$/OneDrive/Fidelitas/SC-601 - Programación Avanzada/Final Project/SugarMonkey/SugarMonkey/obj/Debug/SugarMonkey.csproj.FileListAbsolute.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629854633331</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Clean and build">
+      <created>1629854866076</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1629854866076</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +228,7 @@
     <MESSAGE value="trying to get it to work" />
     <MESSAGE value="Adding bin" />
     <MESSAGE value="gettin this to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="gettin this to work" />
+    <MESSAGE value="Clean and build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean and build" />
   </component>
 </project>
